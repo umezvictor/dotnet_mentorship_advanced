@@ -1,8 +1,8 @@
-using API.Infrastructure;
+using API;
 using CartService.BLL;
 using CartService.DAL;
-using Microsoft.AspNetCore.Http.Features;
-using System.Diagnostics;
+using Serilog;
+using Shared.Constants;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,27 +11,15 @@ var _config = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .Build();
 
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
 
-
-// Add services to the container.
-
-builder.Services.AddBusinessLogicLayer()
+// register layers
+builder.Services.AddPresentationLayer(_config)
+    .AddBusinessLogicLayer()
     .AddDataAccessLayer(_config);
 
-builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-builder.Services.AddProblemDetails(options =>
-{
-    options.CustomizeProblemDetails = context =>
-    {
-        context.ProblemDetails.Instance =
-            $"{context.HttpContext.Request.Method} {context.HttpContext.Request.Path}";
-
-        context.ProblemDetails.Extensions.TryAdd("requestId", context.HttpContext.TraceIdentifier);
-
-        Activity? activity = context.HttpContext.Features.Get<IHttpActivityFeature>()?.Activity;
-        context.ProblemDetails.Extensions.TryAdd("traceId", activity?.Id);
-    };
-});
 
 
 builder.Services.AddControllers();
@@ -47,7 +35,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(AppConstants.CorsPolicy);
 app.UseHttpsRedirection();
+
+app.UseRateLimiter();
 
 app.UseAuthorization();
 

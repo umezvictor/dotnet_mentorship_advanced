@@ -1,6 +1,4 @@
-﻿
-using CartService.Domain;
-
+﻿using CartService.Domain;
 namespace CartService.BLL.Abstractions;
 public interface ICartRepository
 {

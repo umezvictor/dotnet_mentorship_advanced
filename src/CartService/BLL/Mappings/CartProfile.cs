@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BLL.Features.Add;
 using CartService.Domain;
-using CartService.Shared.Dto;
+using Shared.Dto;
 
 namespace CartService.BLL.Mappings;
 public class CartProfile : Profile

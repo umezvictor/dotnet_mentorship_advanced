@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using CartService.BLL.Abstractions;
-using CartService.Shared.Dto;
 using MediatR;
 using Shared;
+using Shared.Dto;
 
 namespace BLL.Features.GetAll;
 

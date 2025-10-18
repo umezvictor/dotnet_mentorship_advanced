@@ -6,7 +6,7 @@ public class AddToCartCommandValidator : AbstractValidator<AddToCartCommand>
     {
 
         RuleFor(p => p.Id)
-        .GreaterThan(0).WithMessage("Id must be greater than 0"); ;
+        .GreaterThan(0).WithMessage("Id must be greater than 0");
 
 
         RuleFor(p => p.Name).NotEmpty()

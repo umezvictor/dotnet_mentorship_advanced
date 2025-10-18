@@ -1,9 +1,26 @@
+using API;
+using BLL;
+using DAL;
+using Serilog;
+using Shared.Constants;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var _config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
+
+builder.Services.AddPresentationLayer(_config)
+    .AddBusinessLogicLayer()
+    .AddDataAccessLayer(_config);
+
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -16,10 +33,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(AppConstants.CorsPolicy);
 app.UseHttpsRedirection();
-
+app.UseRateLimiter();
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
+namespace CatalogService
+{
+    public partial class Program { }
+}

@@ -4,9 +4,10 @@ public class DeleteItemFromCartCommandValidator : AbstractValidator<DeleteItemFr
 {
     public DeleteItemFromCartCommandValidator()
     {
-
         RuleFor(p => p.Id)
-        .GreaterThan(0).WithMessage("Invalid cart item"); ;
+            .NotEmpty()
+            .NotNull()
+        .GreaterThan(0).WithMessage("Id must be greater than 0");
 
 
     }

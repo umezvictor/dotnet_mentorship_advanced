@@ -1,0 +1,15 @@
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: src/CatalogService/API/Dockerfile
+
+  testdb: 
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+    container_name: sql_server
+    environment:
+      ACCEPT_EULA: "Y"  
+      SA_PASSWORD: "Strong_password_123!"  
+    ports:
+      - 1433:1433  

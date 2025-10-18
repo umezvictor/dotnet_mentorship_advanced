@@ -1,16 +1,19 @@
 ﻿using BLL.Features.Add;
 using BLL.Features.Delete;
 using BLL.Features.GetAll;
-using CartService.Shared.Dto;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Shared;
+using Shared.Constants;
+using Shared.Dto;
 
 
 namespace CartService.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableRateLimiting(AppConstants.RateLimitingPolicy)]
     public class CartController : ControllerBase
     {
         private IMediator? _mediator;
