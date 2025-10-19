@@ -9,6 +9,7 @@ public sealed class UpdateCategoryCommand : IRequest<Response<string>>
     public int Id { get; set; }
     public string Name { get; set; }
     public string Image { get; set; } = string.Empty;
+    public string ParentCategory { get; set; } = string.Empty;
 
 }
 

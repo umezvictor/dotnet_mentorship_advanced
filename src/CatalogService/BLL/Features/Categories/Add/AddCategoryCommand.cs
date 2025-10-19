@@ -9,6 +9,7 @@ public sealed class AddCategoryCommand : IRequest<Response<string>>
 {
     public string Name { get; set; }
     public string Image { get; set; } = string.Empty;
+    public string ParentCategory { get; set; } = string.Empty;
 
 }
 

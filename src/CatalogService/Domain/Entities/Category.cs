@@ -7,6 +7,7 @@ public sealed class Category : AuditableEntity
     public int Id { get; set; }
     public string Name { get; set; }
     public string Image { get; set; } = string.Empty;
+    public string ParentCategory { get; set; } = string.Empty;
     public List<Product> Products { get; set; } = new List<Product>();
 }
 
