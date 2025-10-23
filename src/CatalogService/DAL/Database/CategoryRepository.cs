@@ -7,6 +7,10 @@ public sealed class CategoryRepository(ApplicationDbContext _context) : ICategor
 {
     public async Task<int> CreateAsync(Category category, CancellationToken cancellationToken)
     {
+        if (!category.IsValid())
+        {
+            throw new ArgumentException("Invalid category");
+        }
         var createdItem = await _context.Category.AddAsync(category);
         await _context.SaveChangesAsync(cancellationToken);
 

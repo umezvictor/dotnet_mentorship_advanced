@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using CartService.BLL.Abstractions;
-using CartService.Domain;
+using CartService.DAL.Database.Repository;
+using DAL.Models;
 using MediatR;
-using Shared;
 
 namespace BLL.Features.Add;
-public sealed class AddToCartCommand : IRequest<Response<string>>
+public sealed class AddToCartCommand : IRequest<bool>
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -15,13 +14,13 @@ public sealed class AddToCartCommand : IRequest<Response<string>>
 }
 
 public class AddToCartCommandHandler(ICartRepository cartRepository, IMapper mapper) :
-    IRequestHandler<AddToCartCommand, Response<string>>
+    IRequestHandler<AddToCartCommand, bool>
 {
 
-    public async Task<Response<string>> Handle(AddToCartCommand command, CancellationToken cancellationToken)
+    public async Task<bool> Handle(AddToCartCommand command, CancellationToken cancellationToken)
     {
-        await cartRepository.AddItemAsync(mapper.Map<Cart>(command));
-        return new Response<string>(ResponseMessage.ItemAddedToCart, true);
+        await cartRepository.AddItemAsync(mapper.Map<Cart>(command), cancellationToken);
+        return true;
     }
 }
 

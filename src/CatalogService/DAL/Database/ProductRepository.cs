@@ -8,6 +8,10 @@ public sealed class ProductRepository(ApplicationDbContext _context) : IProductR
 
     public async Task<long> CreateAsync(Product product, CancellationToken cancellationToken)
     {
+        if (!product.IsValid())
+        {
+            throw new ArgumentException("Invalid product");
+        }
         var createdItem = await _context.Products.AddAsync(product, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
 

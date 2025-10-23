@@ -1,0 +1,54 @@
+﻿using AutoMapper;
+using BLL.Features.Add;
+using CartService.DAL.Database.Repository;
+using Moq;
+using Shouldly;
+
+namespace BLL.UnitTests;
+public class AddItemToCartHandlerTest
+{
+    private readonly Mock<ICartRepository> _cartRepoMock = new();
+    private readonly Mock<IMapper> _mapperMock = new();
+    private readonly AddToCartCommandHandler _serviceToTest;
+
+    public AddItemToCartHandlerTest()
+    {
+
+        _serviceToTest = new AddToCartCommandHandler(_cartRepoMock.Object, _mapperMock.Object);
+    }
+
+    [Fact]
+    public async Task AddItemToCart_WhenGivenValidPayload_ShouldSaveItemAndReturnSuccessMessage()
+    {
+        // Arrange
+        var command = new AddToCartCommand
+        {
+            Id = 1,
+            Image = "image_url",
+            Name = "Test Item",
+            Price = 10.5m,
+            Quantity = 2
+        };
+
+        var cartItem = new DAL.Models.Cart
+        {
+            Id = 1,
+            Image = "image_url",
+            Name = "Test Item",
+            Price = 10.5m,
+            Quantity = 2
+        };
+
+        var cancellationToken = CancellationToken.None;
+
+        _cartRepoMock.Setup(x => x.AddItemAsync(cartItem, cancellationToken));
+        _mapperMock.Setup(x => x.Map<DAL.Models.Cart>(command)).Returns(cartItem);
+
+        // Act
+        var response = await _serviceToTest.Handle(command, cancellationToken);
+
+        response.ShouldBeTrue();
+
+    }
+
+}

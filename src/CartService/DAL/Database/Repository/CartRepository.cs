@@ -1,5 +1,4 @@
-﻿using CartService.BLL.Abstractions;
-using CartService.Domain;
+﻿using DAL.Models;
 using MongoDB.Driver;
 
 namespace CartService.DAL.Database.Repository;
@@ -13,21 +12,24 @@ public sealed class CartRepository : ICartRepository
         _collection = database.GetCollection<Cart>(CollectionName);
     }
 
-    public async Task AddItemAsync(Cart cart)
+    public async Task AddItemAsync(Cart cart, CancellationToken cancellationToken)
     {
-
-        await _collection.InsertOneAsync(cart);
+        if (!cart.IsValid())
+        {
+            throw new ArgumentException("Invalid cart item");
+        }
+        await _collection.InsertOneAsync(cart, options: null, cancellationToken);
     }
 
-    public async Task<List<Cart>> GetItemsAsync()
+    public async Task<List<Cart>> GetItemsAsync(CancellationToken cancellationToken)
     {
-        return await _collection.Find(_ => true).ToListAsync();
+        return await _collection.Find(_ => true).ToListAsync(cancellationToken);
     }
 
 
-    public async Task<bool> RemoveItemAsync(int id)
+    public async Task<bool> RemoveItemAsync(int id, CancellationToken cancellationToken)
     {
-        var result = await _collection.DeleteOneAsync(c => c.Id == id);
+        var result = await _collection.DeleteOneAsync(c => c.Id == id, cancellationToken);
         return result.DeletedCount > 0;
     }
 }

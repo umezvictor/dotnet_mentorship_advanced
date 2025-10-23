@@ -1,24 +1,21 @@
-﻿using CartService.BLL.Abstractions;
+﻿using CartService.DAL.Database.Repository;
 using MediatR;
-using Shared;
 
 namespace BLL.Features.Delete;
-public sealed class DeleteItemFromCartCommand : IRequest<Response<string>>
+public sealed class DeleteItemFromCartCommand : IRequest<bool>
 {
     public int Id { get; set; }
 }
 
 public class DeleteItemFromCartCommandHandler(ICartRepository cartRepository) :
-    IRequestHandler<DeleteItemFromCartCommand, Response<string>>
+    IRequestHandler<DeleteItemFromCartCommand, bool>
 {
 
-    public async Task<Response<string>> Handle(DeleteItemFromCartCommand command, CancellationToken cancellationToken)
+    public async Task<bool> Handle(DeleteItemFromCartCommand command, CancellationToken cancellationToken)
     {
-        if (await cartRepository.RemoveItemAsync(command.Id))
-        {
-            return new Response<string>(ResponseMessage.ItemRemovedFromCart, true);
-        }
-        return new Response<string>(ResponseMessage.ItemNotRemoved, false);
+        if (await cartRepository.RemoveItemAsync(command.Id, cancellationToken))
+            return true;
+        return false;
     }
 }
 

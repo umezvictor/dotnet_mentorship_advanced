@@ -13,5 +13,15 @@ public sealed class Product : AuditableEntity
     public string Image { get; set; } = string.Empty;
     public int CategoryId { get; set; }
     public Category Category { get; set; }
+
+
+    public bool IsValid()
+    {
+        return !string.IsNullOrWhiteSpace(Name)
+            && Name.Length <= 50
+            && Price > 0
+            && Amount > 0
+            && CategoryId > 0;
+    }
 }
 

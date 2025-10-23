@@ -1,5 +1,4 @@
-﻿using CartService.BLL.Abstractions;
-using CartService.DAL.Database.Repository;
+﻿using CartService.DAL.Database.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
@@ -33,8 +32,6 @@ public static class DependencyInjection
 
         return services;
     }
-
-
 
     private static IServiceCollection AddCartRepository(this IServiceCollection services)
     {
