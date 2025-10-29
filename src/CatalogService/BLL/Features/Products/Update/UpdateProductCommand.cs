@@ -6,7 +6,8 @@ using Shared;
 namespace BLL.Features.Products.Update;
 public sealed class UpdateProductCommand : IRequest<Response<string>>
 {
-    public int Id { get; set; }
+    [System.Text.Json.Serialization.JsonIgnore]
+    public long Id { get; set; }
     public string Name { get; set; }
     public string Image { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;

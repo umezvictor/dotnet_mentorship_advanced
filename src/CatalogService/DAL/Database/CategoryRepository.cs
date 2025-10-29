@@ -29,10 +29,20 @@ public sealed class CategoryRepository(ApplicationDbContext _context) : ICategor
     }
 
 
-    public async Task DeleteAsync(Category category, CancellationToken cancellationToken)
+
+
+
+    public async Task DeleteAsync(int categoryId, CancellationToken cancellationToken)
     {
-        _context.Category.Remove(category);
-        await _context.SaveChangesAsync();
+        var category = await _context.Category
+            .Include(c => c.Products)
+            .FirstOrDefaultAsync(c => c.Id == categoryId, cancellationToken);
+
+        if (category != null)
+        {
+            _context.Category.Remove(category);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
     }
 
     public async Task<Category> UpdateAsync(Category category, CancellationToken cancellationToken)

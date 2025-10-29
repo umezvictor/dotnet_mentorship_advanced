@@ -12,7 +12,7 @@ internal sealed class CategoryConfiguration : IEntityTypeConfiguration<Category>
 
         builder.Property(x => x.Name).HasMaxLength(50).IsRequired();
         builder.HasMany(x => x.Products).WithOne(u => u.Category).HasForeignKey(x => x.CategoryId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Cascade);
     }
 
 

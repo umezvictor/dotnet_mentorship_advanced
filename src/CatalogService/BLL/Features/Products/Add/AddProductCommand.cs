@@ -5,7 +5,7 @@ using MediatR;
 using Shared;
 
 namespace BLL.Features.Products.Add;
-public sealed class AddProductCommand : IRequest<Response<string>>
+public sealed class AddProductCommand : IRequest<Response<long>>
 {
     public string Name { get; set; }
     public string Image { get; set; } = string.Empty;
@@ -17,11 +17,11 @@ public sealed class AddProductCommand : IRequest<Response<string>>
 }
 
 public class AddProductCommandHandler(IProductRepository productRepository, IMapper mapper) :
-    IRequestHandler<AddProductCommand, Response<string>>
+    IRequestHandler<AddProductCommand, Response<long>>
 {
-    public async Task<Response<string>> Handle(AddProductCommand command, CancellationToken cancellationToken)
+    public async Task<Response<long>> Handle(AddProductCommand command, CancellationToken cancellationToken)
     {
-        await productRepository.CreateAsync(mapper.Map<Product>(command), cancellationToken);
-        return new Response<string>(ResponseMessage.ProductAdded, true);
+        var createdProductId = await productRepository.CreateAsync(mapper.Map<Product>(command), cancellationToken);
+        return new Response<long>(createdProductId, ResponseMessage.ProductAdded);
     }
 }

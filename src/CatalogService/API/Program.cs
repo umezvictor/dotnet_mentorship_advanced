@@ -1,5 +1,7 @@
 using API;
+using API.Services;
 using BLL;
+using BLL.Abstractions;
 using DAL;
 using Serilog;
 using Shared.Constants;
@@ -19,7 +21,8 @@ builder.Services.AddPresentationLayer(_config)
     .AddDataAccessLayer(_config);
 
 
-
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ILinkService, LinkService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

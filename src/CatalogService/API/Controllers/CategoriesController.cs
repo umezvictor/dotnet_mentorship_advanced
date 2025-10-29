@@ -15,12 +15,12 @@ namespace API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 [EnableRateLimiting(AppConstants.RateLimitingPolicy)]
-public class CategoryController : ControllerBase
+public class CategoriesController : ControllerBase
 {
     private IMediator? _mediator;
     protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>() ?? null!;
 
-
+    //add new category
     [HttpPost]
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
     public async Task<IActionResult> Add([FromBody] AddCategoryCommand command)
@@ -42,6 +42,7 @@ public class CategoryController : ControllerBase
         return Ok(await Mediator.Send(new GetCategoryQuery { Id = id }));
     }
 
+    //list all categories
     [HttpGet]
     [ProducesResponseType(typeof(Response<List<CategoryDto>>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll()
@@ -49,6 +50,7 @@ public class CategoryController : ControllerBase
         return Ok(await Mediator.Send(new GetCategoriesQuery()));
     }
 
+    //update category
     [HttpPut]
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
     public async Task<IActionResult> Update([FromBody] UpdateCategoryCommand command)

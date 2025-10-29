@@ -9,9 +9,7 @@ public class UpdateProductCommandValidator : AbstractValidator<UpdateProductComm
              .NotNull()
              .WithMessage("Name is required");
 
-        RuleFor(p => p.Id).NotEmpty()
-            .NotNull()
-            .GreaterThan(0).WithMessage("Id must be greater than 0");
+
 
         RuleFor(p => p.Price)
         .NotEmpty()
