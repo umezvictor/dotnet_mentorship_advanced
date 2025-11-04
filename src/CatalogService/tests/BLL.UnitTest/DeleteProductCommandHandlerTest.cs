@@ -1,8 +1,11 @@
-﻿using BLL.Abstractions;
-using BLL.Features.Products.Delete;
-using Domain.Entities;
+﻿using AutoMapper;
+using BLL.Abstractions;
+using BLL.Services;
+using DAL.Database.Repository;
+using DAL.Entities;
 using Moq;
 using Shared;
+using Shared.Dto;
 using Shouldly;
 
 namespace BLL.UnitTest;
@@ -11,18 +14,20 @@ namespace BLL.UnitTest;
 public class DeleteProductCommandHandlerTest
 {
     private readonly Mock<IProductRepository> _productRepoMock = new();
-    private readonly DeleteProductCommandHandler _serviceToTest;
+    private readonly Mock<ILinkService> _linkServiceMock = new();
+    private readonly Mock<IMapper> _mapperMock = new();
+    private readonly ProductService _serviceToTest;
 
     public DeleteProductCommandHandlerTest()
     {
 
-        _serviceToTest = new DeleteProductCommandHandler(_productRepoMock.Object);
+        _serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object);
     }
 
     [Fact]
-    public async Task RemoveItemFromCart_WhenGivenValidId_ShouldDeleteItemAndReturnSuccessMessage()
+    public async Task DeleteProduct_WhenGivenValidId_ShouldDeleteProductAndReturnSuccessMessage()
     {
-        var command = new DeleteProductCommand
+        var request = new DeleteProductRequest
         {
             Id = 1
         };
@@ -39,11 +44,11 @@ public class DeleteProductCommandHandlerTest
         };
         var cancellationToken = CancellationToken.None;
 
-        _productRepoMock.Setup(x => x.GetByIdAsync(command.Id, cancellationToken)).ReturnsAsync(product);
+        _productRepoMock.Setup(x => x.GetByIdAsync(request.Id, cancellationToken)).ReturnsAsync(product);
         _productRepoMock.Setup(x => x.DeleteAsync(product, cancellationToken));
 
         // Act
-        var response = await _serviceToTest.Handle(command, cancellationToken);
+        var response = await _serviceToTest.DeleteProductAsync(request, cancellationToken);
 
         // Assert
         response.Message.ShouldBe(ResponseMessage.ProductDeleted);
@@ -53,9 +58,9 @@ public class DeleteProductCommandHandlerTest
 
 
     [Fact]
-    public async Task RemoveItemFromCart_WhenGivenInValidId_ShouldReturnItemNotRemoved()
+    public async Task DeleteProductWhenGivenInValidId_ShouldReturnProductNotFound()
     {
-        var command = new DeleteProductCommand
+        var request = new DeleteProductRequest
         {
             Id = 1
         };
@@ -64,10 +69,10 @@ public class DeleteProductCommandHandlerTest
 
         var cancellationToken = CancellationToken.None;
 
-        _productRepoMock.Setup(x => x.GetByIdAsync(command.Id, cancellationToken)).ReturnsAsync(product);
+        _productRepoMock.Setup(x => x.GetByIdAsync(request.Id, cancellationToken)).ReturnsAsync(product);
 
         // Act
-        var response = await _serviceToTest.Handle(command, cancellationToken);
+        var response = await _serviceToTest.DeleteProductAsync(request, cancellationToken);
 
         // Assert
         response.Message.ShouldBe(ResponseMessage.ProductNotFound);

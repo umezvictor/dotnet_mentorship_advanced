@@ -1,5 +1,5 @@
-﻿using BLL.Abstractions;
-using DAL.Database;
+﻿using DAL.Database;
+using DAL.Database.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

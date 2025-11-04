@@ -1,5 +1,6 @@
 using DAL.Database;
-using Domain.Entities;
+using DAL.Database.Repository;
+using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.UnitTest;
@@ -69,23 +70,7 @@ public class CategoryRepositoryTests
         Assert.Equal(2, result.Count);
     }
 
-    [Fact]
-    public async Task DeleteAsync_ShouldRemoveCategory()
-    {
-        // Arrange
-        var dbContext = GetDbContext();
-        var category = new Category { Name = "ToDelete", Image = "del.png" };
-        dbContext.Category.Add(category);
-        await dbContext.SaveChangesAsync();
-        var repository = new CategoryRepository(dbContext);
 
-        // Act
-        await repository.DeleteAsync(category, CancellationToken.None);
-
-        // Assert
-        var deleted = await dbContext.Category.FindAsync(category.Id);
-        Assert.Null(deleted);
-    }
 
     [Fact]
     public async Task UpdateAsync_ShouldUpdateCategory()

@@ -1,9 +1,4 @@
-﻿using BLL.Features.Categories.Add;
-using BLL.Features.Categories.Delete;
-using BLL.Features.Categories.GetAll;
-using BLL.Features.Categories.GetById;
-using BLL.Features.Categories.Update;
-using MediatR;
+﻿using BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using Shared;
@@ -15,46 +10,49 @@ namespace API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 [EnableRateLimiting(AppConstants.RateLimitingPolicy)]
-public class CategoriesController : ControllerBase
+public class CategoriesController(ICategoryService categoryService) : ControllerBase
 {
-    private IMediator? _mediator;
-    protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>() ?? null!;
 
-    //add new category
+
+
     [HttpPost]
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Add([FromBody] AddCategoryCommand command)
+    public async Task<IActionResult> Add([FromBody] AddCategoryRequest request, CancellationToken cancellationToken)
     {
-        return Ok(await Mediator.Send(command));
+
+        return Ok(await categoryService.AddCategoryAsync(request, cancellationToken));
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id}", Name = "DeleteCategory")]
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete([FromRoute] int id, CancellationToken cancellationToken)
     {
-        return Ok(await Mediator.Send(new DeleteCategoryCommand { Id = id }));
+        return Ok(await categoryService.DeleteCategoryAsync(new DeleteCategoryRequest { Id = id }, cancellationToken));
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id}", Name = "GetCategory")]
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
     {
-        return Ok(await Mediator.Send(new GetCategoryQuery { Id = id }));
+        return Ok(await categoryService.GetCategoryById(id, cancellationToken));
     }
 
-    //list all categories
+
     [HttpGet]
     [ProducesResponseType(typeof(Response<List<CategoryDto>>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
     {
-        return Ok(await Mediator.Send(new GetCategoriesQuery()));
+        return Ok(await categoryService.GetCategoriesAsync(cancellationToken));
     }
 
-    //update category
-    [HttpPut]
+
+    [HttpPut("{id}", Name = "UpdateCategory")]
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Update([FromBody] UpdateCategoryCommand command)
+    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCategoryRequest request, CancellationToken cancellationToken)
     {
-        return Ok(await Mediator.Send(command));
+        request.Id = id;
+        return Ok(await categoryService.UpdateCategoryAsync(request, cancellationToken));
     }
+
+
 }

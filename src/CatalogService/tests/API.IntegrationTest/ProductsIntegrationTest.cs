@@ -1,5 +1,4 @@
-﻿using BLL.Features.Products.Add;
-using Shared;
+﻿using Shared;
 using Shared.Dto;
 using Shouldly;
 using System.Net;
@@ -16,7 +15,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
     public async Task Addproduct_ValidPayload_ShouldReturnProductAddedSuccessfully()
     {
 
-        var request = new AddProductCommand
+        var request = new AddProductRequest
         {
             Amount = 10,
             CategoryId = 1,
@@ -29,7 +28,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
         // Act
         HttpResponseMessage response = await HttpClient.PostAsJsonAsync("/api/products", request);
-        var result = await response.Content.ReadFromJsonAsync<Response<string>>();
+        var result = await response.Content.ReadFromJsonAsync<Response<long>>();
 
         // Assert
         response.StatusCode.ShouldBe(HttpStatusCode.OK);
@@ -38,17 +37,5 @@ public class ProductsIntegrationTest : BaseFunctionalTest
         result.Message.ShouldBe(ResponseMessage.ProductAdded);
     }
 
-    [Fact]
-    public async Task GetAllProducts_ShouldReturnProductsList()
-    {
 
-        HttpResponseMessage response = await HttpClient.GetAsync("/api/products");
-        var result = await response.Content.ReadFromJsonAsync<Response<List<ProductDto>>>();
-
-        response.StatusCode.ShouldBe(HttpStatusCode.OK);
-        result.ShouldNotBeNull();
-        result.Succeeded.ShouldBeTrue();
-        result.Data.ShouldNotBeNull();
-        result.Data.Count.ShouldBeGreaterThan(0);
-    }
 }

@@ -1,5 +1,4 @@
-﻿using BLL.Abstractions;
-using Domain.Entities;
+﻿using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Database;

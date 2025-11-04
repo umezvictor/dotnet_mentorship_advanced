@@ -1,7 +1,4 @@
-﻿using BLL.Behaviours;
-using BLL.Features.Categories.Add;
-using FluentValidation;
-using MediatR;
+﻿using BLL.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -17,9 +14,10 @@ public static class DependencyInjection
     public static IServiceCollection AddPackages(this IServiceCollection services)
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
-        services.AddValidatorsFromAssemblyContaining<AddCategoryCommandValidator>();
+        services.AddScoped<ICategoryService, CategoryService>();
+        services.AddScoped<IProductService, ProductService>();
+
+
         return services;
     }
 

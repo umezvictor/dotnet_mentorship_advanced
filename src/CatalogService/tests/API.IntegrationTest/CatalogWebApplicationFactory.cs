@@ -1,6 +1,6 @@
 ﻿using CatalogService;
 using DAL.Database;
-using Domain.Entities;
+using DAL.Entities;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;

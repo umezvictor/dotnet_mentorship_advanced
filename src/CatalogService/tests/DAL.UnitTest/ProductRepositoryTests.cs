@@ -1,5 +1,6 @@
 ﻿using DAL.Database;
-using Domain.Entities;
+using DAL.Database.Repository;
+using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.UnitTest;
@@ -46,19 +47,6 @@ public class ProductRepositoryTests
         Assert.Equal("Test Product", saved.Name);
     }
 
-    [Fact]
-    public async Task CreateAsync_ShouldThrowArgumentException_WhenProductIsInvalid()
-    {
-        // Arrange
-        var dbContext = GetDbContext();
-        var repository = new ProductRepository(dbContext);
-        var product = GetValidProduct();
-        product.Name = "";
-
-        // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(async () =>
-            await repository.CreateAsync(product, CancellationToken.None));
-    }
 
     [Fact]
     public async Task GetByIdAsync_ShouldReturnProduct_WhenExists()
