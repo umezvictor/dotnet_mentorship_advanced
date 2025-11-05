@@ -37,7 +37,6 @@ public static class DependencyInjection
 
         services.AddRateLimiter(options =>
         {
-            //limit api calls that can be made from user's ip address
             options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
             options.AddPolicy(AppConstants.RateLimitingPolicy, httpContext =>
                 RateLimitPartition.GetFixedWindowLimiter(

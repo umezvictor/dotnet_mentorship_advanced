@@ -8,16 +8,19 @@ namespace API.Controllers.v2
 {
 
     [ApiController]
-    [Route("api/cart")]
-
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("2.0")]
     public class CartController(ICartService cartService) : ControllerBase
     {
         [HttpPost]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> AddItemToCartV1([FromBody] Cart cart, CancellationToken cancellationToken)
         {
-            return Ok(await cartService.AddItemToCartAsync(cart, cancellationToken));
+            if (await cartService.AddItemToCartAsync(cart, cancellationToken))
+                return Ok(new Response<string>(ResponseMessage.ItemAddedToCart));
+            return BadRequest(new Response<string>(ResponseMessage.ItemNotAddedToCart, false));
         }
 
 
@@ -34,16 +37,18 @@ namespace API.Controllers.v2
 
 
 
-        [HttpGet("cartKey")]
-        [ProducesResponseType(typeof(Response<Cart>), StatusCodes.Status200OK)]
+        [HttpGet("{cartKey}")]
+        [ProducesResponseType(typeof(Response<List<CartItem>>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
-        public async Task<IActionResult> GetCartInfoV1([FromRoute] string cartKey, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetCartInfoV2([FromRoute] string cartKey, CancellationToken cancellationToken)
         {
             var cart = await cartService.GetCartItemsAsync(cartKey, cancellationToken);
             if (cart != null)
-                return Ok(new Response<Cart>(cart, ResponseMessage.ItemsFetched));
+                return Ok(new Response<List<CartItem>>(cart.CartItems, ResponseMessage.ItemsFetched));
             return NotFound();
         }
+
+
     }
 }

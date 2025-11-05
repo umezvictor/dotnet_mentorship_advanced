@@ -1,5 +1,4 @@
 ﻿using API.Infrastructure;
-using Asp.Versioning;
 using Asp.Versioning.Conventions;
 using Microsoft.AspNetCore.Http.Features;
 using Shared.Constants;
@@ -54,16 +53,9 @@ public static class DependencyInjection
 
         services.AddApiVersioning(options =>
         {
-            options.DefaultApiVersion = new ApiVersion(1, 0);
-            options.ReportApiVersions = true;
             options.AssumeDefaultVersionWhenUnspecified = true;
-
-            options.ApiVersionReader = ApiVersionReader.Combine(
-                new QueryStringApiVersionReader("version"),
-                new HeaderApiVersionReader("X-API-Version"),
-                new MediaTypeApiVersionReader("version")
-            );
-
+            options.DefaultApiVersion = new Asp.Versioning.ApiVersion(1, 0);
+            options.ReportApiVersions = true;
         })
         .AddMvc(options =>
         {

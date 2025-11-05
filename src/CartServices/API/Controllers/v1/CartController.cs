@@ -8,16 +8,20 @@ namespace API.Controllers.v1
 {
 
     [ApiController]
-    [Route("api/cart")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
     public class CartController(ICartService cartService) : ControllerBase
     {
 
         [HttpPost]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> AddItemToCartV1([FromBody] Cart cart, CancellationToken cancellationToken)
         {
-            return Ok(await cartService.AddItemToCartAsync(cart, cancellationToken));
+            if (await cartService.AddItemToCartAsync(cart, cancellationToken))
+                return Ok(new Response<string>(ResponseMessage.ItemAddedToCart));
+            return BadRequest(new Response<string>(ResponseMessage.ItemNotAddedToCart, false));
         }
 
 
@@ -34,7 +38,7 @@ namespace API.Controllers.v1
 
 
 
-        [HttpGet("cartKey")]
+        [HttpGet("{cartKey}")]
         [ProducesResponseType(typeof(Response<Cart>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
