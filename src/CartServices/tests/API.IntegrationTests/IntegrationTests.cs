@@ -1,4 +1,5 @@
-﻿using DAL.Entities;
+﻿using DAL;
+using DAL.Entities;
 using Mongo2Go;
 using Shouldly;
 using System.Net;
@@ -35,27 +36,16 @@ public class IntegrationTests : IClassFixture<IntegrationTests.TestContext>
     [Fact]
     public async Task AddItemToCart_GivenValidPayload_ShouldReturnOk()
     {
-        var request = new Cart
+        var request = new AddItemToCartRequest
         {
-            CartKey = "1234",
-            CartItems = new List<CartItem>
+            CartKey = "test-cart",
+            CartItem = new CartItem
             {
-                new CartItem
-                {
-                    Id = 1,
-                    Name = "Test Product",
-                    Image = "test-image-url",
-                    Price = 99.99M,
-                    Quantity = 2
-                },
-                 new CartItem
-                {
-                    Id = 2,
-                    Name = "Test Product2",
-                    Image = "test-image-url2",
-                    Price = 99.99M,
-                    Quantity = 2
-                }
+                Id = 1,
+                Name = "Test Product",
+                Image = "test-image-url",
+                Price = 99.99M,
+                Quantity = 2
             }
         };
 
@@ -65,10 +55,6 @@ public class IntegrationTests : IClassFixture<IntegrationTests.TestContext>
         result.ShouldNotBeNull();
         result.Succeeded.ShouldBeTrue();
     }
-
-
-
-
 
 }
 

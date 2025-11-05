@@ -1,4 +1,5 @@
-﻿using DAL.Entities;
+﻿using DAL;
+using DAL.Entities;
 using MongoDB.Driver;
 
 namespace CartServices.DAL.Database.Repository;
@@ -12,10 +13,26 @@ public sealed class CartRepository : ICartRepository
         _collection = database.GetCollection<Cart>(CollectionName);
     }
 
-    public async Task AddItemAsync(Cart cart, CancellationToken cancellationToken)
+    public async Task<bool> AddItemAsync(AddItemToCartRequest cart, CancellationToken cancellationToken)
     {
-
-        await _collection.InsertOneAsync(cart, options: null, cancellationToken);
+        var existingCart = await _collection.Find(c => c.CartKey == cart.CartKey).FirstOrDefaultAsync(cancellationToken);
+        if (existingCart != null)
+        {
+            existingCart.CartItems.Add(cart.CartItem);
+            var update = Builders<Cart>.Update.Set(c => c.CartItems, existingCart.CartItems);
+            var result = await _collection.UpdateOneAsync(c => c.CartKey == cart.CartKey, update, cancellationToken: cancellationToken);
+            return result.ModifiedCount > 0;
+        }
+        else
+        {
+            var newCart = new Cart
+            {
+                CartKey = cart.CartKey,
+                CartItems = new List<CartItem> { cart.CartItem }
+            };
+            await _collection.InsertOneAsync(newCart, options: null, cancellationToken);
+            return true;
+        }
     }
 
     public async Task<Cart> GetCartItemsAsync(string cartKey, CancellationToken cancellationToken)

@@ -1,11 +1,12 @@
 ﻿
+using DAL;
 using DAL.Entities;
 
 namespace CartServices.DAL.Database.Repository;
 
 public interface ICartRepository
 {
-    Task AddItemAsync(Cart cart, CancellationToken cancellationToken);
+    Task<bool> AddItemAsync(AddItemToCartRequest cart, CancellationToken cancellationToken);
     Task<Cart> GetCartItemsAsync(string cartKey, CancellationToken cancellationToken);
     Task<bool> RemoveItemAsync(string cartKey, int itemId, CancellationToken cancellationToken);
 }

@@ -1,6 +1,6 @@
 ﻿using CartService;
 using CartServices.DAL.Database.Repository;
-using DAL.Entities;
+using DAL;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
@@ -42,7 +42,7 @@ public class CartWebApplicationFactory : WebApplicationFactory<Program>
             //repository mock
             var mockRepo = new Mock<ICartRepository>();
             mockRepo.Setup(x => x.GetCartItemsAsync(It.IsAny<string>(), CancellationToken.None)).ReturnsAsync(TestData.CartData());
-            mockRepo.Setup(x => x.AddItemAsync(It.IsAny<Cart>(), CancellationToken.None));
+            mockRepo.Setup(x => x.AddItemAsync(It.IsAny<AddItemToCartRequest>(), CancellationToken.None));
             mockRepo.Setup(x => x.RemoveItemAsync(It.IsAny<string>(), It.IsAny<int>(), CancellationToken.None)).ReturnsAsync(true);
             services.AddSingleton(mockRepo.Object);
         });

@@ -1,6 +1,7 @@
 ﻿using Asp.Versioning;
 using BLL.Dtos;
 using BLL.Services;
+using DAL;
 using DAL.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +17,9 @@ namespace API.Controllers.v2
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
         [ProducesDefaultResponseType]
-        public async Task<IActionResult> AddItemToCartV1([FromBody] Cart cart, CancellationToken cancellationToken)
+        public async Task<IActionResult> AddItemToCartV1([FromBody] AddItemToCartRequest request, CancellationToken cancellationToken)
         {
-            if (await cartService.AddItemToCartAsync(cart, cancellationToken))
+            if (await cartService.AddItemToCartAsync(request, cancellationToken))
                 return Ok(new Response<string>(ResponseMessage.ItemAddedToCart));
             return BadRequest(new Response<string>(ResponseMessage.ItemNotAddedToCart, false));
         }

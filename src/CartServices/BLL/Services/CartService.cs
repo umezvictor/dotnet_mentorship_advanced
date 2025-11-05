@@ -1,14 +1,16 @@
 ﻿using BLL.Dtos;
 using CartServices.DAL.Database.Repository;
+using DAL;
 using DAL.Entities;
 
 namespace BLL.Services;
 public sealed class CartService(ICartRepository cartRepository) : ICartService
 {
-    public async Task<bool> AddItemToCartAsync(Cart cart, CancellationToken cancellationToken)
+    public async Task<bool> AddItemToCartAsync(AddItemToCartRequest request, CancellationToken cancellationToken)
     {
-        await cartRepository.AddItemAsync(cart, cancellationToken);
-        return true;
+        return await cartRepository.AddItemAsync(request, cancellationToken);
+
+
     }
 
     public async Task<bool> DeleteCartItemAsync(DeleteItemFromCartRequest request, CancellationToken cancellationToken)
