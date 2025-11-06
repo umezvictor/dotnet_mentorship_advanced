@@ -7,12 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers.v2
 {
-
+    /// <summary>
+    /// API for managing cart operations. Use v1 or v2 in the url to specify the version.
+    /// </summary>
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("2.0")]
     public class CartController(ICartService cartService) : ControllerBase
     {
+        /// <summary>
+        /// Add item to cart.
+        /// </summary>
+        /// <param name="request">Cart item data to be added.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>Returns a success response.</returns>
         [HttpPost]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
@@ -25,6 +33,13 @@ namespace API.Controllers.v2
         }
 
 
+        /// <summary>
+        /// Deletes an item from the cart.
+        /// </summary>
+        /// <param name="id">The ID of the cart item to delete.</param>
+        /// <param name="cartKey">The unique key identifying the cart.</param>
+        /// <param name="cancellationToken">A token to cancel the operation.</param>
+        /// <returns>Returns a success response if the item was removed; otherwise, a bad request response.</returns>
         [HttpDelete]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
@@ -37,7 +52,12 @@ namespace API.Controllers.v2
         }
 
 
-
+        /// <summary>
+        /// Retrieves the cart information for the specified cart key.
+        /// </summary>
+        /// <param name="cartKey">The unique key identifying the cart.</param>
+        /// <param name="cancellationToken">A token to cancel the operation.</param>
+        /// <returns>Returns the cart information if found; otherwise, a not found response.</returns>
         [HttpGet("{cartKey}")]
         [ProducesResponseType(typeof(Response<List<CartItem>>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

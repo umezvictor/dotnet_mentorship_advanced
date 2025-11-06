@@ -3,6 +3,7 @@ using CartServices.BLL;
 using CartServices.DAL;
 using Serilog;
 using Shared.Constants;
+using System.Reflection;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,9 +26,12 @@ builder.Services.AddPresentationLayer(_config)
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-
+builder.Services.AddSwaggerGen(c =>
+{
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
+        $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
+});
 
 var app = builder.Build();
 
