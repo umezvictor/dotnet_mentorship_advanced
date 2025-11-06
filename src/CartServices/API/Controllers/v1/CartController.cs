@@ -61,7 +61,7 @@ namespace API.Controllers.v1
         /// <param name="cancellationToken">A token to cancel the operation.</param>
         /// <returns>Returns the cart information if found; otherwise, a not found response.</returns>
         [HttpGet("{cartKey}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response<Cart>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
         public async Task<IActionResult> GetCartInfoV1([FromRoute] string cartKey, CancellationToken cancellationToken)
