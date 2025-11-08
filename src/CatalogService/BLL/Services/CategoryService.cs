@@ -12,14 +12,14 @@ public sealed class CategoryService(ICategoryRepository categoryRepository, IMap
     {
         var category = mapper.Map<Category>(request);
         await categoryRepository.CreateAsync(category, cancellationToken);
-        return new Response<string>(ResponseMessage.CategoryAdded, true);
+        return new Response<string>(ResponseMessage.CategoryAdded);
     }
 
     public async Task<Response<string>> DeleteCategoryAsync(DeleteCategoryRequest request, CancellationToken cancellationToken)
     {
 
         await categoryRepository.DeleteAsync(request.Id, cancellationToken);
-        return new Response<string>(ResponseMessage.CategoryDeleted, true);
+        return new Response<string>(ResponseMessage.CategoryDeleted);
     }
 
     public async Task<Response<List<CategoryDto>>> GetCategoriesAsync(CancellationToken cancellationToken)
@@ -37,7 +37,7 @@ public sealed class CategoryService(ICategoryRepository categoryRepository, IMap
         }
 
         await categoryRepository.UpdateAsync(mapper.Map(request, category), cancellationToken);
-        return new Response<string>(ResponseMessage.CategoryUpdated, true);
+        return new Response<string>(ResponseMessage.CategoryUpdated);
     }
 
     public async Task<Response<CategoryDto>> GetCategoryById(int id, CancellationToken cancellationToken)

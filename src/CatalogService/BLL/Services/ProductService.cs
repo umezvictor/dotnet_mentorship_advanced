@@ -23,7 +23,7 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
             return new Response<string>(ResponseMessage.ProductNotFound, false);
         }
         await productRepository.DeleteAsync(product, cancellationToken);
-        return new Response<string>(ResponseMessage.ProductDeleted, true);
+        return new Response<string>(ResponseMessage.ProductDeleted);
     }
 
 
@@ -33,7 +33,7 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
             (query.CategoryId, query.PageNumber, query.PageSize, cancellationToken);
 
         if (paginatedResponse is null && !paginatedResponse.Data.Any())
-            return new Response<PaginatedResponse<List<ProductDto>>>(new PaginatedResponse<List<ProductDto>>(), ResponseMessage.NotItemsPresent);
+            return new Response<PaginatedResponse<List<ProductDto>>>(ResponseMessage.NotItemsPresent, false);
 
         return new Response<PaginatedResponse<List<ProductDto>>>(paginatedResponse, ResponseMessage.Success);
     }
@@ -47,7 +47,7 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
         }
 
         await productRepository.UpdateAsync(mapper.Map(request, product), cancellationToken);
-        return new Response<string>(ResponseMessage.ProductUpdated, true);
+        return new Response<string>(ResponseMessage.ProductUpdated);
     }
 
     public async Task<Response<ProductDto>> GetProductByIdAsync(long id, CancellationToken cancellationToken)

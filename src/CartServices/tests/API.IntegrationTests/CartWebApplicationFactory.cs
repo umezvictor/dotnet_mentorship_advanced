@@ -1,52 +1,61 @@
 ﻿using CartService;
-using CartServices.DAL.Database.Repository;
-using DAL;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mongo2Go;
-using Moq;
+using MongoDB.Driver;
 
 namespace API.IntegrationTests;
+
 public class CartWebApplicationFactory : WebApplicationFactory<Program>
 {
-    private readonly MongoDbRunner _mongoRunner;
 
-    public CartWebApplicationFactory(MongoDbRunner mongoRunner)
-    {
-        _mongoRunner = mongoRunner;
-    }
+    private MongoDbRunner? _mongoRunner;
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        builder.ConfigureAppConfiguration((context, config) =>
+
+        _mongoRunner = MongoDbRunner.Start();
+
+        builder.ConfigureAppConfiguration((context, configBuilder) =>
         {
             var inMemorySettings = new Dictionary<string, string>
             {
                 ["MONGODB_CONNECTION_STRING"] = _mongoRunner.ConnectionString,
-                ["MONGODB_DATABASE"] = "CartDB"
+                ["MONGODB_DATABASE"] = "TestCartDb"
             };
-            config.AddInMemoryCollection(inMemorySettings!);
+            configBuilder.AddInMemoryCollection(inMemorySettings);
         });
 
         builder.ConfigureServices(services =>
         {
-            var descriptor = services.SingleOrDefault(
-                d => d.ServiceType == typeof(ICartRepository)
-            );
-            if (descriptor != null)
-            {
+            var clientDescriptors = services.Where(d => d.ServiceType == typeof(IMongoClient)).ToList();
+            foreach (var descriptor in clientDescriptors)
                 services.Remove(descriptor);
-            }
 
-            //repository mock
-            var mockRepo = new Mock<ICartRepository>();
-            mockRepo.Setup(x => x.GetCartItemsAsync(It.IsAny<string>(), CancellationToken.None)).ReturnsAsync(TestData.CartData());
-            mockRepo.Setup(x => x.AddItemAsync(It.IsAny<AddItemToCartRequest>(), CancellationToken.None));
-            mockRepo.Setup(x => x.RemoveItemAsync(It.IsAny<string>(), It.IsAny<int>(), CancellationToken.None)).ReturnsAsync(true);
-            services.AddSingleton(mockRepo.Object);
+            var dbDescriptors = services.Where(d => d.ServiceType == typeof(IMongoDatabase)).ToList();
+            foreach (var descriptor in dbDescriptors)
+                services.Remove(descriptor);
+
+
+            var mongoClient = new MongoClient(_mongoRunner.ConnectionString);
+            services.AddSingleton<IMongoClient>(mongoClient);
+            services.AddScoped<IMongoDatabase>(sp =>
+                sp.GetRequiredService<IMongoClient>().GetDatabase("TestCartDb"));
+
+
         });
+
     }
 
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+        _mongoRunner?.Dispose();
+    }
 
 }
+
+
+

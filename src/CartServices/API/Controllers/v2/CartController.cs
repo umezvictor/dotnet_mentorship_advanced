@@ -25,7 +25,7 @@ namespace API.Controllers.v2
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
         [ProducesDefaultResponseType]
-        public async Task<IActionResult> AddItemToCartV1([FromBody] AddItemToCartRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> AddItemToCartV2([FromBody] AddItemToCartRequest request, CancellationToken cancellationToken)
         {
             if (await cartService.AddItemToCartAsync(request, cancellationToken))
                 return Ok(new Response<string>(ResponseMessage.ItemAddedToCart));
@@ -44,7 +44,7 @@ namespace API.Controllers.v2
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
         [ProducesDefaultResponseType]
-        public async Task<IActionResult> DeleteCartItemV1([FromRoute] int id, [FromRoute] string cartKey, CancellationToken cancellationToken)
+        public async Task<IActionResult> DeleteCartItemV2([FromRoute] int id, [FromRoute] string cartKey, CancellationToken cancellationToken)
         {
             if (await cartService.DeleteCartItemAsync(new DeleteItemFromCartRequest { Id = id, CartKey = cartKey }, cancellationToken))
                 return Ok(new Response<string>(ResponseMessage.ItemRemovedFromCart));

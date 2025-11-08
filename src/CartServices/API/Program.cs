@@ -8,18 +8,18 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var _config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .Build();
+//var _config = new ConfigurationBuilder()
+//                .AddJsonFile("appsettings.json")
+//                .Build();
 
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .CreateLogger();
 
 // register layers
-builder.Services.AddPresentationLayer(_config)
+builder.Services.AddPresentationLayer(builder.Configuration)
     .AddBusinessLogicLayer()
-    .AddDataAccessLayer(_config);
+    .AddDataAccessLayer(builder.Configuration);
 
 
 

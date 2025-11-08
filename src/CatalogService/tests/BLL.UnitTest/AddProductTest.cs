@@ -9,14 +9,14 @@ using Shared.Dto;
 using Shouldly;
 
 namespace BLL.UnitTest;
-public class AddProductCommandHandlerTest
+public class AddProductTest
 {
     private readonly Mock<IProductRepository> _productRepoMock = new();
     private readonly Mock<IMapper> _mapperMock = new();
     private readonly Mock<ILinkService> _linkServiceMock = new();
     private readonly ProductService _serviceToTest;
 
-    public AddProductCommandHandlerTest()
+    public AddProductTest()
     {
 
         _serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object);
