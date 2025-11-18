@@ -41,6 +41,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.UnitTests", "src\CartSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.UnitTest", "src\CartServices\tests\DAL.UnitTest\DAL.UnitTest.csproj", "{A28E7EE1-05ED-DB29-A4F0-80FA82CB059F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43B679EC-C4E6-454A-BAB2-C5DE8C6255B5}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ", "src\Shared\RabbitMQ\RabbitMQ.csproj", "{117DE5C2-64F4-48FA-B48D-3BE2FE991132}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +106,10 @@ Global
 		{A28E7EE1-05ED-DB29-A4F0-80FA82CB059F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28E7EE1-05ED-DB29-A4F0-80FA82CB059F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A28E7EE1-05ED-DB29-A4F0-80FA82CB059F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117DE5C2-64F4-48FA-B48D-3BE2FE991132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117DE5C2-64F4-48FA-B48D-3BE2FE991132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117DE5C2-64F4-48FA-B48D-3BE2FE991132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117DE5C2-64F4-48FA-B48D-3BE2FE991132}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +133,7 @@ Global
 		{6F42318E-47CF-CB48-C33A-1F833CB13B6D} = {09AFCC9A-0075-4C6F-885B-97F0A4767C5C}
 		{A7E1CA70-07B3-FB11-E26B-F05CAAA1F5C9} = {09AFCC9A-0075-4C6F-885B-97F0A4767C5C}
 		{A28E7EE1-05ED-DB29-A4F0-80FA82CB059F} = {09AFCC9A-0075-4C6F-885B-97F0A4767C5C}
+		{117DE5C2-64F4-48FA-B48D-3BE2FE991132} = {D793AC58-F8AC-49A8-A3D4-F646349C192D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9380BD1B-B3A2-4B76-9088-A3286C924C51}

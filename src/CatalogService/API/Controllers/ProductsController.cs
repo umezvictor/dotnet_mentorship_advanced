@@ -1,9 +1,9 @@
 ﻿using BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
-using Shared;
 using Shared.Constants;
 using Shared.Dto;
+using Shared.ResponseObjects;
 
 namespace API.Controllers;
 
@@ -69,7 +69,7 @@ public class ProductsController(IProductService productService) : ControllerBase
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
     [ProducesDefaultResponseType]
-    public async Task<IActionResult> Update([FromRoute] long id, [FromBody] UpdateProductRequest request, CancellationToken cancellationToken)
+    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateProductRequest request, CancellationToken cancellationToken)
     {
         request.Id = id;
         var response = await productService.UpdateProductAsync(request, cancellationToken);

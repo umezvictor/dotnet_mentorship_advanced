@@ -1,18 +1,23 @@
 ﻿using AutoMapper;
 using BLL.Abstractions;
+using DAL.Database;
 using DAL.Database.Repository;
 using DAL.Entities;
-using Shared;
 using Shared.Dto;
+using Shared.RabbitMQ;
+using Shared.ResponseObjects;
+using System.Text.Json;
 
 namespace BLL.Services;
-public sealed class ProductService(IProductRepository productRepository, IMapper mapper, ILinkService linkService) : IProductService
+public sealed class ProductService(IProductRepository productRepository, IMapper mapper, ILinkService linkService,
+    IApplicationDbContext dbContext) : IProductService
 {
 
-    public async Task<Response<long>> AddProductAsync(AddProductRequest request, CancellationToken cancellationToken)
+    public async Task<Response<int>> AddProductAsync(AddProductRequest request, CancellationToken cancellationToken)
     {
         var createdProductId = await productRepository.CreateAsync(mapper.Map<Product>(request), cancellationToken);
-        return new Response<long>(createdProductId, ResponseMessage.ProductAdded);
+
+        return new Response<int>(createdProductId, ResponseMessage.ProductAdded);
     }
 
     public async Task<Response<string>> DeleteProductAsync(DeleteProductRequest request, CancellationToken cancellationToken)
@@ -46,9 +51,40 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
             return new Response<string>(ResponseMessage.ProductNotFound, false);
         }
 
-        await productRepository.UpdateAsync(mapper.Map(request, product), cancellationToken);
-        return new Response<string>(ResponseMessage.ProductUpdated);
+        using var transaction = await dbContext.Database.BeginTransactionAsync();
+
+        try
+        {
+            var updatedProduct = await productRepository.UpdateAsync(mapper.Map(request, product), cancellationToken);
+            if (updatedProduct != null)
+            {
+                //save update product details to outbox table
+                await dbContext.Outbox.AddAsync(new Outbox
+                {
+
+                    CreatedOnUTC = DateTime.UtcNow,
+                    Data = JsonSerializer.Serialize(new ProductUpdatedContract
+                    {
+                        Id = updatedProduct.Id,
+                        Name = updatedProduct.Name,
+                        Price = updatedProduct.Price,
+                    }),
+                    IsProcessed = false
+                }, cancellationToken);
+                await dbContext.SaveChangesAsync(cancellationToken);
+                await transaction.CommitAsync(cancellationToken);
+                return new Response<string>(ResponseMessage.ProductUpdated);
+            }
+        }
+        catch
+        {
+            await transaction.RollbackAsync(cancellationToken);
+            return new Response<string>(ResponseMessage.Failure);
+        }
+        return new Response<string>(ResponseMessage.Failure);
     }
+
+
 
     public async Task<Response<ProductDto>> GetProductByIdAsync(long id, CancellationToken cancellationToken)
     {

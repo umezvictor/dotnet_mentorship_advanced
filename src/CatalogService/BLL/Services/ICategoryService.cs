@@ -1,5 +1,5 @@
-﻿using Shared;
-using Shared.Dto;
+﻿using Shared.Dto;
+using Shared.ResponseObjects;
 
 namespace BLL.Services;
 public interface ICategoryService

@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mongo2Go;
 using MongoDB.Driver;
+using Serilog;
 
 namespace API.IntegrationTests;
 
@@ -53,6 +54,7 @@ public class CartWebApplicationFactory : WebApplicationFactory<Program>
     {
         base.Dispose(disposing);
         _mongoRunner?.Dispose();
+        Log.CloseAndFlush();
     }
 
 }

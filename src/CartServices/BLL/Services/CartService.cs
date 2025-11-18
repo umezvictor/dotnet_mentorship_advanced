@@ -2,6 +2,7 @@
 using CartServices.DAL.Database.Repository;
 using DAL;
 using DAL.Entities;
+using Shared.RabbitMQ;
 
 namespace BLL.Services;
 public sealed class CartService(ICartRepository cartRepository) : ICartService
@@ -27,5 +28,11 @@ public sealed class CartService(ICartRepository cartRepository) : ICartService
         if (cart != null)
             return cart;
         return null;
+    }
+
+
+    public async Task UpdateCartItemsFromMessageConsumerAsync(ProductUpdatedContract request, CancellationToken cancellationToken)
+    {
+        await cartRepository.UpdateCartItemsFromMessageConsumerAsync(request.Id, request.Price, request.Name!, cancellationToken);
     }
 }

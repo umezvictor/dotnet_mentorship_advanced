@@ -1,6 +1,8 @@
 ﻿using API.Infrastructure;
+using API.Jobs;
 using Asp.Versioning.Conventions;
 using Microsoft.AspNetCore.Http.Features;
+using Quartz;
 using Shared.Constants;
 using System.Diagnostics;
 using System.Threading.RateLimiting;
@@ -9,7 +11,11 @@ namespace API;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddPresentationLayer(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddPresentationLayer(this IServiceCollection services, IConfiguration configuration) =>
+          services
+          .AddServices(configuration)
+          .AddQuartzSetup();
+    public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddRazorPages();
 
@@ -67,6 +73,30 @@ public static class DependencyInjection
             options.SubstituteApiVersionInUrl = true;
 
         });
+        return services;
+    }
+
+
+    public static IServiceCollection AddQuartzSetup(this IServiceCollection services)
+    {
+        services.AddQuartz(configure =>
+        {
+
+            var jobKey = new JobKey(nameof(RabbitMqListenerJob));
+            configure
+                .AddJob<RabbitMqListenerJob>(jobKey)
+                .AddTrigger(
+                    trigger => trigger.ForJob(jobKey)
+                    .WithSimpleSchedule(
+                        schedule => schedule.WithIntervalInSeconds(10).RepeatForever()));
+
+        });
+
+        services.AddQuartzHostedService(options =>
+        {
+            options.WaitForJobsToComplete = true;
+        });
+
         return services;
     }
 }

@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
 using BLL.Abstractions;
 using BLL.Services;
+using DAL.Database;
 using DAL.Database.Repository;
 using DAL.Entities;
 using Moq;
-using Shared;
 using Shared.Dto;
+using Shared.ResponseObjects;
 
 namespace BLL.UnitTest;
 public class GetProductByIdTest
@@ -13,19 +14,21 @@ public class GetProductByIdTest
     private readonly Mock<IProductRepository> _productRepoMock = new();
     private readonly Mock<IMapper> _mapperMock = new();
     private readonly Mock<ILinkService> _linkServiceMock = new();
+    private readonly Mock<IApplicationDbContext> _dbContextMock = new();
+
     private readonly ProductService _serviceToTest;
 
     public GetProductByIdTest()
     {
 
-        _serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object);
+        _serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object);
     }
 
     [Fact]
     public async Task GetProductById_ProductExists_ReturnsSuccessResponseWithLinks()
     {
         // Arrange
-        long id = 10;
+        int id = 10;
         var product = new Product
         {
             Id = id,

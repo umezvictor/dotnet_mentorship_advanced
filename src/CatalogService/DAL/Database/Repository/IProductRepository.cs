@@ -1,11 +1,11 @@
 ﻿using DAL.Entities;
-using Shared;
 using Shared.Dto;
+using Shared.ResponseObjects;
 
 namespace DAL.Database.Repository;
 public interface IProductRepository
 {
-    Task<long> CreateAsync(Product product, CancellationToken cancellationToken);
+    Task<int> CreateAsync(Product product, CancellationToken cancellationToken);
     Task DeleteAsync(Product product, CancellationToken cancellationToken);
     Task<List<Product>> GetAllProductsAsync(CancellationToken cancellationToken);
     Task<Product?> GetByIdAsync(long id, CancellationToken cancellationToken);

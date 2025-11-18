@@ -1,5 +1,5 @@
-﻿using Shared;
-using Shared.Dto;
+﻿using Shared.Dto;
+using Shared.ResponseObjects;
 using Shouldly;
 using System.Net;
 using System.Net.Http.Json;

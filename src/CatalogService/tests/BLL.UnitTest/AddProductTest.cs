@@ -1,17 +1,19 @@
 ﻿using AutoMapper;
 using BLL.Abstractions;
 using BLL.Services;
+using DAL.Database;
 using DAL.Database.Repository;
 using DAL.Entities;
 using Moq;
-using Shared;
 using Shared.Dto;
+using Shared.ResponseObjects;
 using Shouldly;
 
 namespace BLL.UnitTest;
 public class AddProductTest
 {
     private readonly Mock<IProductRepository> _productRepoMock = new();
+    private readonly Mock<IApplicationDbContext> _dbContextMock = new();
     private readonly Mock<IMapper> _mapperMock = new();
     private readonly Mock<ILinkService> _linkServiceMock = new();
     private readonly ProductService _serviceToTest;
@@ -19,7 +21,7 @@ public class AddProductTest
     public AddProductTest()
     {
 
-        _serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object);
+        _serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object);
     }
 
     [Fact]

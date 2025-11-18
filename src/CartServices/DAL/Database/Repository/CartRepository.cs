@@ -60,4 +60,30 @@ public sealed class CartRepository : ICartRepository
 
 
     }
+
+
+    //update name and price whenever a product is updated - called by the message queue consumer
+    public async Task UpdateCartItemsFromMessageConsumerAsync(int id, decimal price, string name, CancellationToken cancellationToken)
+    {
+
+        var cartsWithItem = await _collection.Find(Builders<Cart>.Filter.ElemMatch(c => c.CartItems, ci => ci.Id == id)).ToListAsync(cancellationToken);
+        if (!cartsWithItem.Any())
+            return;
+        var updatedCount = 0;
+        foreach (var item in cartsWithItem)
+        {
+            updatedCount++;
+            var cartItems = item.CartItems;
+            foreach (var cartItem in cartItems.Where(ci => ci.Id == id))
+            {
+                cartItem.Name = name;
+                cartItem.Price = price;
+            }
+            var update = Builders<Cart>.Update.Set(c => c.CartItems, cartItems);
+            var result = await _collection.UpdateOneAsync(c => c.CartKey == item.CartKey, update, cancellationToken: cancellationToken);
+            if (result.ModifiedCount > 0)
+                updatedCount++;
+
+        }
+    }
 }

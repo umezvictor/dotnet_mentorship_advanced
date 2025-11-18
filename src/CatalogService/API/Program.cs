@@ -3,6 +3,7 @@ using API.Services;
 using BLL;
 using BLL.Abstractions;
 using DAL;
+using RabbitMQ;
 using Serilog;
 using Shared.Constants;
 
@@ -26,6 +27,7 @@ builder.Services.AddScoped<ILinkService, LinkService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IRabbitMqClient, RabbitMqClient>();
 
 var app = builder.Build();
 

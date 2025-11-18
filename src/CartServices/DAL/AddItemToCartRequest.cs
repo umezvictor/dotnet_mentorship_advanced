@@ -10,3 +10,10 @@ public class AddItemToCartRequest
     public CartItem CartItem { get; set; }
 
 }
+
+
+public class UpdateItemRequest
+{
+    public CartItem CartItem { get; set; }
+
+}

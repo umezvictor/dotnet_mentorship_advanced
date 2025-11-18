@@ -2,8 +2,8 @@
 using BLL.Abstractions;
 using DAL.Database.Repository;
 using DAL.Entities;
-using Shared;
 using Shared.Dto;
+using Shared.ResponseObjects;
 
 namespace BLL.Services;
 public sealed class CategoryService(ICategoryRepository categoryRepository, IMapper mapper, ILinkService linkService) : ICategoryService

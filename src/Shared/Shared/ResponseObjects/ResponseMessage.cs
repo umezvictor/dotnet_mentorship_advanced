@@ -1,7 +1,8 @@
-﻿namespace Shared;
+﻿namespace Shared.ResponseObjects;
 public sealed class ResponseMessage
 {
     public const string ItemAddedToCart = "Item added to cart successfully";
+    public const string ItemNotAddedToCart = "Item not added to cart";
     public const string ItemRemovedFromCart = "Item removed from cart successfully";
     public const string ItemsFetched = "Cart Items fetched successfully";
     public const string ItemNotRemoved = "Item deletion failed";
@@ -20,4 +21,9 @@ public sealed class ResponseMessage
     public const string NotFound = "No record was found";
     public const string NotItemsPresent = "No items present at the moment";
     public const string Success = "Successful";
+    public const string Failure = "Failed";
+
+
+
+
 }

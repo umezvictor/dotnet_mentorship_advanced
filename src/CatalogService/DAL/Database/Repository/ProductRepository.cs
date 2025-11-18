@@ -1,13 +1,13 @@
 ﻿using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
-using Shared;
 using Shared.Dto;
+using Shared.ResponseObjects;
 
 namespace DAL.Database.Repository;
 public sealed class ProductRepository(ApplicationDbContext _context) : IProductRepository
 {
 
-    public async Task<long> CreateAsync(Product product, CancellationToken cancellationToken)
+    public async Task<int> CreateAsync(Product product, CancellationToken cancellationToken)
     {
 
         var createdItem = await _context.Products.AddAsync(product, cancellationToken);

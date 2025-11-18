@@ -1,5 +1,6 @@
 ﻿using DAL;
 using DAL.Entities;
+using Shared.ResponseObjects;
 using Shouldly;
 using System.Net;
 using System.Net.Http.Json;
@@ -7,14 +8,18 @@ using System.Net.Http.Json;
 namespace API.IntegrationTests;
 public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 {
+    private readonly CartWebApplicationFactory _factory;
+    private readonly HttpClient _client;
 
+    public IntegrationTests(CartWebApplicationFactory factory)
+    {
+        _factory = factory;
+        _client = _factory.CreateClient();
+    }
 
     [Fact]
     public async Task AddItemToCart_GivenValidPayload_ShouldReturnOk()
     {
-
-        using var factory = new CartWebApplicationFactory();
-        var client = factory.CreateClient();
 
         var request = new AddItemToCartRequest
         {
@@ -29,7 +34,7 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
             }
         };
 
-        var response = await client.PostAsJsonAsync("/api/v1/cart", request);
+        var response = await _client.PostAsJsonAsync("/api/v1/cart", request);
         response.StatusCode.ShouldBe(HttpStatusCode.OK);
         var result = await response.Content.ReadFromJsonAsync<Response<string>>();
         result.ShouldNotBeNull();
@@ -41,13 +46,11 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
     [Fact]
     public async Task GetItemFromCart_GivenValidCartKey_Version1ShouldReturnCartModel()
     {
-        using var factory = new CartWebApplicationFactory();
-        var client = factory.CreateClient();
 
         string cartKey = "1234";
-        await AddTestCartDataAsync(client, cartKey);
+        await AddTestCartDataAsync(_client, cartKey);
 
-        var response = await client.GetAsync($"/api/v1/cart/{cartKey}");
+        var response = await _client.GetAsync($"/api/v1/cart/{cartKey}");
         response.StatusCode.ShouldBe(HttpStatusCode.OK);
         var result = await response.Content.ReadFromJsonAsync<Response<Cart>>();
         result.ShouldNotBeNull();
@@ -60,13 +63,11 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
     [Fact]
     public async Task GetItemFromCart_GivenValidCartKey_Version2ShouldReturnCartModel()
     {
-        using var factory = new CartWebApplicationFactory();
-        var client = factory.CreateClient();
 
         string cartKey = "1234";
-        await AddTestCartDataAsync(client, cartKey);
+        await AddTestCartDataAsync(_client, cartKey);
 
-        var response = await client.GetAsync($"/api/v2/cart/{cartKey}");
+        var response = await _client.GetAsync($"/api/v2/cart/{cartKey}");
         response.StatusCode.ShouldBe(HttpStatusCode.OK);
         var result = await response.Content.ReadFromJsonAsync<Response<List<CartItem>>>();
         result.ShouldNotBeNull();

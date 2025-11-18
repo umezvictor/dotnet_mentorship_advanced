@@ -1,9 +1,9 @@
 ﻿using BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
-using Shared;
 using Shared.Constants;
 using Shared.Dto;
+using Shared.ResponseObjects;
 
 namespace API.Controllers;
 
@@ -44,7 +44,7 @@ public class CategoriesController(ICategoryService categoryService) : Controller
 
     [HttpGet("{id}", Name = "GetCategory")]
     [ProducesResponseType(typeof(Response<CategoryDto>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(Shared.Response<CategoryDto>), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(Response<CategoryDto>), StatusCodes.Status404NotFound)]
     [ProducesDefaultResponseType]
     public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
     {
