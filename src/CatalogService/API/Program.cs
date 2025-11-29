@@ -28,7 +28,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRabbitMqClient, RabbitMqClient>();
-
+builder.Host.UseSerilog();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

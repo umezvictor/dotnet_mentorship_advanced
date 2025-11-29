@@ -33,7 +33,8 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
                 Quantity = 2
             }
         };
-
+        var token = TokenGenerator.GenerateAccessToken();
+        _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
         var response = await _client.PostAsJsonAsync("/api/v1/cart", request);
         response.StatusCode.ShouldBe(HttpStatusCode.OK);
         var result = await response.Content.ReadFromJsonAsync<Response<string>>();
@@ -48,6 +49,8 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
     {
 
         string cartKey = "1234";
+        var token = TokenGenerator.GenerateAccessToken();
+        _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
         await AddTestCartDataAsync(_client, cartKey);
 
         var response = await _client.GetAsync($"/api/v1/cart/{cartKey}");
@@ -65,6 +68,8 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
     {
 
         string cartKey = "1234";
+        var token = TokenGenerator.GenerateAccessToken();
+        _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
         await AddTestCartDataAsync(_client, cartKey);
 
         var response = await _client.GetAsync($"/api/v2/cart/{cartKey}");
@@ -95,5 +100,7 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
         await client.PostAsJsonAsync("/api/v1/cart", request);
 
     }
+
+
 }
 

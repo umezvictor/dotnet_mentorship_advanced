@@ -3,6 +3,7 @@ using BLL.Dtos;
 using BLL.Services;
 using DAL;
 using DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Shared.ResponseObjects;
 
@@ -14,6 +15,7 @@ namespace API.Controllers.v2
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("2.0")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class CartController(ICartService cartService) : ControllerBase
     {
         /// <summary>
@@ -26,6 +28,7 @@ namespace API.Controllers.v2
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
         [ProducesDefaultResponseType]
+        [Authorize(Policy = "ManagerOrCustomerPolicy")]
         public async Task<IActionResult> AddItemToCartV2([FromBody] AddItemToCartRequest request, CancellationToken cancellationToken)
         {
             if (await cartService.AddItemToCartAsync(request, cancellationToken))
@@ -45,6 +48,7 @@ namespace API.Controllers.v2
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<string>), StatusCodes.Status400BadRequest)]
         [ProducesDefaultResponseType]
+        [Authorize(Policy = "ManagerOrCustomerPolicy")]
         public async Task<IActionResult> DeleteCartItemV2([FromRoute] int id, [FromRoute] string cartKey, CancellationToken cancellationToken)
         {
             if (await cartService.DeleteCartItemAsync(new DeleteItemFromCartRequest { Id = id, CartKey = cartKey }, cancellationToken))
@@ -63,6 +67,7 @@ namespace API.Controllers.v2
         [ProducesResponseType(typeof(Response<List<CartItem>>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
+        [Authorize(Policy = "ManagerOrCustomerPolicy")]
         public async Task<IActionResult> GetCartInfoV2([FromRoute] string cartKey, CancellationToken cancellationToken)
         {
             var cart = await cartService.GetCartItemsAsync(cartKey, cancellationToken);

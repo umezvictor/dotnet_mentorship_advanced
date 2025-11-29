@@ -26,6 +26,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
         };
 
+
         // Act
         HttpResponseMessage response = await HttpClient.PostAsJsonAsync("/api/products", request);
         var result = await response.Content.ReadFromJsonAsync<Response<long>>();
@@ -40,7 +41,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
 
     [Fact]
-    public async Task Addproduct_InValidPayload_ShouldReturnBadRequest()
+    public async Task Addproduct_InValidPayload_ShouldReturnForbidden()
     {
 
         var request = new AddProductRequest
@@ -73,6 +74,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
             PageNumber = 1,
             PageSize = 10
         };
+
 
         await AddProduct();
         // Act

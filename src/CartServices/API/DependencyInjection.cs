@@ -2,6 +2,7 @@
 using API.Jobs;
 using Asp.Versioning.Conventions;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.IdentityModel.Tokens;
 using Quartz;
 using Shared.Constants;
 using System.Diagnostics;
@@ -13,6 +14,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddPresentationLayer(this IServiceCollection services, IConfiguration configuration) =>
           services
+        .AddSecurity(configuration)
           .AddServices(configuration)
           .AddQuartzSetup();
     public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
@@ -44,7 +46,6 @@ public static class DependencyInjection
 
         services.AddRateLimiter(options =>
         {
-            //limit api calls that can be made from user's ip address
             options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
             options.AddPolicy(AppConstants.RateLimitingPolicy, httpContext =>
                 RateLimitPartition.GetFixedWindowLimiter(
@@ -76,6 +77,50 @@ public static class DependencyInjection
         return services;
     }
 
+    public static IServiceCollection AddSecurity(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddAuthentication("Bearer")
+           .AddJwtBearer("Bearer", options =>
+           {
+               options.Authority = configuration["JwtSettings:Issuer"];
+
+               options.TokenValidationParameters = new TokenValidationParameters
+               {
+                   ValidateAudience = false,
+                   RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                   NameClaimType = "sub"
+
+               };
+           });
+
+        services.AddAuthorization(options =>
+        {
+            options.AddPolicy("ApiScope", policy =>
+            {
+                policy.RequireAuthenticatedUser();
+                policy.RequireClaim("scope", "cartApi");
+            });
+
+
+            options.AddPolicy("ManagerOrCustomerPolicy", policy =>
+            {
+                policy.RequireAssertion(context =>
+                    (context.User.IsInRole("Manager") &&
+                         context.User.HasClaim("permission", "Read") ||
+                         context.User.HasClaim("permission", "Create") ||
+                         context.User.HasClaim("permission", "Update") ||
+                         context.User.HasClaim("permission", "Delete")
+                    )
+                    ||
+                    (context.User.IsInRole("StoreCustomer") &&
+                         context.User.HasClaim("permission", "Read")
+                    )
+                );
+            });
+        });
+
+        return services;
+    }
 
     public static IServiceCollection AddQuartzSetup(this IServiceCollection services)
     {

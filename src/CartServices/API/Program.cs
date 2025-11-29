@@ -1,4 +1,5 @@
 using API;
+using API.Middleware;
 using CartServices.BLL;
 using CartServices.DAL;
 using RabbitMQ;
@@ -22,6 +23,9 @@ builder.Services.AddPresentationLayer(builder.Configuration)
 
 
 builder.Services.AddControllers();
+
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -30,21 +34,21 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddScoped<IRabbitMqClient, RabbitMqClient>();
-
+builder.Host.UseSerilog();
 
 var app = builder.Build();
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseMiddleware<AccessTokenLoggingMiddleware>();
 
 app.UseCors(AppConstants.CorsPolicy);
 app.UseHttpsRedirection();
 
 app.UseRateLimiter();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
