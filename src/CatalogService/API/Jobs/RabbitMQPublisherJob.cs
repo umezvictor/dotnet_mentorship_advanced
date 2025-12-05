@@ -1,10 +1,10 @@
-﻿using DAL.Database;
+﻿using System.Text.Json;
+using DAL.Database;
 using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using Quartz;
 using RabbitMQ;
 using Shared.RabbitMQ;
-using System.Text.Json;
 
 namespace API.Jobs;
 
