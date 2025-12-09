@@ -1,0 +1,270 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.14.0.0",
+        "fileVersion": "4.14.0-3.25465.8 (b0a9adbf)",
+        "semanticVersion": "4.14.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'permission' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 31,
+                  "endLine": 109,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 31,
+                  "endLine": 110,
+                  "endColumn": 43
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 31,
+                  "endLine": 111,
+                  "endColumn": 43
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 31,
+                  "endLine": 112,
+                  "endColumn": 43
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 116,
+                  "startColumn": 31,
+                  "endLine": 116,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "ASP0025",
+          "level": "note",
+          "message": "Use AddAuthorizationBuilder to register authorization services and construct policies",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 3,
+                  "endLine": 120,
+                  "endColumn": 6
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6966",
+          "level": "warning",
+          "message": "Await RunAsync instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/Program.cs",
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 1,
+                  "endLine": 56,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 4,
+                  "endLine": 26,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 4,
+                  "endLine": 26,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "ASP0015",
+          "level": "note",
+          "message": "The header 'Authorization' can be accessed using the Authorization property",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/Middleware/AccessTokenLoggingMiddleware.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 20,
+                  "endLine": 23,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "HeaderName": "Authorization",
+              "ResolvedPropertyName": "Authorization"
+            }
+          }
+        }
+      ],
+      "rules": {
+        "ASP0015": {
+          "id": "ASP0015",
+          "shortDescription": "Suggest using IHeaderDictionary properties",
+          "defaultLevel": "note",
+          "helpUri": "https://aka.ms/aspnet/analyzers",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true
+          }
+        },
+        "ASP0025": {
+          "id": "ASP0025",
+          "shortDescription": "Use AddAuthorizationBuilder",
+          "defaultLevel": "note",
+          "helpUri": "https://aka.ms/aspnet/analyzers",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S5122": {
+          "id": "S5122",
+          "shortDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
+          "fullDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5122",
+          "properties": {
+            "category": "Minor Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6966": {
+          "id": "S6966",
+          "shortDescription": "Awaitable method should be used",
+          "fullDescription": "In an async method, any blocking operations should be avoided.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6966",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

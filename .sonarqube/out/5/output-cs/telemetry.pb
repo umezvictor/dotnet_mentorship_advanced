@@ -1,0 +1,1 @@
+ßRêC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\RabbitMQ\RabbitMQ.csproj¢net8.0ÚCSharp12

@@ -1,0 +1,2 @@
+﻿C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\RabbitMQ\IRabbitMqClient.cs
+C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\RabbitMQ\RabbitMqClient.cs

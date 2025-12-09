@@ -1,0 +1,12 @@
+´
+¨C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.csutf-8Ï
+ÃC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8¶
+ªC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\obj\Debug\net8.0\BLL.GlobalUsings.g.csutf-8¨
+žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Services\ProductService.csutf-8©
+ŸC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Services\IProductService.csutf-8ª
+ C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Services\ICategoryService.csutf-8©
+ŸC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Services\CategoryService.csutf-8¨
+žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Mappings\ProductProfile.csutf-8¨
+žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Mappings\CatalogProfile.csutf-8¤
+šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\DependencyInjection.csutf-8ª
+ C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Abstractions\ILinkService.csutf-8

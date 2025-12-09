@@ -1,0 +1,1 @@
+½R¦C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\BLL.UnitTests\BLL.UnitTests.csproj¢net8.0òCSharp12

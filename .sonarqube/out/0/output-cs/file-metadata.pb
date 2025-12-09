@@ -1,0 +1,19 @@
+ 
+æC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8≤
+¶C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\obj\Debug\net8.0\Shared.AssemblyInfo.csutf-8§
+öC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\ResponseObjects\Response.csutf-8•
+õC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateCategoryRequest.csutf-8¥
+®C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\obj\Debug\net8.0\Shared.GlobalUsings.g.csutf-8´
+°C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\ResponseObjects\ResponseMessage.csutf-8´
+°C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\ProductUpdatedContract.csutf-8≠
+£C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\ResponseObjects\PaginatedResponse.csutf-8¶
+úC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\RabbitMQConstants.csutf-8§
+öC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateProductRequest.csutf-8ö
+êC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\ProductDto.csutf-8†
+ñC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\GetProductsQuery.csutf-8§
+öC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\DeleteProductRequest.csutf-8•
+õC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\DeleteCategoryRequest.csutf-8õ
+ëC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\CategoryDto.csutf-8°
+óC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\AddProductRequest.csutf-8¢
+òC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\AddCategoryRequest.csutf-8¢
+òC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Constants\AppConstants.csutf-8

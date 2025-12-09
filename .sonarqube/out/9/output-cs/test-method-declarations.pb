@@ -1,0 +1,12 @@
+Ø
+¬C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\DAL.UnitTest\ProductRepositoryTests.csDAL.UnitTesta
+#DAL.UnitTest.ProductRepositoryTests:CreateAsync_ShouldAddProductAndReturnId_WhenProductIsValidR
+#DAL.UnitTest.ProductRepositoryTests+GetByIdAsync_ShouldReturnProduct_WhenExistsR
+#DAL.UnitTest.ProductRepositoryTests+GetAllProductsAsync_ShouldReturnAllProductsF
+#DAL.UnitTest.ProductRepositoryTestsDeleteAsync_ShouldRemoveProductF
+#DAL.UnitTest.ProductRepositoryTestsUpdateAsync_ShouldUpdateProduct‰
+­C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\DAL.UnitTest\CategoryRepositoryTests.csDAL.UnitTestP
+$DAL.UnitTest.CategoryRepositoryTests(CreateAsync_ShouldAddCategoryAndReturnIdT
+$DAL.UnitTest.CategoryRepositoryTests,GetByIdAsync_ShouldReturnCategory_WhenExistsW
+$DAL.UnitTest.CategoryRepositoryTests/GetAllCategoriesAsync_ShouldReturnAllCategoriesH
+$DAL.UnitTest.CategoryRepositoryTests UpdateAsync_ShouldUpdateCategory

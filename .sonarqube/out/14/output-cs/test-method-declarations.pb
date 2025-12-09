@@ -1,0 +1,8 @@
+
+´C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\CategoryIntegrationTest.csAPI.IntegrationTestm
++API.IntegrationTest.CategoryIntegrationTest>Addcategory_ValidPayload_ShouldReturnCategoryAddedSuccessfully`
++API.IntegrationTest.CategoryIntegrationTest1Getcategory_ValidPayload_ShouldReturnCategoryList†
+´C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\ProductsIntegrationTest.csAPI.IntegrationTestk
++API.IntegrationTest.ProductsIntegrationTest<Addproduct_ValidPayload_ShouldReturnProductAddedSuccessfully^
++API.IntegrationTest.ProductsIntegrationTest/Addproduct_InValidPayload_ShouldReturnForbiddenk
++API.IntegrationTest.ProductsIntegrationTest<Getproduct_ValidPayload_ShouldReturnProductAddedSuccessfully

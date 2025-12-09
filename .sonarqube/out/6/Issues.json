@@ -1,0 +1,1100 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.14.0.0",
+        "fileVersion": "4.14.0-3.25465.8 (b0a9adbf)",
+        "semanticVersion": "4.14.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Products' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 9,
+                  "endLine": 9,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 24,
+                  "endLine": 13,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Category' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 9,
+                  "endLine": 9,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 25,
+                  "endLine": 14,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Outbox' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 9,
+                  "endLine": 9,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Entities/Product.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Entities/Product.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Category' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Entities/Product.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 18,
+                  "endLine": 17,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Entities/Product.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 18,
+                  "endLine": 17,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Entities/Category.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Entities/Category.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'FK_Products_Category_CategoryId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 11,
+                  "endLine": 14,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 11,
+                  "endLine": 28,
+                  "endColumn": 44
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 11,
+                  "endLine": 40,
+                  "endColumn": 44
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 11,
+                  "endLine": 54,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Products' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 12,
+                  "endLine": 15,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 12,
+                  "endLine": 19,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 12,
+                  "endLine": 29,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 12,
+                  "endLine": 41,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 12,
+                  "endLine": 45,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 12,
+                  "endLine": 55,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'SqlServer:Identity' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 18,
+                  "endLine": 24,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 21,
+                  "endLine": 25,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 18,
+                  "endLine": 50,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251111104726_changed_prinarykey_to_integer.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 21,
+                  "endLine": 51,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'FK_Products_Category_CategoryId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 11,
+                  "endLine": 14,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 11,
+                  "endLine": 51,
+                  "endColumn": 44
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 11,
+                  "endLine": 63,
+                  "endColumn": 44
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 11,
+                  "endLine": 87,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Products' 10 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 12,
+                  "endLine": 15,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 12,
+                  "endLine": 19,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 12,
+                  "endLine": 26,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 12,
+                  "endLine": 47,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 12,
+                  "endLine": 52,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 12,
+                  "endLine": 64,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 12,
+                  "endLine": 68,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 12,
+                  "endLine": 72,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 12,
+                  "endLine": 76,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 12,
+                  "endLine": 88,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'CreatedAt' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 11,
+                  "endLine": 18,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 11,
+                  "endLine": 32,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 11,
+                  "endLine": 71,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 11,
+                  "endLine": 79,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'datetime2' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 11,
+                  "endLine": 20,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 11,
+                  "endLine": 27,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 11,
+                  "endLine": 34,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 11,
+                  "endLine": 41,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'UpdatedAt' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 11,
+                  "endLine": 25,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 11,
+                  "endLine": 39,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 11,
+                  "endLine": 75,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 11,
+                  "endLine": 83,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Category' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 12,
+                  "endLine": 33,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 12,
+                  "endLine": 40,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 21,
+                  "endLine": 54,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 12,
+                  "endLine": 80,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 12,
+                  "endLine": 84,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Migrations/20251018094224_added-tables.cs",
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 21,
+                  "endLine": 90,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'builder' to 'modelBuilder' to match the base class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 56,
+                  "endLine": 17,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2016",
+          "level": "note",
+          "message": "Forward the 'cancellationToken' parameter to the 'AddAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/Repository/CategoryRepository.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 27,
+                  "endLine": 10,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "ArgumentName": "cancellationToken",
+              "ParameterName": null,
+              "ShouldFix": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "CA2016",
+          "level": "note",
+          "message": "Forward the 'cancellationToken' parameter to the 'SaveChangesAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/Repository/CategoryRepository.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 9,
+                  "endLine": 47,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "ArgumentName": "cancellationToken",
+              "ParameterName": null,
+              "ShouldFix": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "CA2016",
+          "level": "note",
+          "message": "Forward the 'cancellationToken' parameter to the 'ToListAsync' method or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/Repository/ProductRepository.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 34,
+                  "endLine": 58,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "ArgumentName": "cancellationToken",
+              "ParameterName": "cancellationToken",
+              "ShouldFix": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "S6966",
+          "level": "warning",
+          "message": "Await CountAsync instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/DAL/Database/Repository/ProductRepository.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 34,
+                  "endLine": 43,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA2016": {
+          "id": "CA2016",
+          "shortDescription": "Forward the 'CancellationToken' parameter to methods",
+          "fullDescription": "Forward the 'CancellationToken' parameter to methods to ensure the operation cancellation notifications gets properly propagated, or pass in 'CancellationToken.None' explicitly to indicate intentionally not propagating the token.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2016",
+          "properties": {
+            "category": "Reliability",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6966": {
+          "id": "S6966",
+          "shortDescription": "Awaitable method should be used",
+          "fullDescription": "In an async method, any blocking operations should be avoided.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6966",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S927": {
+          "id": "S927",
+          "shortDescription": "Parameter names should match base declaration and other partial definitions",
+          "fullDescription": "Parameters are part of the method signature and its identity.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

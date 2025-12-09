@@ -1,0 +1,8 @@
+æ
+ÚC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\IdentityServerAPI.MvcApplicationPartsAssemblyInfo.csutf-8Ó
+ÇC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\IdentityServerAPI.AssemblyInfo.csutf-8³
+©C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\HostingExtensions.csutf-8à
+ÔC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8Õ
+ÉC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\IdentityServerAPI.GlobalUsings.g.csutf-8©
+ŸC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\Program.csutf-8¨
+žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\Config.csutf-8
