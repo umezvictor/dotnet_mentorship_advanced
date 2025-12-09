@@ -1,3 +1,4 @@
+using System.Reflection;
 using API;
 using API.Middleware;
 using CartServices.BLL;
@@ -5,19 +6,18 @@ using CartServices.DAL;
 using RabbitMQ;
 using Serilog;
 using Shared.Constants;
-using System.Reflection;
 
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder( args );
 
 Log.Logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)
-    .CreateLogger();
+	.ReadFrom.Configuration( builder.Configuration )
+	.CreateLogger();
 
 // register layers
-builder.Services.AddPresentationLayer(builder.Configuration)
-    .AddBusinessLogicLayer()
-    .AddDataAccessLayer(builder.Configuration);
+builder.Services.AddPresentationLayer( builder.Configuration )
+	.AddBusinessLogicLayer()
+	.AddDataAccessLayer( builder.Configuration );
 
 
 
@@ -27,11 +27,11 @@ builder.Services.AddControllers();
 
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddSwaggerGen( c =>
 {
-    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
-        $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
-});
+	c.IncludeXmlComments( Path.Combine( AppContext.BaseDirectory,
+		$"{Assembly.GetExecutingAssembly().GetName().Name}.xml" ) );
+} );
 
 builder.Services.AddScoped<IRabbitMqClient, RabbitMqClient>();
 builder.Host.UseSerilog();
@@ -39,12 +39,12 @@ builder.Host.UseSerilog();
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+	app.UseSwagger();
+	app.UseSwaggerUI();
 }
 app.UseMiddleware<AccessTokenLoggingMiddleware>();
 
-app.UseCors(AppConstants.CorsPolicy);
+app.UseCors( AppConstants.CorsPolicy );
 app.UseHttpsRedirection();
 
 app.UseRateLimiter();
@@ -57,7 +57,7 @@ app.Run();
 
 namespace CartService
 {
-    public partial class Program;
+	public partial class Program;
 }
 
 
