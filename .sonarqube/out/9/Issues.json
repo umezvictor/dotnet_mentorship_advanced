@@ -77,16 +77,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "Member 'GetValidProduct' does not access instance data and can be marked as static",
+          "message": "Member 'GetDbContext' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/tests/DAL.UnitTest/ProductRepositoryTests.cs",
                 "region": {
-                  "startLine": 18,
-                  "startColumn": 18,
-                  "endLine": 18,
-                  "endColumn": 33
+                  "startLine": 10,
+                  "startColumn": 31,
+                  "endLine": 10,
+                  "endColumn": 43
                 }
               }
             }
@@ -98,16 +98,16 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "Member 'GetDbContext' does not access instance data and can be marked as static",
+          "message": "Member 'GetValidProduct' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/tests/DAL.UnitTest/ProductRepositoryTests.cs",
                 "region": {
-                  "startLine": 10,
-                  "startColumn": 31,
-                  "endLine": 10,
-                  "endColumn": 43
+                  "startLine": 18,
+                  "startColumn": 18,
+                  "endLine": 18,
+                  "endColumn": 33
                 }
               }
             }

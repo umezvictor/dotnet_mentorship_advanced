@@ -12,7 +12,7 @@
   <HasBeginStepCommandLineTruststorePassword>false</HasBeginStepCommandLineTruststorePassword>
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
   <SonarQubeVersion>25.11.0.114957</SonarQubeVersion>
-  <SonarProjectKey>EcommerceApp</SonarProjectKey>
+  <SonarProjectKey>EcommerceApp3</SonarProjectKey>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
@@ -147,8 +147,8 @@
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.java.jvmframeworkconfig.activate">true</Property>
     <Property Name="sonar.updatecenter.url">https://downloads.sonarsource.com/sonarqube/update/update-center.properties</Property>
-    <Property Name="sonar.core.startTime">12/9/2025 4:02:22 PM</Property>
-    <Property Name="sonar.core.id">147B411E-AZsDa5-qmnietOkSc8PA</Property>
+    <Property Name="sonar.core.startTime">12/10/2025 3:36:13 PM</Property>
+    <Property Name="sonar.core.id">147B411E-AZsIeg2oLydz5w8LIdut</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://localhost:9000</Property>

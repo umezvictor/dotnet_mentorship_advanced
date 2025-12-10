@@ -1,5 +1,5 @@
 ﻿namespace Shared.ResponseObjects;
-public sealed class ResponseMessage
+public static class ResponseMessage
 {
 	public const string ItemAddedToCart = "Item added to cart successfully";
 	public const string ItemNotAddedToCart = "Item not added to cart";

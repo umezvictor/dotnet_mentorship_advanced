@@ -147,7 +147,21 @@
 .. // 225 =
 22 33 "44$ /
 77 !33 F
-77/ :99 ;; ?? AA EE GG ñ
+77/ :99 ;; ?? AA EE GG ‹
+šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\DependencyInjection.cs
+
+ '
+
+" 7
+Q Y
+
+	 
+
+" -2
+G O 
+ 
+ 
+	 ñ
 žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Mappings\ProductProfile.cs
 
  
@@ -167,21 +181,7 @@
  
 
   
-" +0 9‹
-šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\DependencyInjection.cs
-
- '
-
-" 7
-Q Y
-
-	 
-
-" -2
-G O 
- 
- 
-	 ë
+" +0 9ë
  C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Abstractions\ILinkService.cs
 
  

@@ -40,7 +40,7 @@ public sealed class ProductRepository (ApplicationDbContext _context) : IProduct
 
 		paginatedResponse.PageSize = pageSize;
 		var query = _context.Products.Where( u => u.CategoryId == categoryId );
-		paginatedResponse.TotalCount = query.Count();
+		paginatedResponse.TotalCount = await query.CountAsync();
 
 		paginatedResponse.Data = await _context.Products.Where( p => p.CategoryId == categoryId )
 			.Select( o => new ProductDto

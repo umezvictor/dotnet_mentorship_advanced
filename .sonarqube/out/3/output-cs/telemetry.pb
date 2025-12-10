@@ -1,1 +1,1 @@
-ªR§C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\DAL.UnitTest\DAL.UnitTest.csproj¢net8.0ÚCSharp12
+ßRêC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\RabbitMQ\RabbitMQ.csproj¢net8.0ÚCSharp12

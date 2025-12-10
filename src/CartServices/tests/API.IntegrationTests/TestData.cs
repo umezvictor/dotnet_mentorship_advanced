@@ -49,9 +49,9 @@ public class TestDocument
 {
 	[BsonId]
 	[BsonRepresentation( BsonType.ObjectId )]
-	public string CartKey { get; set; }
+	public string? CartKey { get; set; }
 
-	public List<CartItem> CartItems { get; set; }
+	public List<CartItem>? CartItems { get; set; }
 
 	public static TestDocument DummyData1 ()
 	{

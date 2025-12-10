@@ -12,18 +12,31 @@
       },
       "results": [
         {
-          "ruleId": "S3626",
+          "ruleId": "CS8618",
           "level": "warning",
-          "message": "Remove this redundant jump.",
+          "message": "Non-nullable property 'CartKey' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/Shared/RabbitMQ/RabbitMqClient.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/BLL/Dtos/DeleteItemFromCartRequest.cs",
                 "region": {
-                  "startLine": 55,
-                  "startColumn": 4,
-                  "endLine": 55,
-                  "endColumn": 11
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/BLL/Dtos/DeleteItemFromCartRequest.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 23
                 }
               }
             }
@@ -34,20 +47,17 @@
         }
       ],
       "rules": {
-        "S3626": {
-          "id": "S3626",
-          "shortDescription": "Jump statements should not be redundant",
-          "fullDescription": "Jump statements, such as return, yield break, goto, and continue are used to change the normal flow of execution in a program. However, redundant jump statements can make code difficult to read and maintain.",
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3626",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
           "properties": {
-            "category": "Minor Code Smell",
+            "category": "Compiler",
             "isEnabledByDefault": true,
             "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
+              "Compiler",
+              "Telemetry"
             ]
           }
         }

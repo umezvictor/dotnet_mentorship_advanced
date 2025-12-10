@@ -10,11 +10,11 @@
     },
     {
       "key": "sonar.scanner.bootstrapStartTime",
-      "value": "1765292592000"
+      "value": "1765378238000"
     },
     {
       "key": "sonar.projectKey",
-      "value": "EcommerceApp"
+      "value": "EcommerceApp3"
     },
     {
       "key": "sonar.working.directory",
@@ -38,11 +38,11 @@
     },
     {
       "key": "sonar.modules",
-      "value": "B49EAD76-4666-4ACB-87EC-3C395D855394,5EFDD228-0BB5-0A36-7385-7F1F22B5633E,F9F0A177-36D7-45D6-A992-849BF5DBADF1,DD4D597A-FBAF-4C67-B100-BBE90AADC94E,D70FE318-3865-4B41-9226-ACF91380DD97,6F42318E-47CF-CB48-C33A-1F833CB13B6D,4448B8FA-86DF-4C34-AAE1-C69E199BE180,332FC619-496A-4BB5-8382-A070A8B56464,A28E7EE1-05ED-DB29-A4F0-80FA82CB059F,A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD,117DE5C2-64F4-48FA-B48D-3BE2FE991132,48E8B815-153D-4476-B650-52AFC62FD90D,A7E1CA70-07B3-FB11-E26B-F05CAAA1F5C9,A2EDFFC8-C888-BFC6-F5AC-A8F9DD1BCF93,09D96752-E03B-4B28-9BC8-6F5B5497FC5D"
+      "value": "B49EAD76-4666-4ACB-87EC-3C395D855394,5EFDD228-0BB5-0A36-7385-7F1F22B5633E,F9F0A177-36D7-45D6-A992-849BF5DBADF1,6F42318E-47CF-CB48-C33A-1F833CB13B6D,DD4D597A-FBAF-4C67-B100-BBE90AADC94E,D70FE318-3865-4B41-9226-ACF91380DD97,4448B8FA-86DF-4C34-AAE1-C69E199BE180,332FC619-496A-4BB5-8382-A070A8B56464,117DE5C2-64F4-48FA-B48D-3BE2FE991132,48E8B815-153D-4476-B650-52AFC62FD90D,A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD,A28E7EE1-05ED-DB29-A4F0-80FA82CB059F,A7E1CA70-07B3-FB11-E26B-F05CAAA1F5C9,A2EDFFC8-C888-BFC6-F5AC-A8F9DD1BCF93,09D96752-E03B-4B28-9BC8-6F5B5497FC5D"
     },
     {
       "key": "B49EAD76-4666-4ACB-87EC-3C395D855394.sonar.projectKey",
-      "value": "EcommerceApp:B49EAD76-4666-4ACB-87EC-3C395D855394"
+      "value": "EcommerceApp3:B49EAD76-4666-4ACB-87EC-3C395D855394"
     },
     {
       "key": "B49EAD76-4666-4ACB-87EC-3C395D855394.sonar.projectName",
@@ -82,7 +82,7 @@
     },
     {
       "key": "5EFDD228-0BB5-0A36-7385-7F1F22B5633E.sonar.projectKey",
-      "value": "EcommerceApp:5EFDD228-0BB5-0A36-7385-7F1F22B5633E"
+      "value": "EcommerceApp3:5EFDD228-0BB5-0A36-7385-7F1F22B5633E"
     },
     {
       "key": "5EFDD228-0BB5-0A36-7385-7F1F22B5633E.sonar.projectName",
@@ -122,7 +122,7 @@
     },
     {
       "key": "F9F0A177-36D7-45D6-A992-849BF5DBADF1.sonar.projectKey",
-      "value": "EcommerceApp:F9F0A177-36D7-45D6-A992-849BF5DBADF1"
+      "value": "EcommerceApp3:F9F0A177-36D7-45D6-A992-849BF5DBADF1"
     },
     {
       "key": "F9F0A177-36D7-45D6-A992-849BF5DBADF1.sonar.projectName",
@@ -161,88 +161,8 @@
       "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\10\\Telemetry.json"
     },
     {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.projectKey",
-      "value": "EcommerceApp:DD4D597A-FBAF-4C67-B100-BBE90AADC94E"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.projectName",
-      "value": "BLL.UnitTest"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.projectBaseDir",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.working.directory",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod3"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.sourceEncoding",
-      "value": "utf-8"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.sources",
-      "value": ""
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.tests",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\obj\\BLL.UnitTest.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\bin\\Debug\\net8.0\\BLL.UnitTest.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\bin\\Debug\\net8.0\\BLL.UnitTest.runtimeconfig.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\obj\\Debug\\net8.0\\BLL.UnitTest.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\AddProductTest.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\DeleteProductTest.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\GetProductByIdTest.cs"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\11"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\11\\Issues.json"
-    },
-    {
-      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\11\\Telemetry.json"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.projectKey",
-      "value": "EcommerceApp:D70FE318-3865-4B41-9226-ACF91380DD97"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.projectName",
-      "value": "API"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.projectBaseDir",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.working.directory",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod4"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.sourceEncoding",
-      "value": "utf-8"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.tests",
-      "value": ""
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.sources",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\appsettings.Development.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\appsettings.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\API.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Properties\\launchSettings.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\API.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\API.runtimeconfig.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\API.staticwebassets.endpoints.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\appsettings.Development.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\appsettings.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\ApiEndpoints.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\rjsmcshtml.dswa.cache.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\rjsmrazor.dswa.cache.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\rpswa.dswa.cache.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\staticwebassets.build.endpoints.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\staticwebassets.build.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\EndpointInfo\\API.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Controllers\\CategoriesController.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Controllers\\ProductsController.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\DependencyInjection.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Infrastructure\\GlobalExceptionHandler.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Jobs\\RabbitMQPublisherJob.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Program.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Services\\LinkService.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.GlobalUsings.g.cs,\"C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs\",C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.AssemblyInfo.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.MvcApplicationPartsAssemblyInfo.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\API.http,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251117.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251118.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251123.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251124.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251125.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251129.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251205.txt"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\12"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\12\\Issues.json"
-    },
-    {
-      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\12\\Telemetry.json"
-    },
-    {
       "key": "6F42318E-47CF-CB48-C33A-1F833CB13B6D.sonar.projectKey",
-      "value": "EcommerceApp:6F42318E-47CF-CB48-C33A-1F833CB13B6D"
+      "value": "EcommerceApp3:6F42318E-47CF-CB48-C33A-1F833CB13B6D"
     },
     {
       "key": "6F42318E-47CF-CB48-C33A-1F833CB13B6D.sonar.projectName",
@@ -254,7 +174,7 @@
     },
     {
       "key": "6F42318E-47CF-CB48-C33A-1F833CB13B6D.sonar.working.directory",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod5"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod3"
     },
     {
       "key": "6F42318E-47CF-CB48-C33A-1F833CB13B6D.sonar.sourceEncoding",
@@ -270,19 +190,99 @@
     },
     {
       "key": "6F42318E-47CF-CB48-C33A-1F833CB13B6D.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\13"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\11"
     },
     {
       "key": "6F42318E-47CF-CB48-C33A-1F833CB13B6D.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\13\\Issues.json"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\11\\Issues.json"
     },
     {
       "key": "6F42318E-47CF-CB48-C33A-1F833CB13B6D.sonar.cs.scanner.telemetry",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\11\\Telemetry.json"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.projectKey",
+      "value": "EcommerceApp3:DD4D597A-FBAF-4C67-B100-BBE90AADC94E"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.projectName",
+      "value": "BLL.UnitTest"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.projectBaseDir",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.working.directory",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod4"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.sourceEncoding",
+      "value": "utf-8"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.sources",
+      "value": ""
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.tests",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\obj\\BLL.UnitTest.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\bin\\Debug\\net8.0\\BLL.UnitTest.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\bin\\Debug\\net8.0\\BLL.UnitTest.runtimeconfig.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\obj\\Debug\\net8.0\\BLL.UnitTest.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\AddProductTest.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\DeleteProductTest.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\tests\\BLL.UnitTest\\GetProductByIdTest.cs"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.cs.analyzer.projectOutPaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\12"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.cs.roslyn.reportFilePaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\12\\Issues.json"
+    },
+    {
+      "key": "DD4D597A-FBAF-4C67-B100-BBE90AADC94E.sonar.cs.scanner.telemetry",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\12\\Telemetry.json"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.projectKey",
+      "value": "EcommerceApp3:D70FE318-3865-4B41-9226-ACF91380DD97"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.projectName",
+      "value": "API"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.projectBaseDir",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.working.directory",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod5"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.sourceEncoding",
+      "value": "utf-8"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.tests",
+      "value": ""
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.sources",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\appsettings.Development.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\appsettings.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\API.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Properties\\launchSettings.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\API.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\API.runtimeconfig.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\API.staticwebassets.endpoints.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\appsettings.Development.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\bin\\Debug\\net8.0\\appsettings.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\ApiEndpoints.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\rjsmcshtml.dswa.cache.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\rjsmrazor.dswa.cache.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\rpswa.dswa.cache.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\staticwebassets.build.endpoints.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\staticwebassets.build.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\EndpointInfo\\API.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Controllers\\CategoriesController.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Controllers\\ProductsController.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\DependencyInjection.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Infrastructure\\GlobalExceptionHandler.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Jobs\\RabbitMQPublisherJob.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Program.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Services\\LinkService.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.GlobalUsings.g.cs,\"C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs\",C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.AssemblyInfo.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\obj\\Debug\\net8.0\\API.MvcApplicationPartsAssemblyInfo.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\API.http,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251117.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251118.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251123.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251124.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251125.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251129.txt,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CatalogService\\API\\Logs\\log-20251205.txt"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.cs.analyzer.projectOutPaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\13"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.cs.roslyn.reportFilePaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\13\\Issues.json"
+    },
+    {
+      "key": "D70FE318-3865-4B41-9226-ACF91380DD97.sonar.cs.scanner.telemetry",
       "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\13\\Telemetry.json"
     },
     {
       "key": "4448B8FA-86DF-4C34-AAE1-C69E199BE180.sonar.projectKey",
-      "value": "EcommerceApp:4448B8FA-86DF-4C34-AAE1-C69E199BE180"
+      "value": "EcommerceApp3:4448B8FA-86DF-4C34-AAE1-C69E199BE180"
     },
     {
       "key": "4448B8FA-86DF-4C34-AAE1-C69E199BE180.sonar.projectName",
@@ -322,7 +322,7 @@
     },
     {
       "key": "332FC619-496A-4BB5-8382-A070A8B56464.sonar.projectKey",
-      "value": "EcommerceApp:332FC619-496A-4BB5-8382-A070A8B56464"
+      "value": "EcommerceApp3:332FC619-496A-4BB5-8382-A070A8B56464"
     },
     {
       "key": "332FC619-496A-4BB5-8382-A070A8B56464.sonar.projectName",
@@ -361,88 +361,8 @@
       "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\2\\Telemetry.json"
     },
     {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.projectKey",
-      "value": "EcommerceApp:A28E7EE1-05ED-DB29-A4F0-80FA82CB059F"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.projectName",
-      "value": "DAL.UnitTest"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.projectBaseDir",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.working.directory",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod8"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.sourceEncoding",
-      "value": "utf-8"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.sources",
-      "value": ""
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.tests",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\obj\\DAL.UnitTest.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\bin\\Debug\\net8.0\\DAL.UnitTest.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\bin\\Debug\\net8.0\\DAL.UnitTest.runtimeconfig.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\obj\\Debug\\net8.0\\DAL.UnitTest.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\CartRepositoryTests.cs"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\3"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\3\\Issues.json"
-    },
-    {
-      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\3\\Telemetry.json"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.projectKey",
-      "value": "EcommerceApp:A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.projectName",
-      "value": "BLL"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.projectBaseDir",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.working.directory",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod9"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.sourceEncoding",
-      "value": "utf-8"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.tests",
-      "value": ""
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.sources",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\BLL.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\Cart.BLL.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\CartService.BLL.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\bin\\Debug\\net8.0\\BLL.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\Debug\\net8.0\\BLL.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\DependencyInjection.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\Dtos\\DeleteItemFromCartRequest.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\Services\\CartService.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\Services\\ICartService.cs"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\4"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\4\\Issues.json"
-    },
-    {
-      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\4\\Telemetry.json"
-    },
-    {
       "key": "117DE5C2-64F4-48FA-B48D-3BE2FE991132.sonar.projectKey",
-      "value": "EcommerceApp:117DE5C2-64F4-48FA-B48D-3BE2FE991132"
+      "value": "EcommerceApp3:117DE5C2-64F4-48FA-B48D-3BE2FE991132"
     },
     {
       "key": "117DE5C2-64F4-48FA-B48D-3BE2FE991132.sonar.projectName",
@@ -454,7 +374,7 @@
     },
     {
       "key": "117DE5C2-64F4-48FA-B48D-3BE2FE991132.sonar.working.directory",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod10"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod8"
     },
     {
       "key": "117DE5C2-64F4-48FA-B48D-3BE2FE991132.sonar.sourceEncoding",
@@ -470,19 +390,19 @@
     },
     {
       "key": "117DE5C2-64F4-48FA-B48D-3BE2FE991132.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\5"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\3"
     },
     {
       "key": "117DE5C2-64F4-48FA-B48D-3BE2FE991132.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\5\\Issues.json"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\3\\Issues.json"
     },
     {
       "key": "117DE5C2-64F4-48FA-B48D-3BE2FE991132.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\5\\Telemetry.json"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\3\\Telemetry.json"
     },
     {
       "key": "48E8B815-153D-4476-B650-52AFC62FD90D.sonar.projectKey",
-      "value": "EcommerceApp:48E8B815-153D-4476-B650-52AFC62FD90D"
+      "value": "EcommerceApp3:48E8B815-153D-4476-B650-52AFC62FD90D"
     },
     {
       "key": "48E8B815-153D-4476-B650-52AFC62FD90D.sonar.projectName",
@@ -494,7 +414,7 @@
     },
     {
       "key": "48E8B815-153D-4476-B650-52AFC62FD90D.sonar.working.directory",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod11"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod9"
     },
     {
       "key": "48E8B815-153D-4476-B650-52AFC62FD90D.sonar.sourceEncoding",
@@ -510,19 +430,99 @@
     },
     {
       "key": "48E8B815-153D-4476-B650-52AFC62FD90D.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\6"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\4"
     },
     {
       "key": "48E8B815-153D-4476-B650-52AFC62FD90D.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\6\\Issues.json"
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\4\\Issues.json"
     },
     {
       "key": "48E8B815-153D-4476-B650-52AFC62FD90D.sonar.cs.scanner.telemetry",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\4\\Telemetry.json"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.projectKey",
+      "value": "EcommerceApp3:A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.projectName",
+      "value": "BLL"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.projectBaseDir",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.working.directory",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod10"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.sourceEncoding",
+      "value": "utf-8"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.tests",
+      "value": ""
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.sources",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\BLL.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\Cart.BLL.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\CartService.BLL.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\bin\\Debug\\net8.0\\BLL.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\obj\\Debug\\net8.0\\BLL.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\DependencyInjection.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\Dtos\\DeleteItemFromCartRequest.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\Services\\CartService.cs,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\BLL\\Services\\ICartService.cs"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.cs.analyzer.projectOutPaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\5"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.cs.roslyn.reportFilePaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\5\\Issues.json"
+    },
+    {
+      "key": "A11D1D54-F7C3-46CB-A3C9-E1FD7742C6CD.sonar.cs.scanner.telemetry",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\5\\Telemetry.json"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.projectKey",
+      "value": "EcommerceApp3:A28E7EE1-05ED-DB29-A4F0-80FA82CB059F"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.projectName",
+      "value": "DAL.UnitTest"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.projectBaseDir",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.working.directory",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\.sonar\\mod11"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.sourceEncoding",
+      "value": "utf-8"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.sources",
+      "value": ""
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.tests",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\obj\\DAL.UnitTest.csproj.nuget.dgspec.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\obj\\project.assets.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\bin\\Debug\\net8.0\\DAL.UnitTest.deps.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\bin\\Debug\\net8.0\\DAL.UnitTest.runtimeconfig.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\obj\\Debug\\net8.0\\DAL.UnitTest.sourcelink.json,C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\src\\CartServices\\tests\\DAL.UnitTest\\CartRepositoryTests.cs"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.cs.analyzer.projectOutPaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\6"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.cs.roslyn.reportFilePaths",
+      "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\6\\Issues.json"
+    },
+    {
+      "key": "A28E7EE1-05ED-DB29-A4F0-80FA82CB059F.sonar.cs.scanner.telemetry",
       "value": "C:\\Users\\ChibuzorUmezuruike\\Documents\\Victor\\.Net_Mentorship_Program_Advanced\\DotnetAdvancedEcommerceProject\\.sonarqube\\out\\6\\Telemetry.json"
     },
     {
       "key": "A7E1CA70-07B3-FB11-E26B-F05CAAA1F5C9.sonar.projectKey",
-      "value": "EcommerceApp:A7E1CA70-07B3-FB11-E26B-F05CAAA1F5C9"
+      "value": "EcommerceApp3:A7E1CA70-07B3-FB11-E26B-F05CAAA1F5C9"
     },
     {
       "key": "A7E1CA70-07B3-FB11-E26B-F05CAAA1F5C9.sonar.projectName",
@@ -562,7 +562,7 @@
     },
     {
       "key": "A2EDFFC8-C888-BFC6-F5AC-A8F9DD1BCF93.sonar.projectKey",
-      "value": "EcommerceApp:A2EDFFC8-C888-BFC6-F5AC-A8F9DD1BCF93"
+      "value": "EcommerceApp3:A2EDFFC8-C888-BFC6-F5AC-A8F9DD1BCF93"
     },
     {
       "key": "A2EDFFC8-C888-BFC6-F5AC-A8F9DD1BCF93.sonar.projectName",
@@ -602,7 +602,7 @@
     },
     {
       "key": "09D96752-E03B-4B28-9BC8-6F5B5497FC5D.sonar.projectKey",
-      "value": "EcommerceApp:09D96752-E03B-4B28-9BC8-6F5B5497FC5D"
+      "value": "EcommerceApp3:09D96752-E03B-4B28-9BC8-6F5B5497FC5D"
     },
     {
       "key": "09D96752-E03B-4B28-9BC8-6F5B5497FC5D.sonar.projectName",

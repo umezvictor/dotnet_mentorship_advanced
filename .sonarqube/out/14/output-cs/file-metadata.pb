@@ -1,10 +1,10 @@
 Ü
 ÐC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\obj\Debug\net8.0\API.IntegrationTest.GlobalUsings.g.csutf-8Ú
 ÎC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\obj\Debug\net8.0\API.IntegrationTest.AssemblyInfo.csutf-8å
-ÙC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8¾
-´C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\CategoryIntegrationTest.csutf-8Ã
-¹C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\CatalogWebApplicationFactory.csutf-8Š
+ÙC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8Š
 C:\Users\ChibuzorUmezuruike\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8µ
 «C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\TokenGenerator.csutf-8¾
-´C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\ProductsIntegrationTest.csutf-8¹
+´C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\ProductsIntegrationTest.csutf-8¾
+´C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\CategoryIntegrationTest.csutf-8Ã
+¹C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\CatalogWebApplicationFactory.csutf-8¹
 ¯C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\API.IntegrationTest\BaseFunctionalTest.csutf-8

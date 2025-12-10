@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>DAL.UnitTest</ProjectName>
+  <ProjectName>RabbitMQ</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
-  <ProjectType>Test</ProjectType>
-  <ProjectGuid>a28e7ee1-05ed-db29-a4f0-80fa82cb059f</ProjectGuid>
-  <FullPath>C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\DAL.UnitTest\DAL.UnitTest.csproj</FullPath>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>117de5c2-64f4-48fa-b48d-3be2fe991132</ProjectGuid>
+  <FullPath>C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\RabbitMQ\RabbitMQ.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResultFiles>
     <AnalysisResultFile Id="FilesToAnalyze" Location="C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\.sonarqube\conf\3\FilesToAnalyze.txt" />

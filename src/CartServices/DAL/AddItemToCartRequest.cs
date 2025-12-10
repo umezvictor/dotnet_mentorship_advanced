@@ -5,15 +5,15 @@ namespace DAL;
 public class AddItemToCartRequest
 {
 	[Required]
-	public string CartKey { get; set; }
+	public required string CartKey { get; set; }
 	[Required]
-	public CartItem CartItem { get; set; }
+	public required CartItem CartItem { get; set; }
 
 }
 
 
 public class UpdateItemRequest
 {
-	public CartItem CartItem { get; set; }
+	public required CartItem CartItem { get; set; }
 
 }

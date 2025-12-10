@@ -1,48 +1,115 @@
-ÿ
-ìC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\RabbitMQ\IRabbitMqClient.cs
-	namespace 	
-RabbitMQ
- 
-; 
-public 
-	interface 
-IRabbitMqClient  
-{ 
-Task 
-< 
-string 
-> 
-ConsumeMessageAsync !
-(" #
-string# )
-	queueName* 3
-)3 4
-;4 5
-Task 
-PublishMessageAsync 
-< 
-T 
-> 
-( 
-T 
-message  '
-,' (
-string) /
-	queueName0 9
-)9 :
-;: ;
-} ∏5
-íC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\RabbitMQ\RabbitMqClient.cs
-	namespace 	
-RabbitMQ
- 
-; 
+ç
+öC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\BLL\Services\ICartService.cs
+	namespace 	
+BLL
+ 
+. 
+Services 
+; 
+public 
+	interface 
+ICartService 
+{ 
+Task		 
+<		 
+bool		 
+
+>		
+ 
+AddItemToCartAsync		 
+(		   
+AddItemToCartRequest		  4
+request		5 <
+,		< =
+CancellationToken		> O
+cancellationToken		P a
+)		a b
+;		b c
+Task
+
+ 
+<
+
+ 
+bool
+
+ 
+
+>
+
+
+ 
+DeleteCartItemAsync
+
+ 
+(
+
+  !%
+DeleteItemFromCartRequest
+
+! :
+request
+
+; B
+,
+
+B C
+CancellationToken
+
+D U
+cancellationToken
+
+V g
+)
+
+g h
+;
+
+h i
+Task 
+< 
+Cart 
+
+?
+ 
+> 
+GetCartItemsAsync 
+(  
+string  &
+cartKey' .
+,. /
+CancellationToken0 A
+cancellationTokenB S
+)S T
+;T U
+Task 3
+'UpdateCartItemsFromMessageConsumerAsync -
+(. /"
+ProductUpdatedContract/ E
+requestF M
+,M N
+CancellationTokenO `
+cancellationTokena r
+)r s
+;s t
+} Û
+ôC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\BLL\Services\CartService.cs
+	namespace 	
+BLL
+ 
+. 
+Services 
+; 
 public 
 sealed 
-class 
-RabbitMqClient "
-:# $
-IRabbitMqClient% 4
+class 
+CartService 
+(  !
+ICartRepository! 0
+cartRepository1 ?
+)? @
+:A B
+ICartServiceC O
 {		 
 public
 
@@ -52,397 +119,289 @@
  
 Task
 
- 
-PublishMessageAsync
-
- &
+ 
 <
 
-& '
-T
+ 
+bool
 
-' (
+ 
 >
 
-( )
+ 
+AddItemToCartAsync
+
+ +
 (
 
-* +
-T
+, - 
+AddItemToCartRequest
 
-+ ,
-message
+- A
+request
 
-- 4
+B I
 ,
 
-4 5
-string
+I J
+CancellationToken
 
-6 <
-	queueName
+K \
+cancellationToken
 
-= F
+] n
 )
 
-F G
-{ 
-var 
-factory 
-= 
-new 
-ConnectionFactory %
-{& '
-HostName( 0
-=1 2
-RabbitMQConstants3 D
-.D E
-HostE I
-}J K
-;K L
-factory 	
-.	 
-$
-AutomaticRecoveryEnabled
- "
-=# $
-true% )
-;) *
-factory 	
-.	 
-#
-NetworkRecoveryInterval
- !
-=" #
-TimeSpan$ ,
-., -
-FromSeconds- 8
-(8 9
-$num: <
-)= >
-;> ?
-using 
-var 
-
-connection 
-= 
-await 
-factory &
-.& '!
-CreateConnectionAsync' <
-(< =
-)= >
-;> ?
-using 
-var 
-channel 
-= 
-await 
-
-connection &
-.& '
-CreateChannelAsync' 9
-(9 :
-): ;
-;; <
-await 
-channel 
-. 
-QueueDeclareAsync !
-(! "
-queue# (
-:( )
-	queueName* 3
-,3 4
-durable5 <
-:< =
-false> C
-,C D
-	exclusiveE N
-:N O
-falseP U
-,U V
-
-autoDeleteW a
-:a b
-falsec h
-,h i
-	arguments 
-: 
-null 
-) 
-; 
-var 
-json 
+n o
+{ 
+return 
+await	 
+cartRepository 
+. 
+AddItemAsync *
+(* +
+request, 3
+,3 4
+cancellationToken5 F
+)G H
+;H I
+} 
+public 
+async 
+Task 
+< 
+bool 
+> 
+DeleteCartItemAsync ,
+(- .%
+DeleteItemFromCartRequest. G
+requestH O
+,O P
+CancellationTokenQ b
+cancellationTokenc t
+)t u
+{ 
+if 
+( 
+await 
+cartRepository 
+. 
+RemoveItemAsync *
+(* +
+request, 3
+.3 4
+CartKey4 ;
+,; <
+request= D
+.D E
+IdE G
+,G H
+cancellationTokenI Z
+)[ \
+)\ ]
+return 	
+true
+ 
+; 
+return 
+false	 
+; 
+} 
+public 
+async 
+Task 
+< 
+Cart 
+? 
+> 
+GetCartItemsAsync +
+(, -
+string- 3
+cartKey4 ;
+,; <
+CancellationToken= N
+cancellationTokenO `
+)` a
+{ 
+var 
+cart 
 
-= 
-JsonSerializer 
-. 
-	Serialize %
-(% &
-message' .
-)/ 0
-;0 1
-var 
-body 
+= 
+await 
+cartRepository !
+.! "
+GetCartItemsAsync" 3
+(3 4
+cartKey5 <
+,< =
+cancellationToken> O
+)P Q
+;Q R
+if 
+( 
+cart 
+
+!= 
+null 
+) 
+return 	
+cart
+ 
+; 
+return 
+null	 
+; 
+} 
+public"" 
+async"" 
+Task"" 3
+'UpdateCartItemsFromMessageConsumerAsync"" :
+(""; <"
+ProductUpdatedContract""< R
+request""S Z
+,""Z [
+CancellationToken""\ m
+cancellationToken""n 
+)	"" Ä
+{## 
+await$$ 
+cartRepository$$ 
+.$$ 3
+'UpdateCartItemsFromMessageConsumerAsync$$ >
+($$> ?
+request$$@ G
+.$$G H
+Id$$H J
+,$$J K
+request$$L S
+.$$S T
+Price$$T Y
+,$$Y Z
+request$$[ b
+.$$b c
+Name$$c g
+!$$g h
+,$$h i
+cancellationToken$$j {
+)$$| }
+;$$} ~
+}%% 
+}&& å
+£C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\BLL\Dtos\DeleteItemFromCartRequest.cs
+	namespace 	
+BLL
+ 
+. 
+Dtos 
+; 
+public 
+sealed 
+class %
+DeleteItemFromCartRequest -
+{ 
+[ 
+Required 
 
-= 
-Encoding 
-. 
-UTF8 
-. 
-GetBytes #
-(# $
-json% )
-)* +
-;+ ,
-await 
-channel 
-. 
-BasicPublishAsync !
-(! "
-exchange# +
-:+ ,
-string- 3
-.3 4
-Empty4 9
-,9 :
-
-routingKey; E
-:E F
-	queueNameG P
-,P Q
-bodyR V
-:V W
-bodyX \
-)] ^
-;^ _
-} 
-public 
-async 
-Task 
-< 
-string 
-> 
-ConsumeMessageAsync .
-(/ 0
-string0 6
-	queueName7 @
-)@ A
-{ 
-var 
-factory 
-= 
-new 
-ConnectionFactory %
-{& '
-HostName( 0
-=1 2
-RabbitMQConstants3 D
-.D E
-HostE I
-}J K
-;K L
-factory 	
-.	 
-$
-AutomaticRecoveryEnabled
- "
-=# $
-true% )
-;) *
-factory 	
-.	 
-#
-NetworkRecoveryInterval
- !
-=" #
-TimeSpan$ ,
-., -
-FromSeconds- 8
-(8 9
-$num: <
-)= >
-;> ?
-using   
-var   
-
-connection   
-=   
-await   
-factory   &
-.  & '!
-CreateConnectionAsync  ' <
-(  < =
-)  = >
-;  > ?
-using!! 
-var!! 
-channel!! 
-=!! 
-await!! 
-
-connection!! &
-.!!& '
-CreateChannelAsync!!' 9
-(!!9 :
-)!!: ;
-;!!; <
-await## 
-channel## 
-.## 
-QueueDeclareAsync## !
-(##! "
-queue### (
-:##( )
-RabbitMQConstants##* ;
-.##; <
-ProductQueue##< H
-,##H I
-durable##J Q
-:##Q R
-false##S X
-,##X Y
-	exclusive##Z c
-:##c d
-false##e j
-,##j k
-
-autoDelete##l v
-:##v w
-false##x }
-,##} ~
-	arguments$$ 
-:$$ 
-null$$ 
-)$$ 
-;$$ 
-var&& 
-response&& 
-=&& 
-string&& 
-.&& 
-Empty&& 
-;&& 
-var(( 
-consumer(( 
-=(( 
-new(( &
-AsyncEventingBasicConsumer(( /
-(((/ 0
-channel((1 8
-)((9 :
-;((: ;
-consumer)) 
+]
+ 
+public 
+int 
+Id 
+{ 
+get 
+; 
+set 
+; 
+} 
+[ 
+Required 
 
-.))
+]
+ 
+public		 
+string		 
+CartKey		 
+{		 
+get		 
+;		 
+set		 !
+;		! "
+}		# $
+}
+
+ î
+òC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\BLL\DependencyInjection.cs
+	namespace 	
+CartServices
+ 
+. 
+BLL 
+; 
+public 
+static 
+class 
+DependencyInjection '
+{ 
+public 
+static 
+IServiceCollection !!
+AddBusinessLogicLayer" 7
+(8 9
+this9 =
+IServiceCollection> P
+servicesQ Y
+)Y Z
+{		 
+return
+
+ 
+services
+
+	 
+. 
+AddPackages 
+( 
+) 
+; 
+} 
+public 
+static 
+IServiceCollection !
+AddPackages" -
+(. /
+this/ 3
+IServiceCollection4 F
+servicesG O
+)O P
+{ 
+services 
+
+.
  
-ReceivedAsync)) 
-+=)) 
-async)) !
-())" #
-model))# (
-,))( )
-arg))* -
-)))- .
-=>))/ 1
-{** 
-var++ 
-body++ 
-=++ 
-arg++ 
-.++ 
-Body++ 
-.++ 
-ToArray++ 
-(++ 
-)++  
-;++  !
-var,, 
-message,, 
-=,, 
-Encoding,, 
-.,, 
-UTF8,, 
-.,, 
-	GetString,, (
-(,,( )
-body,,* .
-),,/ 0
-;,,0 1
-try.. 
-{// 
-response00 
-=00 
-message00 
-;00 
-await11 	
-channel11
- 
-.11 
-BasicAckAsync11 
-(11  
-deliveryTag11! ,
-:11, -
-arg11. 1
-.111 2
-DeliveryTag112 =
-,11= >
-multiple11? G
-:11G H
-false11I N
-)11O P
-;11P Q
-}22 
-catch33 
-{44 
-await55 	
-channel55
- 
-.55 
-BasicNackAsync55  
-(55  !
-deliveryTag55" -
-:55- .
-arg55/ 2
-.552 3
-DeliveryTag553 >
-,55> ?
-multiple55@ H
-:55H I
-false55J O
-,55O P
-requeue55Q X
-:55X Y
-true55Z ^
-)55_ `
-;55` a
-}66 
-return77 	
-;77	 
+AddAutoMapper 
+( 
+Assembly "
+." # 
+GetExecutingAssembly# 7
+(7 8
+)8 9
+): ;
+;; <
+services 
 
-}88 
-;88 
-await99 
-channel99 
-.99 
-BasicConsumeAsync99 !
-(99! "
-RabbitMQConstants99# 4
-.994 5
-ProductQueue995 A
-,99A B
-autoAck99C J
-:99J K
-false99L Q
-,99Q R
-consumer99S [
-:99[ \
-consumer99] e
-)99f g
-;99g h
-return;; 
-response;;	 
-;;; 
-}<< 
-}== 
+.
+ 
+	AddScoped 
+< 
+ICartService !
+,! "
+CartService# .
+>. /
+(/ 0
+)0 1
+;1 2
+return 
+services	 
+; 
+} 
+} 

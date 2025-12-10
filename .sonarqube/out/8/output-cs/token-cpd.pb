@@ -1,4 +1,4 @@
-¢!
+º!
 ŒC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\API\Program.cs
 var 
 builder 
@@ -222,14 +222,16 @@ CorsPolicy// $
 MapControllers66 
 (66 
 )66 
-;66 
-app88 
-.88 
-Run88 
-(88 
-)88 	
-;88	 
-
+;66 
+await88 
+app88 	
+.88	 
+
+RunAsync88
+ 
+(88 
+)88 
+;88 
 	namespace:: 	
 CartService::
  
@@ -805,7 +807,7 @@ authHeader 
 )   
 ;   
 }!! 
-}"" Û_
+}"" ßa
 ˜C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\API\DependencyInjection.cs
 	namespace 	
 API
@@ -1346,44 +1348,52 @@ ApiVersion@@2 <
 Usermm 
 .mm 
 HasClaimmm 
-(mm 
-$strmm *
-,mm* +
-$strmm, 2
-)mm3 4
-||mm5 7
+(mm 
+AppConstantsmm *
+.mm* +
+PermissionClaimmm+ :
+,mm: ;
+$strmm< B
+)mmC D
+||mmE G
 contextnn 
 .nn 
 Usernn 
 .nn 
 HasClaimnn 
-(nn 
-$strnn *
-,nn* +
-$strnn, 4
-)nn5 6
-||nn7 9
+(nn 
+AppConstantsnn *
+.nn* +
+PermissionClaimnn+ :
+,nn: ;
+$strnn< D
+)nnE F
+||nnG I
 contextoo 
 .oo 
 Useroo 
 .oo 
 HasClaimoo 
-(oo 
-$stroo *
-,oo* +
-$stroo, 4
-)oo5 6
-||oo7 9
+(oo 
+AppConstantsoo *
+.oo* +
+PermissionClaimoo+ :
+,oo: ;
+$stroo< D
+)ooE F
+||ooG I
 contextpp 
 .pp 
 Userpp 
 .pp 
 HasClaimpp 
-(pp 
-$strpp *
-,pp* +
-$strpp, 4
-)pp5 6
+(pp 
+AppConstantspp *
+.pp* +
+PermissionClaimpp+ :
+,pp: ;
+$strpp< D
+)ppE F
 )qq 
 ||rr 
 (ss 
@@ -1401,11 +1411,13 @@ ApiVersion@@2 <
 Usertt 
 .tt 
 HasClaimtt 
-(tt 
-$strtt *
-,tt* +
-$strtt, 2
-)tt3 4
+(tt 
+AppConstantstt *
+.tt* +
+PermissionClaimtt+ :
+,tt: ;
+$strtt< B
+)ttC D
 )uu 
 )vv 
 ;vv 

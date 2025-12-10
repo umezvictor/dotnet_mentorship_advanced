@@ -89,10 +89,10 @@ public static class DependencyInjection
 			{
 				policy.RequireAssertion( context =>
 					(context.User.IsInRole( "Manager" ) &&
-						 context.User.HasClaim( "permission", "Read" ) ||
-						 context.User.HasClaim( "permission", "Create" ) ||
-						 context.User.HasClaim( "permission", "Update" ) ||
-						 context.User.HasClaim( "permission", "Delete" )
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Read" ) ||
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Create" ) ||
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Update" ) ||
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Delete" )
 					)
 
 				);
@@ -102,14 +102,14 @@ public static class DependencyInjection
 			{
 				policy.RequireAssertion( context =>
 					(context.User.IsInRole( "Manager" ) &&
-						 context.User.HasClaim( "permission", "Read" ) ||
-						 context.User.HasClaim( "permission", "Create" ) ||
-						 context.User.HasClaim( "permission", "Update" ) ||
-						 context.User.HasClaim( "permission", "Delete" )
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Read" ) ||
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Create" ) ||
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Update" ) ||
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Delete" )
 					)
 					||
 					(context.User.IsInRole( "StoreCustomer" ) &&
-						 context.User.HasClaim( "permission", "Read" )
+						 context.User.HasClaim( AppConstants.PermissionClaim, "Read" )
 					)
 				);
 			} );

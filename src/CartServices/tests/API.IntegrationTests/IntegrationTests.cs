@@ -81,7 +81,7 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 	}
 
 
-	private async Task AddTestCartDataAsync (HttpClient client, string cartKey)
+	private static async Task AddTestCartDataAsync (HttpClient client, string cartKey)
 	{
 
 		var request = new AddItemToCartRequest

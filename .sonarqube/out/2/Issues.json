@@ -12,48 +12,6 @@
       },
       "results": [
         {
-          "ruleId": "S2068",
-          "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/IdentityServerApi/IdentityServerAPI/Config.cs",
-                "region": {
-                  "startLine": 59,
-                  "startColumn": 5,
-                  "endLine": 59,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2068",
-          "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/IdentityServerApi/IdentityServerAPI/Config.cs",
-                "region": {
-                  "startLine": 73,
-                  "startColumn": 5,
-                  "endLine": 73,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1192",
           "level": "warning",
           "message": "Define a constant instead of using this literal 'permission' 8 times.",
@@ -211,18 +169,18 @@
           }
         },
         {
-          "ruleId": "S6966",
+          "ruleId": "S2068",
           "level": "warning",
-          "message": "Await RunAsync instead.",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/IdentityServerApi/IdentityServerAPI/Program.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/IdentityServerApi/IdentityServerAPI/Config.cs",
                 "region": {
-                  "startLine": 23,
-                  "startColumn": 2,
-                  "endLine": 23,
-                  "endColumn": 11
+                  "startLine": 59,
+                  "startColumn": 5,
+                  "endLine": 59,
+                  "endColumn": 30
                 }
               }
             }
@@ -232,18 +190,18 @@
           }
         },
         {
-          "ruleId": "S6966",
+          "ruleId": "S2068",
           "level": "warning",
-          "message": "Await CloseAndFlushAsync instead.",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/IdentityServerApi/IdentityServerAPI/Program.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/IdentityServerApi/IdentityServerAPI/Config.cs",
                 "region": {
-                  "startLine": 32,
-                  "startColumn": 2,
-                  "endLine": 32,
-                  "endColumn": 21
+                  "startLine": 73,
+                  "startColumn": 5,
+                  "endLine": 73,
+                  "endColumn": 30
                 }
               }
             }
@@ -297,23 +255,6 @@
             "tags": [
               "C#",
               "MainSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S6966": {
-          "id": "S6966",
-          "shortDescription": "Awaitable method should be used",
-          "fullDescription": "In an async method, any blocking operations should be avoided.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6966",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
               "SonarWay"
             ]
           }

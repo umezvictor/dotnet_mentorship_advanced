@@ -12,31 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "CS8618",
+          "ruleId": "CS8604",
           "level": "warning",
-          "message": "Non-nullable property 'CartKey' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "message": "Possible null reference argument for parameter 'httpContext' in 'string? LinkGeneratorEndpointNameAddressExtensions.GetUriByName(LinkGenerator generator, HttpContext httpContext, string endpointName, object? values, string? scheme = null, HostString? host = null, PathString? pathBase = null, FragmentString fragment = default(FragmentString), LinkOptions? options = null)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/TestData.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/API/Services/LinkService.cs",
                 "region": {
-                  "startLine": 52,
-                  "startColumn": 16,
-                  "endLine": 52,
-                  "endColumn": 23
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/TestData.cs",
-                "region": {
-                  "startLine": 52,
-                  "startColumn": 16,
-                  "endLine": 52,
-                  "endColumn": 23
+                  "startLine": 12,
+                  "startColumn": 32,
+                  "endLine": 12,
+                  "endColumn": 63
                 }
               }
             }
@@ -46,31 +33,18 @@
           }
         },
         {
-          "ruleId": "CS8618",
+          "ruleId": "CS8604",
           "level": "warning",
-          "message": "Non-nullable property 'CartItems' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "message": "Possible null reference argument for parameter 'Href' in 'Link.Link(string Href, string Rel, string Method)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/TestData.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/API/Services/LinkService.cs",
                 "region": {
-                  "startLine": 54,
-                  "startColumn": 24,
-                  "endLine": 54,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/TestData.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 24,
-                  "endLine": 54,
-                  "endColumn": 33
+                  "startLine": 12,
+                  "startColumn": 4,
+                  "endLine": 14,
+                  "endColumn": 17
                 }
               }
             }
@@ -80,111 +54,81 @@
           }
         },
         {
-          "ruleId": "CS8620",
+          "ruleId": "S1125",
           "level": "warning",
-          "message": "Argument of type 'Dictionary<string, string>' cannot be used for parameter 'initialData' of type 'IEnumerable<KeyValuePair<string, string?>>' in 'IConfigurationBuilder MemoryConfigurationBuilderExtensions.AddInMemoryCollection(IConfigurationBuilder configurationBuilder, IEnumerable<KeyValuePair<string, string?>>? initialData)' due to differences in the nullability of reference types.",
+          "message": "Remove the unnecessary Boolean literal(s).",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/CartWebApplicationFactory.cs",
-                "region": {
-                  "startLine": 33,
-                  "startColumn": 41,
-                  "endLine": 33,
-                  "endColumn": 57
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1861",
-          "level": "note",
-          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/TokenGenerator.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 14,
-                  "endLine": 24,
-                  "endColumn": 75
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "paramName": "value"
-            }
-          }
-        },
-        {
-          "ruleId": "CA1861",
-          "level": "note",
-          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/TokenGenerator.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/API/Jobs/RabbitMQPublisherJob.cs",
                 "region": {
                   "startLine": 25,
-                  "startColumn": 12,
+                  "startColumn": 74,
                   "endLine": 25,
-                  "endColumn": 27
+                  "endColumn": 82
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "paramName": "value"
-            }
+            "warningLevel": 1
           }
         },
         {
-          "ruleId": "CA1861",
-          "level": "note",
-          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/TokenGenerator.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/API/DependencyInjection.cs",
                 "region": {
-                  "startLine": 31,
-                  "startColumn": 19,
-                  "endLine": 31,
-                  "endColumn": 65
+                  "startLine": 26,
+                  "startColumn": 4,
+                  "endLine": 26,
+                  "endColumn": 47
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "paramName": "value"
-            }
+            "warningLevel": 1
           }
         },
         {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'AddTestCartDataAsync' does not access instance data and can be marked as static",
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/tests/API.IntegrationTests/IntegrationTests.cs",
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/API/DependencyInjection.cs",
                 "region": {
-                  "startLine": 84,
-                  "startColumn": 21,
-                  "endLine": 84,
-                  "endColumn": 41
+                  "startLine": 26,
+                  "startColumn": 4,
+                  "endLine": 26,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "ASP0025",
+          "level": "note",
+          "message": "Use AddAuthorizationBuilder to register authorization services and construct policies",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CatalogService/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 3,
+                  "endLine": 116,
+                  "endColumn": 6
                 }
               }
             }
@@ -195,42 +139,21 @@
         }
       ],
       "rules": {
-        "CA1822": {
-          "id": "CA1822",
-          "shortDescription": "Mark members as static",
-          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
+        "ASP0025": {
+          "id": "ASP0025",
+          "shortDescription": "Use AddAuthorizationBuilder",
           "defaultLevel": "note",
-          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
+          "helpUri": "https://aka.ms/aspnet/analyzers",
           "properties": {
-            "category": "Performance",
-            "isEnabledByDefault": true,
-            "tags": [
-              "PortedFromFxCop",
-              "Telemetry",
-              "EnabledRuleInAggressiveMode"
-            ]
+            "category": "Usage",
+            "isEnabledByDefault": true
           }
         },
-        "CA1861": {
-          "id": "CA1861",
-          "shortDescription": "Avoid constant arrays as arguments",
-          "fullDescription": "Constant arrays passed as arguments are not reused when called repeatedly, which implies a new array is created each time. Consider extracting them to 'static readonly' fields to improve performance if the passed array is not mutated within the called method.",
-          "defaultLevel": "note",
-          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1861",
-          "properties": {
-            "category": "Performance",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Telemetry",
-              "EnabledRuleInAggressiveMode"
-            ]
-          }
-        },
-        "CS8618": {
-          "id": "CS8618",
-          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+        "CS8604": {
+          "id": "CS8604",
+          "shortDescription": "Possible null reference argument.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,
@@ -240,17 +163,36 @@
             ]
           }
         },
-        "CS8620": {
-          "id": "CS8620",
-          "shortDescription": "Argument cannot be used for parameter due to differences in the nullability of reference types.",
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "A boolean literal can be represented in two different ways: true or false. They can be combined with logical operators (!, &&, ||, ==, !=) to produce logical expressions that represent truth values. However, comparing a boolean literal to a variable or expression that evaluates to a boolean value is unnecessary and can make the code harder to read and understand. The more complex a boolean expression is, the harder it will be for developers to understand its meaning and expected behavior, and it will favour the introduction of new bugs.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8620)",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
           "properties": {
-            "category": "Compiler",
+            "category": "Minor Code Smell",
             "isEnabledByDefault": true,
             "tags": [
-              "Compiler",
-              "Telemetry"
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S5122": {
+          "id": "S5122",
+          "shortDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
+          "fullDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5122",
+          "properties": {
+            "category": "Minor Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
             ]
           }
         }

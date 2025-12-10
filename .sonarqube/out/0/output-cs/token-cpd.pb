@@ -1,243 +1,4 @@
-ù
-šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\ResponseObjects\Response.cs
-	namespace 	
-Shared
- 
-. 
-ResponseObjects  
-;  !
-public 
-class 
-Response 
-< 
-T 
-> 
-{ 
-public 
-Response 
-( 
-) 
-{ 
-} 
-public 
-Response 
-( 
-T 
-data 
-, 
-string  
-message! (
-)( )
-{		 
-	Succeeded
-
- 
-=
-
- 
-true
-
- 
-;
-
- 
-Message 	
-=
- 
-message 
-; 
-Data 
-= 
-data	 
-; 
-} 
-public 
-Response 
-( 
-string 
-message  
-)  !
-{ 
-	Succeeded 
-= 
-true 
-; 
-Message 	
-=
- 
-message 
-; 
-} 
-public 
-Response 
-( 
-string 
-message  
-,  !
-bool" &
-	succeeded' 0
-)0 1
-{ 
-	Succeeded 
-= 
-	succeeded 
-; 
-Message 	
-=
- 
-message 
-; 
-} 
-public 
-bool 
-	Succeeded 
-{ 
-get 
-; 
-set !
-;! "
-}# $
-public 
-string 
-Message 
-{ 
-get 
-; 
-set !
-;! "
-}# $
-=% &
-string' -
-.- .
-Empty. 3
-;3 4
-public 
-List 
-< 
-string 
-> 
-Errors 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-=* +
-new, /
-List0 4
-<4 5
-string5 ;
->; <
-(< =
-)= >
-;> ?
-public 
-T 	
-?	 
-
-Data 
-{ 
-get 
-; 
-set 
-; 
-} 
-} ß
-
-›C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateCategoryRequest.cs
-	namespace 	
-Shared
- 
-. 
-Dto 
-; 
-public 
-class !
-UpdateCategoryRequest "
-{ 
-[ 
-System 
-. 	
-Text	 
-. 
-Json 
-. 
-Serialization  
-.  !
-
-JsonIgnore! +
-]+ ,
-public 
-int 
-Id 
-{ 
-get 
-; 
-set 
-; 
-} 
-[		 
-Required		 
-
-]		
- 
-public
-
- 
-string
-
- 
-Name
-
- 
-{
-
- 
-get
-
- 
-;
-
- 
-set
-
- 
-;
-
- 
-}
-
-  !
-public 
-string 
-Image 
-{ 
-get 
-; 
-set 
-;  
-}! "
-=# $
-string% +
-.+ ,
-Empty, 1
-;1 2
-public 
-string 
-ParentCategory 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-=, -
-string. 4
-.4 5
-Empty5 :
-;: ;
-} æ
+æ
 ¡C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\ResponseObjects\ResponseMessage.cs
 	namespace 	
 Shared
@@ -383,47 +144,152 @@ JsonIgnore! +
 = 
 $str '
 ;' (
-} ¸
-¡C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\ProductUpdatedContract.cs
+} ù
+šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\ResponseObjects\Response.cs
 	namespace 	
 Shared
  
-. 
-RabbitMQ 
-; 
-public 
-class "
-ProductUpdatedContract #
-{ 
-public 
-int 
-Id 
-{ 
-get 
-; 
-set 
-; 
-} 
-public 
-string 
-? 
-Name 
-{ 
-get 
-; 
-set 
-;  
-}! "
-public 
-decimal 
-Price 
-{ 
-get 
-; 
-set  
-;  !
-}" #
-} °
+. 
+ResponseObjects  
+;  !
+public 
+class 
+Response 
+< 
+T 
+> 
+{ 
+public 
+Response 
+( 
+) 
+{ 
+} 
+public 
+Response 
+( 
+T 
+data 
+, 
+string  
+message! (
+)( )
+{		 
+	Succeeded
+
+ 
+=
+
+ 
+true
+
+ 
+;
+
+ 
+Message 	
+=
+ 
+message 
+; 
+Data 
+= 
+data	 
+; 
+} 
+public 
+Response 
+( 
+string 
+message  
+)  !
+{ 
+	Succeeded 
+= 
+true 
+; 
+Message 	
+=
+ 
+message 
+; 
+} 
+public 
+Response 
+( 
+string 
+message  
+,  !
+bool" &
+	succeeded' 0
+)0 1
+{ 
+	Succeeded 
+= 
+	succeeded 
+; 
+Message 	
+=
+ 
+message 
+; 
+} 
+public 
+bool 
+	Succeeded 
+{ 
+get 
+; 
+set !
+;! "
+}# $
+public 
+string 
+Message 
+{ 
+get 
+; 
+set !
+;! "
+}# $
+=% &
+string' -
+.- .
+Empty. 3
+;3 4
+public 
+List 
+< 
+string 
+> 
+Errors 
+{ 
+get !
+;! "
+set# &
+;& '
+}( )
+=* +
+new, /
+List0 4
+<4 5
+string5 ;
+>; <
+(< =
+)= >
+;> ?
+public 
+T 	
+?	 
+
+Data 
+{ 
+get 
+; 
+set 
+; 
+} 
+} °
 £C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\ResponseObjects\PaginatedResponse.cs
 	namespace 	
 Shared
@@ -498,7 +364,101 @@ TotalCount 
 = 
 $str '
 ;' (
-} ô
+} ß
+
+›C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateCategoryRequest.cs
+	namespace 	
+Shared
+ 
+. 
+Dto 
+; 
+public 
+class !
+UpdateCategoryRequest "
+{ 
+[ 
+System 
+. 	
+Text	 
+. 
+Json 
+. 
+Serialization  
+.  !
+
+JsonIgnore! +
+]+ ,
+public 
+int 
+Id 
+{ 
+get 
+; 
+set 
+; 
+} 
+[		 
+Required		 
+
+]		
+ 
+public
+
+ 
+string
+
+ 
+Name
+
+ 
+{
+
+ 
+get
+
+ 
+;
+
+ 
+set
+
+ 
+;
+
+ 
+}
+
+  !
+public 
+string 
+Image 
+{ 
+get 
+; 
+set 
+;  
+}! "
+=# $
+string% +
+.+ ,
+Empty, 1
+;1 2
+public 
+string 
+ParentCategory 
+{ 
+get  #
+;# $
+set% (
+;( )
+}* +
+=, -
+string. 4
+.4 5
+Empty5 :
+;: ;
+} ô
 šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateProductRequest.cs
 	namespace 	
 Shared
@@ -629,7 +589,47 @@ JsonIgnore! +
 set 
 ; 
 }  
-} ø
+} ¸
+¡C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\ProductUpdatedContract.cs
+	namespace 	
+Shared
+ 
+. 
+RabbitMQ 
+; 
+public 
+class "
+ProductUpdatedContract #
+{ 
+public 
+int 
+Id 
+{ 
+get 
+; 
+set 
+; 
+} 
+public 
+string 
+? 
+Name 
+{ 
+get 
+; 
+set 
+;  
+}! "
+public 
+decimal 
+Price 
+{ 
+get 
+; 
+set  
+;  !
+}" #
+} ø
 C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\ProductDto.cs
 	namespace 	
 Shared
@@ -1102,7 +1102,7 @@ CategoryId 
 .		4 5
 Empty		5 :
 ;		: ;
-} à
+} è
 ˜C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Constants\AppConstants.cs
 	namespace 	
 Shared
@@ -1128,5 +1128,12 @@ CorsPolicy 
 RateLimitingPolicy '
 =( )
 $str* >
-;> ?
-} 
+;> ?
+public 
+const 
+string 
+PermissionClaim $
+=% &
+$str' 3
+;3 4
+} 

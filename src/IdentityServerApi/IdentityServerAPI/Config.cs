@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Test;
+using Shared.Constants;
 
 namespace IdentityServerAPI;
 
@@ -38,16 +39,12 @@ public static class Config
             }
 		};
 
-
-
-
-
 	public static IEnumerable<IdentityResource> IdentityResources => new[]
 	{
 		new IdentityResources.OpenId(),
 		new IdentityResources.Profile(),
 		new IdentityResource("roles", "Your role(s)", new[] { "role" }),
-		new IdentityResource("permissions", "My permissions", new[] { "permission" })
+		new IdentityResource("permissions", "My permissions", new[] { AppConstants.PermissionClaim })
 	};
 	public static List<TestUser> Users =>
 	new List<TestUser>
@@ -60,10 +57,10 @@ public static class Config
 				Claims = new List<Claim>
 				{
 					new Claim("role", "Manager"),
-					new Claim("permission", "Read"),
-					new Claim("permission", "Create"),
-					new Claim("permission", "Update"),
-					new Claim("permission", "Delete")
+					new Claim(AppConstants.PermissionClaim, "Read"),
+					new Claim(AppConstants.PermissionClaim, "Create"),
+					new Claim(AppConstants.PermissionClaim, "Update"),
+					new Claim(AppConstants.PermissionClaim, "Delete")
 				}
 			},
 			new TestUser
@@ -74,7 +71,7 @@ public static class Config
 				Claims = new List<Claim>
 				{
 					new Claim("role", "StoreCustomer"),
-					new Claim("permission", "Read")
+					new Claim(AppConstants.PermissionClaim, "Read")
 				}
 			}
 	};
