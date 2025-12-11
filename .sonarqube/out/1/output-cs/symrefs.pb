@@ -18,7 +18,36 @@
 
  
 
-		  ë
+		  Ï
+˜C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\DependencyInjection.cs
+
+ '
+
+
+
+" 4
+
+
+N V	 
+
+
+g t #
+
+# 3(
+M U 
+ 
+!!	 
+f s (
+  1
+ % - &
+ ' 2
+& ( 
+ 
+ 
+
+$$# 4
+$$N V&& 
+''	 ë
 ¨C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\Database\Repository\ICartRepository.cs
 
   
@@ -57,7 +86,20 @@
 
 M Q
 
-e vç
+e vØ
+™C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\AddItemToCartRequest.cs
+
+ !
+
+ 
+
+
+
+ "
+
+ 
+
+ "ç
 
 §C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\Database\Repository\CartRepository.cs
 
@@ -113,46 +155,4 @@
 RR SSR X
 RR+ ,RR0 1
 SS TT 
-SS2 3SS7 8Ï
-˜C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\DependencyInjection.cs
-
- '
-
-
-
-" 4
-
-
-N V	 
-
-
-g t #
-
-# 3(
-M U 
- 
-!!	 
-f s (
-  1
- % - &
- ' 2
-& ( 
- 
- 
-
-$$# 4
-$$N V&& 
-''	 Ø
-™C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\AddItemToCartRequest.cs
-
- !
-
- 
-
-
-
- "
-
- 
-
- "
+SS2 3SS7 8

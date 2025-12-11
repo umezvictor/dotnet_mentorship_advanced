@@ -1,1 +1,1 @@
-ËR´C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\API.IntegrationTests\API.IntegrationTests.csproj¢net8.0òCSharp12
+½R¦C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\BLL.UnitTest\BLL.UnitTest.csproj¢net8.0òCSharp12

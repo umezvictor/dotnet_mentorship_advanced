@@ -23,7 +23,8 @@ public class DeleteItemFromCartCommandHandlerTest
 	{
 		var request = new DeleteItemFromCartRequest
 		{
-			Id = 1
+			Id = 1,
+			CartKey = "test-cart-key"
 		};
 		var cancellationToken = CancellationToken.None;
 
@@ -43,7 +44,8 @@ public class DeleteItemFromCartCommandHandlerTest
 	{
 		var request = new DeleteItemFromCartRequest
 		{
-			Id = 1
+			Id = 1,
+			CartKey = "test-cart-key"
 		};
 		var cancellationToken = CancellationToken.None;
 

@@ -8,10 +8,11 @@ internal sealed class LinkService (LinkGenerator linkGenerator,
 {
 	public Link GenerateLinks (string endpointName, object? routeValues, string rel, string method)
 	{
-		return new Link(
-			linkGenerator.GetUriByName( httpContextAccessor.HttpContext,
-			endpointName,
-			routeValues ),
-			rel, method );
+		var httpContext = httpContextAccessor.HttpContext;
+		var href = httpContext != null
+			? linkGenerator.GetUriByName( httpContext, endpointName, routeValues )
+			: null;
+
+		return new Link( href ?? string.Empty, rel, method );
 	}
 }

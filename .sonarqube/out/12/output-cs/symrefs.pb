@@ -1,81 +1,182 @@
-Á
-®C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\BLL.UnitTest\GetProductByIdTest.cs
+
+õC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\API\Services\LinkService.cs
 
- <
-+ ;' 777 WW dd pp 2
-  +@ K;; XX qq Z
-% 5T d?? CC GG YY ZZ [[ rr 
-. <m {(
-! / NN %ii %
+ !
+1 > 
+ ) '
 
- OF
- "" 
--- 
-88  "NN; =TT WW0 2d
-   ..
- // 00 11 22 33 99 <<# *XX. 5
-++ 	== 
-88 88 
-<< << 
-@@ @@ 
-DD DD 
-HH HH <
-NN QQ RR) 1SS TT UU 
-WW WW  !
-XX XX 
-YY YY  !
-ZZ ZZ  !
-[[ [[  !
+		 
+		# /. :
+		9 D< G
+		M P) ,
+		Y _. 4
+  ! ,
+ 
+ ˘
+éC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\API\Program.cs^
+
+
+  !          
+ 
+ ' . Z
+   "" $$ %% (( )) ** ++ ,, -- 	
 
-`` M(
-cc 	ee  "ii; =pp0 2
-ee ee (
-ii ll mm1 9nn 
-pp pp  !
-qq qq 
-rr rr  !∞
-ßC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\BLL.UnitTest\DeleteProductTest.cs
+11 —
+†C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\API\Jobs\RabbitMQPublisherJob.cs
 
- 2
-+ ;' 7// 00 HH 
-. <m {
-% 5T d
-  +@ K(
-! / 33 %KK %
+ !2
+( 2  '.. //	 
+" 1 ## 
+4 = 
+O ] "
 
- \
- /// 633: A
-## //_ f00. 5(
--- //; L007 H33C T
-// //  
-00 00  
-33 66 
-77 
-
+ 
 
-== N
-?? HH/ 6KK: A
-DD
- HH_ f
-FF HH; LKKC T
-HH HH  
-KK NN 
+1 8
+  ! /
+6 7; <
+ '++ .." 92
+   !! %% && '' Ù
+¨C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\API\Infrastructure\GlobalExceptionHandler.cs
+ ,6 L
+N T 
+	m Ç $
+
+		 ,
+
+
+  <
+   
+   
+
+ $
+  "È
+öC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\API\DependencyInjection.cs
+
+ '
+
+" 6
+P X 
+i v    
+
+" -F
+G O 
+ 
+ 
+!! 
+// 
+<<	 
+
+` m
+  
+? F 
+
+!! %## 
+P
+##% ,%% && &&- 4(( ((; B**  ++ 
+** ++9 A
+// "11 
+22 
+
+227 B44 
+
+55 
+
+??" -(
+??G OAA 
 OO 
-˜
-§C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\BLL.UnitTest\AddProductTest.cs
+vv	 
+??` mDD '
+BB %DD FF (
+OO $QQ 
+XX 
+ee 
+
+QQ" (SS 
+TT 
+
+XX' -ZZ 
+<
+ZZ $[[ \\ ]] ^^ __ 
+ee1 7gg 
+P
+gg $hh ii jj kk ll oo pp 
 
- 
-+ ;' 766 
-. <m {
-  +@ K77 
-% 5T d
-! / :: %
+xx" 0,
+xxJ Rzz 
+
+áá 
+
+åå	 
+zz ~~  
+}} # )
+ÅÅ  &
 
- C
- 77* 1::7 >
-** 66. 577? F
-44 667 H::@ Q
-66 66  
-77 77 
-:: == 
->> 
+ÅÅ 
+ÅÅ 
+
+ÉÉ 
+ÉÉ 
+
+áá# *
+ââ 
+˛
+•C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\API\Controllers\ProductsController.cs
+
+ <
+1 ? %'' %44 %BB %QQ %
+
+" %
+D K7 >
+_ p@ Q(
+    
+
+%%" (
+%%. 0''Z \
+%%D U''` q(
+'' (( )) ** 
+
+22" )
+22< >44; =
+22R c44? P(
+44 55 66 77 
+
+@@" 9
+@@X ]BBD I
+	@@q ÇBBK \(
+BB CC DD EE 
+
+NN" (
+NN: <PP 
+NN^ ePP 	QQ: A
+	NNy äQQC T(
+QQ RR SS TT È
+ßC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\API\Controllers\CategoriesController.cs
+
+ !<
+4 C &)) &77 &EE &TT &
+
+" %
+E L9 @
+` qB S(
+    
+
+&&" (
+&&: <))] _
+&&P a))c t(
+)) ** ++ ,, 
+
+55" )
+55/ 1778 :
+55E V77< M(
+77 88 99 :: 
+
+CC" (
+CC< MEE; L(
+EE FF GG HH 
+
+QQ" (
+QQ: <SS 
+QQ_ fSS 	TT< C
+	QQz ãTTE V(
+TT UU VV WW 

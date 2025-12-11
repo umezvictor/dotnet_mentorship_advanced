@@ -37,7 +37,9 @@ public class GetProductByIdTest
 			Price = 15.5m,
 			Amount = 3,
 			CategoryId = 2,
-			Image = "img"
+			Image = "img",
+			Category = new Category { Id = 1, Name = "Test Category", Image = "category-image-url" }
+
 		};
 
 		var dto = new ProductDto

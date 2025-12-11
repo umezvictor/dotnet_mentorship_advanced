@@ -1,8 +1,6 @@
-³
-©C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\HostingExtensions.csutf-8æ
-ÚC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\IdentityServerAPI.MvcApplicationPartsAssemblyInfo.csutf-8à
-ÔC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8Ó
-ÇC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\IdentityServerAPI.AssemblyInfo.csutf-8Õ
-ÉC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\obj\Debug\net8.0\IdentityServerAPI.GlobalUsings.g.csutf-8©
-ŸC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\Program.csutf-8¨
-žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\IdentityServerApi\IdentityServerAPI\Config.csutf-8
+Ê
+¾C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\DAL.UnitTest\obj\Debug\net8.0\DAL.UnitTest.AssemblyInfo.csutf-8Ì
+ÀC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\DAL.UnitTest\obj\Debug\net8.0\DAL.UnitTest.GlobalUsings.g.csutf-8Ü
+ÐC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\DAL.UnitTest\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8Š
+C:\Users\ChibuzorUmezuruike\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8±
+§C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\DAL.UnitTest\CartRepositoryTests.csutf-8

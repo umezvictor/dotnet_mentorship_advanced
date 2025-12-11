@@ -6,5 +6,5 @@ public sealed class DeleteItemFromCartRequest
 	[Required]
 	public int Id { get; set; }
 	[Required]
-	public string CartKey { get; set; }
+	public required string CartKey { get; set; }
 }

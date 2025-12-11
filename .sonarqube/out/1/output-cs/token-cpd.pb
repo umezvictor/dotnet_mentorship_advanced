@@ -102,7 +102,190 @@
 [		1 2
 ]		2 3
 ;		3 4
-} «
+} Ñ
+òC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\DependencyInjection.cs
+	namespace 	
+CartServices
+ 
+. 
+DAL 
+; 
+public 
+static 
+class 
+DependencyInjection '
+{		 
+public
+
+ 
+static
+
+ 
+IServiceCollection
+
+ !
+AddDataAccessLayer
+
+" 4
+(
+
+5 6
+this
+
+6 :
+IServiceCollection
+
+; M
+services
+
+N V
+,
+
+V W
+IConfiguration
+
+X f
+configuration
+
+g t
+)
+
+t u
+{ 
+return 
+services	 
+. 
+AddMongoDbClient 
+( 
+configuration #
+)$ %
+. 
+AddCartRepository 
+( 
+) 
+; 
+} 
+private 
+static	 
+IServiceCollection "
+AddMongoDbClient# 3
+(4 5
+this5 9
+IServiceCollection: L
+servicesM U
+,U V
+IConfigurationW e
+configurationf s
+)s t
+{ 
+var 
+dbConnectionString 
+= 
+configuration (
+[( )
+$str) D
+]D E
+;E F
+var 
+mongoUrl 
+= 
+new 
+MongoUrl 
+( 
+dbConnectionString 1
+)2 3
+;3 4
+var 
+mongoClient 
+= 
+new 
+MongoClient #
+(# $
+mongoUrl% -
+). /
+;/ 0
+services 
+
+.
+ 
+AddSingleton 
+< 
+IMongoClient $
+>$ %
+(% &
+mongoClient' 2
+)3 4
+;4 5
+services 
+
+.
+ 
+	AddScoped 
+< 
+IMongoDatabase #
+># $
+($ %
+sp& (
+=>) +
+{ 
+var 
+client 
+= 
+sp 
+. 
+GetRequiredService %
+<% &
+IMongoClient& 2
+>2 3
+(3 4
+)4 5
+;5 6
+return 	
+client
+ 
+. 
+GetDatabase 
+( 
+mongoUrl &
+.& '
+DatabaseName' 3
+)4 5
+;5 6
+} 
+) 
+; 
+return!! 
+services!!	 
+;!! 
+}"" 
+private$$ 
+static$$	 
+IServiceCollection$$ "
+AddCartRepository$$# 4
+($$5 6
+this$$6 :
+IServiceCollection$$; M
+services$$N V
+)$$V W
+{%% 
+services&& 
+
+.&&
+ 
+	AddScoped&& 
+<&& 
+ICartRepository&& $
+,&&$ %
+CartRepository&&& 4
+>&&4 5
+(&&5 6
+)&&6 7
+;&&7 8
+return'' 
+services''	 
+;'' 
+}(( 
+})) «
 ®C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\Database\Repository\ICartRepository.cs
 	namespace 	
 CartServices
@@ -209,7 +392,82 @@ Repository$ .
 cancellationTokene v
 )v w
 ;w x
-} çR
+} ë
+ôC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\AddItemToCartRequest.cs
+	namespace 	
+DAL
+ 
+; 
+public 
+class  
+AddItemToCartRequest !
+{ 
+[ 
+Required 
+
+]
+ 
+public 
+required 
+string 
+CartKey 
+{  !
+get" %
+;% &
+set' *
+;* +
+}, -
+[		 
+Required		 
+
+]		
+ 
+public
+
+ 
+required
+
+ 
+CartItem
+
+ 
+CartItem
+
+ "
+{
+
+# $
+get
+
+% (
+;
+
+( )
+set
+
+* -
+;
+
+- .
+}
+
+/ 0
+} 
+public 
+class 
+UpdateItemRequest 
+{ 
+public 
+required 
+CartItem 
+CartItem "
+{# $
+get% (
+;( )
+set* -
+;- .
+}/ 0
+} çR
 ßC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\Database\Repository\CartRepository.cs
 	namespace 	
 CartServices
@@ -796,262 +1054,4 @@ Repository$ .
 ;UU 
 }WW 
 }XX 
-}YY Ñ
-òC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\DependencyInjection.cs
-	namespace 	
-CartServices
- 
-. 
-DAL 
-; 
-public 
-static 
-class 
-DependencyInjection '
-{		 
-public
-
- 
-static
-
- 
-IServiceCollection
-
- !
-AddDataAccessLayer
-
-" 4
-(
-
-5 6
-this
-
-6 :
-IServiceCollection
-
-; M
-services
-
-N V
-,
-
-V W
-IConfiguration
-
-X f
-configuration
-
-g t
-)
-
-t u
-{ 
-return 
-services	 
-. 
-AddMongoDbClient 
-( 
-configuration #
-)$ %
-. 
-AddCartRepository 
-( 
-) 
-; 
-} 
-private 
-static	 
-IServiceCollection "
-AddMongoDbClient# 3
-(4 5
-this5 9
-IServiceCollection: L
-servicesM U
-,U V
-IConfigurationW e
-configurationf s
-)s t
-{ 
-var 
-dbConnectionString 
-= 
-configuration (
-[( )
-$str) D
-]D E
-;E F
-var 
-mongoUrl 
-= 
-new 
-MongoUrl 
-( 
-dbConnectionString 1
-)2 3
-;3 4
-var 
-mongoClient 
-= 
-new 
-MongoClient #
-(# $
-mongoUrl% -
-). /
-;/ 0
-services 
-
-.
- 
-AddSingleton 
-< 
-IMongoClient $
->$ %
-(% &
-mongoClient' 2
-)3 4
-;4 5
-services 
-
-.
- 
-	AddScoped 
-< 
-IMongoDatabase #
-># $
-($ %
-sp& (
-=>) +
-{ 
-var 
-client 
-= 
-sp 
-. 
-GetRequiredService %
-<% &
-IMongoClient& 2
->2 3
-(3 4
-)4 5
-;5 6
-return 	
-client
- 
-. 
-GetDatabase 
-( 
-mongoUrl &
-.& '
-DatabaseName' 3
-)4 5
-;5 6
-} 
-) 
-; 
-return!! 
-services!!	 
-;!! 
-}"" 
-private$$ 
-static$$	 
-IServiceCollection$$ "
-AddCartRepository$$# 4
-($$5 6
-this$$6 :
-IServiceCollection$$; M
-services$$N V
-)$$V W
-{%% 
-services&& 
-
-.&&
- 
-	AddScoped&& 
-<&& 
-ICartRepository&& $
-,&&$ %
-CartRepository&&& 4
->&&4 5
-(&&5 6
-)&&6 7
-;&&7 8
-return'' 
-services''	 
-;'' 
-}(( 
-})) ë
-ôC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\DAL\AddItemToCartRequest.cs
-	namespace 	
-DAL
- 
-; 
-public 
-class  
-AddItemToCartRequest !
-{ 
-[ 
-Required 
-
-]
- 
-public 
-required 
-string 
-CartKey 
-{  !
-get" %
-;% &
-set' *
-;* +
-}, -
-[		 
-Required		 
-
-]		
- 
-public
-
- 
-required
-
- 
-CartItem
-
- 
-CartItem
-
- "
-{
-
-# $
-get
-
-% (
-;
-
-( )
-set
-
-* -
-;
-
-- .
-}
-
-/ 0
-} 
-public 
-class 
-UpdateItemRequest 
-{ 
-public 
-required 
-CartItem 
-CartItem "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-} 
+}YY 

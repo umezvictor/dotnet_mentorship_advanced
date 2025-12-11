@@ -25,7 +25,7 @@ public class CartWebApplicationFactory : WebApplicationFactory<Program>
 
 		builder.ConfigureAppConfiguration( (context, configBuilder) =>
 		{
-			var inMemorySettings = new Dictionary<string, string>
+			var inMemorySettings = new Dictionary<string, string?>
 			{
 				["MONGODB_CONNECTION_STRING"] = _mongoRunner.ConnectionString,
 				["MONGODB_DATABASE"] = "TestCartDb"

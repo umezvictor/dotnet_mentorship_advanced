@@ -1,0 +1,5 @@
+ò
+¬C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\API.IntegrationTests\IntegrationTests.csAPI.IntegrationTestsW
+%API.IntegrationTests.IntegrationTests.AddItemToCart_GivenValidPayload_ShouldReturnOkh
+%API.IntegrationTests.IntegrationTests?GetItemFromCart_GivenValidCartKey_Version1ShouldReturnCartModelh
+%API.IntegrationTests.IntegrationTests?GetItemFromCart_GivenValidCartKey_Version2ShouldReturnCartModel

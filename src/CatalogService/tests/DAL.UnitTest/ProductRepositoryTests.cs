@@ -120,6 +120,6 @@ public class ProductRepositoryTests
 		// Assert
 		Assert.Equal( "Updated Name", updated.Name );
 		var fetchedProduct = await dbContext.Products.FindAsync( product.Id );
-		Assert.Equal( "Updated Name", fetchedProduct.Name );
+		Assert.Equal( "Updated Name", fetchedProduct!.Name );
 	}
 }

@@ -66,41 +66,11 @@
  Ã
 œC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\RabbitMQConstants.cs
 
- 
+ %
 
  !
 
- Ú
-›C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateCategoryRequest.cs
-
- "
-
- 
-
-
-
- 
-
- 
-
- ñ
-šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateProductRequest.cs
-
- !
-
- 
-
-		 
-
-
-
- 
-
- 
-
- 
-
- Ô
+ Ô
 ¡C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\ProductUpdatedContract.cs
 
  #
@@ -137,7 +107,37 @@
 
 ( +
 
-4 :É
+4 :Ú
+›C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateCategoryRequest.cs
+
+ "
+
+ 
+
+
+
+ 
+
+ 
+
+ ñ
+šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateProductRequest.cs
+
+ !
+
+ 
+
+		 
+
+
+
+ 
+
+ 
+
+ 
+
+ É
 –C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\GetProductsQuery.cs
 
  
@@ -146,15 +146,15 @@
 
  
 
-		 µ
-šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\DeleteProductRequest.cs
-
- !
-
- ¶
+		 ¶
 ›C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\DeleteCategoryRequest.cs
 
  "
+
+ µ
+šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\DeleteProductRequest.cs
+
+ !
 
  Ü
 ‘C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\CategoryDto.cs
@@ -174,7 +174,7 @@
 
  
 
- 
+ 
 
  
 
@@ -191,14 +191,14 @@
 
  
 
- 
+ 
 
  
 
 		 Ë
 ˜C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Constants\AppConstants.cs
 
- 
+  
 
  
 

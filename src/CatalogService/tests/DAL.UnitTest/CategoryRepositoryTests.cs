@@ -88,7 +88,7 @@ public class CategoryRepositoryTests
 
 		// Assert
 		Assert.Equal( "NewName", updated.Name );
-		var fetched = await dbContext.Category.FindAsync( category.Id );
-		Assert.Equal( "NewName", fetched.Name );
+		var fetchedCategory = await dbContext.Category.FindAsync( category.Id );
+		Assert.Equal( "NewName", fetchedCategory!.Name );
 	}
 }

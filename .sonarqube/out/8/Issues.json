@@ -12,27 +12,6 @@
       },
       "results": [
         {
-          "ruleId": "ASP0025",
-          "level": "note",
-          "message": "Use AddAuthorizationBuilder to register authorization services and construct policies",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
-                "region": {
-                  "startLine": 96,
-                  "startColumn": 3,
-                  "endLine": 120,
-                  "endColumn": 6
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S5122",
           "level": "warning",
           "message": "Make sure this permissive CORS policy is safe here.",
@@ -66,6 +45,27 @@
                   "startColumn": 4,
                   "endLine": 26,
                   "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "ASP0025",
+          "level": "note",
+          "message": "Use AddAuthorizationBuilder to register authorization services and construct policies",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/ChibuzorUmezuruike/Documents/Victor/.Net_Mentorship_Program_Advanced/DotnetAdvancedEcommerceProject/src/CartServices/API/DependencyInjection.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 3,
+                  "endLine": 120,
+                  "endColumn": 6
                 }
               }
             }

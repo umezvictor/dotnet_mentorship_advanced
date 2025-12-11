@@ -1,5 +1,9 @@
-ò
-¬C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CartServices\tests\API.IntegrationTests\IntegrationTests.csAPI.IntegrationTestsW
-%API.IntegrationTests.IntegrationTests.AddItemToCart_GivenValidPayload_ShouldReturnOkh
-%API.IntegrationTests.IntegrationTests?GetItemFromCart_GivenValidCartKey_Version1ShouldReturnCartModelh
-%API.IntegrationTests.IntegrationTests?GetItemFromCart_GivenValidCartKey_Version2ShouldReturnCartModel
+ù
+¨C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\BLL.UnitTest\GetProductByIdTest.csBLL.UnitTest_
+BLL.UnitTest.GetProductByIdTest<GetProductById_ProductExists_ReturnsSuccessResponseWithLinks]
+BLL.UnitTest.GetProductByIdTest:GetProductById_ProductDoesNotExist_ReturnsNotFoundResponse„
+§C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\BLL.UnitTest\DeleteProductTest.csBLL.UnitTestk
+BLL.UnitTest.DeleteProductTestIDeleteProduct_WhenGivenValidId_ShouldDeleteProductAndReturnSuccessMessage]
+BLL.UnitTest.DeleteProductTest;DeleteProductWhenGivenInValidId_ShouldReturnProductNotFound†
+¤C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\tests\BLL.UnitTest\AddProductTest.csBLL.UnitTestO
+BLL.UnitTest.AddProductTest0AddProduct_ValidPayload_ShouldReturnProductAdded

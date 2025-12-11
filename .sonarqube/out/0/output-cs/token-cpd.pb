@@ -7,7 +7,7 @@
 ResponseObjects  
 ;  !
 public 
-sealed 
+static 
 class 
 ResponseMessage #
 { 
@@ -338,7 +338,7 @@ TotalCount 
 set 
 ;  
 }! "
-} Ü
+} ð
 œC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\RabbitMQConstants.cs
 	namespace 	
 Shared
@@ -346,9 +346,10 @@ TotalCount 
 . 
 RabbitMQ 
 ; 
-public 
-class 
-RabbitMQConstants 
+public 
+static 
+class 
+RabbitMQConstants %
 { 
 public 
 const 
@@ -364,232 +365,7 @@ TotalCount 
 = 
 $str '
 ;' (
-} ß
-
-›C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateCategoryRequest.cs
-	namespace 	
-Shared
- 
-. 
-Dto 
-; 
-public 
-class !
-UpdateCategoryRequest "
-{ 
-[ 
-System 
-. 	
-Text	 
-. 
-Json 
-. 
-Serialization  
-.  !
-
-JsonIgnore! +
-]+ ,
-public 
-int 
-Id 
-{ 
-get 
-; 
-set 
-; 
-} 
-[		 
-Required		 
-
-]		
- 
-public
-
- 
-string
-
- 
-Name
-
- 
-{
-
- 
-get
-
- 
-;
-
- 
-set
-
- 
-;
-
- 
-}
-
-  !
-public 
-string 
-Image 
-{ 
-get 
-; 
-set 
-;  
-}! "
-=# $
-string% +
-.+ ,
-Empty, 1
-;1 2
-public 
-string 
-ParentCategory 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-=, -
-string. 4
-.4 5
-Empty5 :
-;: ;
-} ô
-šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateProductRequest.cs
-	namespace 	
-Shared
- 
-. 
-Dto 
-; 
-public 
-class  
-UpdateProductRequest !
-{ 
-[ 
-System 
-. 	
-Text	 
-. 
-Json 
-. 
-Serialization  
-.  !
-
-JsonIgnore! +
-]+ ,
-public 
-long 
-Id 
-{ 
-get 
-; 
-set 
-; 
-} 
-[ 
-Required 
-
-]
- 
-public		 
-string		 
-Name		 
-{		 
-get		 
-;		 
-set		 
-;		 
-}		  !
-public
-
- 
-string
-
- 
-Image
-
- 
-{
-
- 
-get
-
- 
-;
-
- 
-set
-
- 
-;
-
-  
-}
-
-! "
-=
-
-# $
-string
-
-% +
-.
-
-+ ,
-Empty
-
-, 1
-;
-
-1 2
-public 
-string 
-Description 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-=) *
-string+ 1
-.1 2
-Empty2 7
-;7 8
-[ 
-Required 
-
-]
- 
-public 
-decimal 
-Price 
-{ 
-get 
-; 
-set  
-;  !
-}" #
-[ 
-Required 
-
-]
- 
-public 
-int 
-Amount 
-{ 
-get 
-; 
-set 
-; 
-}  
-} ¸
+} ¸
 ¡C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\RabbitMQ\ProductUpdatedContract.cs
 	namespace 	
 Shared
@@ -770,7 +546,236 @@ CategoryId
 string- 3
 Method4 :
 ): ;
-;; <Ñ
+;; <õ
+
+›C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateCategoryRequest.cs
+	namespace 	
+Shared
+ 
+. 
+Dto 
+; 
+public 
+class !
+UpdateCategoryRequest "
+{ 
+[ 
+System 
+. 	
+Text	 
+. 
+Json 
+. 
+Serialization  
+.  !
+
+JsonIgnore! +
+]+ ,
+public 
+int 
+Id 
+{ 
+get 
+; 
+set 
+; 
+} 
+[		 
+Required		 
+
+]		
+ 
+public
+
+ 
+required
+
+ 
+string
+
+ 
+Name
+
+ 
+{
+
+ 
+get
+
+ "
+;
+
+" #
+set
+
+$ '
+;
+
+' (
+}
+
+) *
+public 
+string 
+Image 
+{ 
+get 
+; 
+set 
+;  
+}! "
+=# $
+string% +
+.+ ,
+Empty, 1
+;1 2
+public 
+string 
+ParentCategory 
+{ 
+get  #
+;# $
+set% (
+;( )
+}* +
+=, -
+string. 4
+.4 5
+Empty5 :
+;: ;
+} Š
+šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\UpdateProductRequest.cs
+	namespace 	
+Shared
+ 
+. 
+Dto 
+; 
+public 
+class  
+UpdateProductRequest !
+{ 
+[ 
+System 
+. 	
+Text	 
+. 
+Json 
+. 
+Serialization  
+.  !
+
+JsonIgnore! +
+]+ ,
+public 
+long 
+Id 
+{ 
+get 
+; 
+set 
+; 
+} 
+[ 
+Required 
+
+]
+ 
+public		 
+required		 
+string		 
+Name		 
+{		 
+get		 "
+;		" #
+set		$ '
+;		' (
+}		) *
+public
+
+ 
+string
+
+ 
+Image
+
+ 
+{
+
+ 
+get
+
+ 
+;
+
+ 
+set
+
+ 
+;
+
+  
+}
+
+! "
+=
+
+# $
+string
+
+% +
+.
+
++ ,
+Empty
+
+, 1
+;
+
+1 2
+public 
+string 
+Description 
+{ 
+get  
+;  !
+set" %
+;% &
+}' (
+=) *
+string+ 1
+.1 2
+Empty2 7
+;7 8
+[ 
+Required 
+
+]
+ 
+public 
+decimal 
+Price 
+{ 
+get 
+; 
+set  
+;  !
+}" #
+[ 
+Required 
+
+]
+ 
+public 
+int 
+Amount 
+{ 
+get 
+; 
+set 
+; 
+}  
+} Ñ
 –C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\GetProductsQuery.cs
 	namespace 	
 Shared
@@ -948,7 +953,7 @@ PageNumber 
 (, -
 )- .
 ;. /
-}		 È
+}		 Þ
 —C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\AddProductRequest.cs
 	namespace 	
 Shared
@@ -965,15 +970,16 @@ PageNumber 
 
 ]
  
-public 
-string 
-Name 
-{ 
-get 
-; 
-set 
-; 
-}  !
+public 
+required 
+string 
+Name 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
 public 
 string 
 Image 
@@ -1048,7 +1054,7 @@ CategoryId 
 set !
 ;! "
 }# $
-} 
+} —
 ˜C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Dto\AddCategoryRequest.cs
 	namespace 	
 Shared
@@ -1065,15 +1071,16 @@ CategoryId 
 
 ]
  
-public 
-string 
-Name 
-{ 
-get 
-; 
-set 
-; 
-}  !
+public 
+required 
+string 
+Name 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
 public 
 string 
 Image 
@@ -1102,7 +1109,7 @@ CategoryId 
 .		4 5
 Empty		5 :
 ;		: ;
-} è
+} ü
 ˜C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\Shared\Shared\Constants\AppConstants.cs
 	namespace 	
 Shared
@@ -1110,9 +1117,10 @@ CategoryId 
 . 
 	Constants 
 ; 
-public 
-class 
-AppConstants 
+public 
+static 
+class 
+AppConstants  
 { 
 public 
 const 

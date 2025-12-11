@@ -37,7 +37,7 @@ public sealed class ProductService (IProductRepository productRepository, IMappe
 		var paginatedResponse = await productRepository.GetProductsByCategoryIdAsync
 			( query.CategoryId, query.PageNumber, query.PageSize, cancellationToken );
 
-		if (paginatedResponse is null && !paginatedResponse.Data.Any())
+		if (paginatedResponse is null && !paginatedResponse!.Data!.Any())
 			return new Response<PaginatedResponse<List<ProductDto>>>( ResponseMessage.NotItemsPresent, false );
 
 		return new Response<PaginatedResponse<List<ProductDto>>>( paginatedResponse, ResponseMessage.Success );

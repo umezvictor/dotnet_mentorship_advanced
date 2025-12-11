@@ -40,7 +40,17 @@
 [[ \\ __2 9
 __ ``  aa# -
 dd  `` F
-dd- 7ff hh ll nn rr tt ã
+dd- 7ff hh ll nn rr tt ñ
+žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Mappings\ProductProfile.cs
+
+ 
+  
+
+
+ 
+
+  
+" +0 9ã
 ŸC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Services\IProductService.cs
 
   
@@ -147,7 +157,17 @@
 .. // 225 =
 22 33 "44$ /
 77 !33 F
-77/ :99 ;; ?? AA EE GG ‹
+77/ :99 ;; ?? AA EE GG ñ
+žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Mappings\CatalogProfile.cs
+
+ 
+  
+
+
+ 
+
+  
+" +0 9‹
 šC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\DependencyInjection.cs
 
  '
@@ -161,27 +181,7 @@
 G O 
  
  
-	 ñ
-žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Mappings\ProductProfile.cs
-
- 
-  
-
-
- 
-
-  
-" +0 9ñ
-žC:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Mappings\CatalogProfile.cs
-
- 
-  
-
-
- 
-
-  
-" +0 9ë
+	 ë
  C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Abstractions\ILinkService.cs
 
  

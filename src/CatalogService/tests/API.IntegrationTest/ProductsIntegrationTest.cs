@@ -50,7 +50,8 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 			CategoryId = 1,
 			Description = "Test product description",
 			Price = 99.99M,
-			Image = "test-image-url"
+			Image = "test-image-url",
+			Name = ""
 
 		};
 
@@ -83,8 +84,8 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
 		// Assert
 		response.StatusCode.ShouldBe( HttpStatusCode.OK );
-		result.Succeeded.ShouldBeTrue();
-		result.Data.Data.ShouldNotBeNull();
+		result!.Succeeded.ShouldBeTrue();
+		result.Data!.Data.ShouldNotBeNull();
 		result.Data.Data.ShouldBeOfType<List<ProductDto>>();
 	}
 

@@ -14,11 +14,11 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 	public DbSet<Category> Category { get; set; }
 	public DbSet<Outbox> Outbox { get; set; }
 	public new DatabaseFacade Database => base.Database;
-	protected override void OnModelCreating (ModelBuilder builder)
+	protected override void OnModelCreating (ModelBuilder modelBuilder)
 	{
 
-		base.OnModelCreating( builder );
-		builder.ApplyConfigurationsFromAssembly( typeof( ApplicationDbContext ).Assembly );
+		base.OnModelCreating( modelBuilder );
+		modelBuilder.ApplyConfigurationsFromAssembly( typeof( ApplicationDbContext ).Assembly );
 	}
 
 	public override Task<int> SaveChangesAsync (CancellationToken cancellationToken = default)

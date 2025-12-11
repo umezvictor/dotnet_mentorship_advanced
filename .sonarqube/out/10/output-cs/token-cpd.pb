@@ -1,4 +1,4 @@
-‘a
+¯a
 C:\Users\ChibuzorUmezuruike\Documents\Victor\.Net_Mentorship_Program_Advanced\DotnetAdvancedEcommerceProject\src\CatalogService\BLL\Services\ProductService.cs
 	namespace 	
 BLL
@@ -221,13 +221,15 @@ PageNumber&& '
 &&((  "
 !((# $
 paginatedResponse(($ 5
-.((5 6
-Data((6 :
-.((: ;
-Any((; >
-(((> ?
-)((? @
-)((@ A
+!((5 6
+.((6 7
+Data((7 ;
+!((; <
+.((< =
+Any((= @
+(((@ A
+)((A B
+)((B C
 return)) 	
 new))
  

@@ -40,7 +40,9 @@ public class DeleteProductTest
 			Description = "Test product description",
 			Name = "Test Product",
 			Price = 99.99M,
-			Image = "test-image-url"
+			Image = "test-image-url",
+			Category = new Category { Id = 1, Name = "Test Category", Image = "category-image-url" }
+
 		};
 		var cancellationToken = CancellationToken.None;
 
@@ -65,7 +67,7 @@ public class DeleteProductTest
 			Id = 1
 		};
 
-		Product product = null;
+		Product? product = null;
 
 		var cancellationToken = CancellationToken.None;
 
