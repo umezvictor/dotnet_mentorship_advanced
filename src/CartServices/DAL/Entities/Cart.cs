@@ -3,10 +3,9 @@
 namespace DAL.Entities;
 public class Cart
 {
-	[BsonId]
-	public required string CartKey { get; set; }
-
-	public List<CartItem> CartItems { get; set; } = [];
+    [BsonId]
+    public required string CartKey { get; set; }
+    public List<CartItem> CartItems { get; set; } = [];
 
 }
 
