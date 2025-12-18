@@ -8,22 +8,22 @@ namespace DAL.Migrations
 	public partial class addedparentcategory : Migration
 	{
 		/// <inheritdoc />
-		protected override void Up (MigrationBuilder migrationBuilder)
+		protected override void Up(MigrationBuilder migrationBuilder)
 		{
 			migrationBuilder.AddColumn<string>(
 				name: "ParentCategory",
 				table: "Category",
 				type: "nvarchar(max)",
 				nullable: false,
-				defaultValue: "" );
+				defaultValue: "");
 		}
 
 		/// <inheritdoc />
-		protected override void Down (MigrationBuilder migrationBuilder)
+		protected override void Down(MigrationBuilder migrationBuilder)
 		{
 			migrationBuilder.DropColumn(
 				name: "ParentCategory",
-				table: "Category" );
+				table: "Category");
 		}
 	}
 }

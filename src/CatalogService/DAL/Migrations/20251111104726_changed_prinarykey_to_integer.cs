@@ -8,21 +8,21 @@ namespace DAL.Migrations
 	public partial class changed_prinarykey_to_integer : Migration
 	{
 		/// <inheritdoc />
-		protected override void Up (MigrationBuilder migrationBuilder)
+		protected override void Up(MigrationBuilder migrationBuilder)
 		{
 			migrationBuilder.DropForeignKey(
 				name: "FK_Products_Category_CategoryId",
-				table: "Products" );
+				table: "Products");
 
 			migrationBuilder.AlterColumn<int>(
 				name: "Id",
 				table: "Products",
 				type: "int",
 				nullable: false,
-				oldClrType: typeof( long ),
-				oldType: "bigint" )
-				.Annotation( "SqlServer:Identity", "1, 1" )
-				.OldAnnotation( "SqlServer:Identity", "1, 1" );
+				oldClrType: typeof(long),
+				oldType: "bigint")
+				.Annotation("SqlServer:Identity", "1, 1")
+				.OldAnnotation("SqlServer:Identity", "1, 1");
 
 			migrationBuilder.AddForeignKey(
 				name: "FK_Products_Category_CategoryId",
@@ -30,25 +30,25 @@ namespace DAL.Migrations
 				column: "CategoryId",
 				principalTable: "Category",
 				principalColumn: "Id",
-				onDelete: ReferentialAction.Cascade );
+				onDelete: ReferentialAction.Cascade);
 		}
 
 		/// <inheritdoc />
-		protected override void Down (MigrationBuilder migrationBuilder)
+		protected override void Down(MigrationBuilder migrationBuilder)
 		{
 			migrationBuilder.DropForeignKey(
 				name: "FK_Products_Category_CategoryId",
-				table: "Products" );
+				table: "Products");
 
 			migrationBuilder.AlterColumn<long>(
 				name: "Id",
 				table: "Products",
 				type: "bigint",
 				nullable: false,
-				oldClrType: typeof( int ),
-				oldType: "int" )
-				.Annotation( "SqlServer:Identity", "1, 1" )
-				.OldAnnotation( "SqlServer:Identity", "1, 1" );
+				oldClrType: typeof(int),
+				oldType: "int")
+				.Annotation("SqlServer:Identity", "1, 1")
+				.OldAnnotation("SqlServer:Identity", "1, 1");
 
 			migrationBuilder.AddForeignKey(
 				name: "FK_Products_Category_CategoryId",
@@ -56,7 +56,7 @@ namespace DAL.Migrations
 				column: "CategoryId",
 				principalTable: "Category",
 				principalColumn: "Id",
-				onDelete: ReferentialAction.Restrict );
+				onDelete: ReferentialAction.Restrict);
 		}
 	}
 }
