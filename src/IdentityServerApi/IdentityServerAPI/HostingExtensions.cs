@@ -4,28 +4,28 @@ namespace IdentityServerAPI;
 
 internal static class HostingExtensions
 {
-    public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
-    {
+	public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
+	{
 
-        builder.Services.AddIdentityServer()
-            .AddInMemoryApiScopes(Config.ApiScopes)
-            .AddInMemoryClients(Config.Clients)
-            .AddTestUsers(Config.Users)
-        .AddInMemoryIdentityResources(Config.IdentityResources);
+		builder.Services.AddIdentityServer()
+			.AddInMemoryApiScopes(Config.ApiScopes)
+			.AddInMemoryClients(Config.Clients)
+			.AddTestUsers(Config.Users)
+		.AddInMemoryIdentityResources(Config.IdentityResources);
 
-        return builder.Build();
-    }
+		return builder.Build();
+	}
 
-    public static WebApplication ConfigurePipeline(this WebApplication app)
-    {
-        app.UseSerilogRequestLogging();
+	public static WebApplication ConfigurePipeline(this WebApplication app)
+	{
+		app.UseSerilogRequestLogging();
 
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseDeveloperExceptionPage();
-        }
+		if (app.Environment.IsDevelopment())
+		{
+			app.UseDeveloperExceptionPage();
+		}
 
-        app.UseIdentityServer();
-        return app;
-    }
+		app.UseIdentityServer();
+		return app;
+	}
 }

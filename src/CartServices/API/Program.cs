@@ -11,20 +11,20 @@ using Shared.Constants;
 var builder = WebApplication.CreateBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)
-    .CreateLogger();
+	.ReadFrom.Configuration(builder.Configuration)
+	.CreateLogger();
 
 // register layers
 builder.Services.AddPresentationLayer(builder.Configuration)
-    .AddBusinessLogicLayer()
-    .AddDataAccessLayer(builder.Configuration);
+	.AddBusinessLogicLayer()
+	.AddDataAccessLayer(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
-        $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
+	c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
+		$"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
 });
 
 builder.Services.AddScoped<IRabbitMqClient, RabbitMqClient>();
@@ -33,8 +33,8 @@ builder.Host.UseSerilog();
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+	app.UseSwagger();
+	app.UseSwaggerUI();
 }
 app.UseMiddleware<AccessTokenLoggingMiddleware>();
 
@@ -49,7 +49,7 @@ await app.RunAsync();
 
 namespace CartService
 {
-    public partial class Program;
+	public partial class Program;
 }
 
 

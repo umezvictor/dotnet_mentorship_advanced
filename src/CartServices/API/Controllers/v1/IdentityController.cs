@@ -10,13 +10,13 @@ namespace API.Controllers.v1;
 [Authorize]
 public class IdentityController : ControllerBase
 {
-    /// <summary>
-    /// Gets the claims for the currently authenticated user.
-    /// </summary>
-    /// <returns>A JSON array of claim types and values.</returns>
-    [HttpGet]
-    public IActionResult Get()
-    {
-        return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
-    }
+	/// <summary>
+	/// Gets the claims for the currently authenticated user.
+	/// </summary>
+	/// <returns>A JSON array of claim types and values.</returns>
+	[HttpGet]
+	public IActionResult Get()
+	{
+		return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+	}
 }
