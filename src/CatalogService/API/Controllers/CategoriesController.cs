@@ -14,8 +14,6 @@ namespace API.Controllers;
 public class CategoriesController (ICategoryService categoryService) : ControllerBase
 {
 
-
-
 	[HttpPost]
 	[ProducesResponseType( typeof( Response<string> ), StatusCodes.Status200OK )]
 	[ProducesResponseType( typeof( Response<string> ), StatusCodes.Status400BadRequest )]

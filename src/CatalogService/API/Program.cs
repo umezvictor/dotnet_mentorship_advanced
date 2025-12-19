@@ -3,6 +3,7 @@ using API.Services;
 using BLL;
 using BLL.Abstractions;
 using DAL;
+using DAL.Database;
 using RabbitMQ;
 using Serilog;
 using Shared.Constants;
@@ -31,10 +32,12 @@ builder.Services.AddScoped<IRabbitMqClient, RabbitMqClient>();
 builder.Host.UseSerilog();
 var app = builder.Build();
 
+
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
+	await MigrationManager.ApplyMigrationsAsync( app.Services );
 }
 
 app.UseCors( AppConstants.CorsPolicy );

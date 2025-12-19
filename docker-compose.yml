@@ -1,15 +1,97 @@
 services:
-  api:
-    image: ${DOCKER_REGISTRY-}api
+  catalogapi:
+    image: ${DOCKER_REGISTRY-}catalogapi
     build:
       context: .
       dockerfile: src/CatalogService/API/Dockerfile
 
-  testdb: 
-    image: mcr.microsoft.com/mssql/server:2022-latest 
-    container_name: sql_server
-    environment:
-      ACCEPT_EULA: "Y"  
-      SA_PASSWORD: "Strong_password_123!"  
     ports:
-      - 1433:1433  
+      - 5000:8080
+      - 5001:8081
+    depends_on:
+     - sqlserver
+    environment:
+     - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+     - app-network
+    restart: on-failure
+
+  sqlserver: 
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "Passw@rd123"
+      ACCEPT_EULA: "Y"        
+    ports:
+      - 1433:1433
+    volumes:
+     - sqlvolume:/var/opt/mssql 
+    networks:
+      - app-network
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_DATABASE: CartDB
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: Passw@rd123
+    ports:
+      - 27017:27017        # Exposes MongoDB default port
+    volumes:
+      - mongodata:/data/db   
+    networks:
+      - app-network
+  
+  cart:
+    image: ${DOCKER_REGISTRY-}cart
+    container_name: cart
+    build:
+      context: .
+      dockerfile: src/CartServices/API/Dockerfile
+    depends_on:
+     - mongodb
+    ports:
+      - 5003:8080
+      - 5002:8081
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+     - app-network
+    restart: on-failure
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"     # AMQP (used by applications)
+      - "15672:15672"   # Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin123
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+    networks:
+      - app-network
+
+  identityserverapi:
+    image: ${DOCKER_REGISTRY-}identityserverapi
+    container_name: identityserverapi
+    build:
+      context: .
+      dockerfile: src/IdentityServerApi/IdentityServerAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 5004:8080
+    networks:
+      - app-network
+    restart: on-failure
+
+networks:
+  app-network:
+
+volumes:
+  sqlvolume:
+  mongodata:
+  rabbitmqdata:  

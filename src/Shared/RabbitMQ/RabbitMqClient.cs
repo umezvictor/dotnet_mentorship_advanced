@@ -9,7 +9,8 @@ public sealed class RabbitMqClient : IRabbitMqClient
 {
 	public async Task PublishMessageAsync<T> (T message, string queueName)
 	{
-		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host };
+		//Todo: read credentials from appsettings
+		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host, UserName = RabbitMQConstants.Username, Password = RabbitMQConstants.Password };
 		factory.AutomaticRecoveryEnabled = true;
 		factory.NetworkRecoveryInterval = TimeSpan.FromSeconds( 10 );
 		using var connection = await factory.CreateConnectionAsync();
@@ -26,7 +27,7 @@ public sealed class RabbitMqClient : IRabbitMqClient
 
 	public async Task<string> ConsumeMessageAsync (string queueName)
 	{
-		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host };
+		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host, UserName = RabbitMQConstants.Username, Password = RabbitMQConstants.Password };
 		factory.AutomaticRecoveryEnabled = true;
 		factory.NetworkRecoveryInterval = TimeSpan.FromSeconds( 10 );
 		using var connection = await factory.CreateConnectionAsync();
@@ -34,9 +35,7 @@ public sealed class RabbitMqClient : IRabbitMqClient
 
 		await channel.QueueDeclareAsync( queue: RabbitMQConstants.ProductQueue, durable: false, exclusive: false, autoDelete: false,
 			arguments: null );
-
 		var response = string.Empty;
-
 		var consumer = new AsyncEventingBasicConsumer( channel );
 		consumer.ReceivedAsync += async (model, arg) =>
 		{

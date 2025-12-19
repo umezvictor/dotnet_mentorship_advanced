@@ -35,8 +35,12 @@ public static class Config
 				},
 
 				AllowedScopes = { "cartApi", "offline_access","roles", "permissions" },
-				AllowOfflineAccess = true //enables refresh tokens, together with the offline_access scope
-            }
+				AllowOfflineAccess = true, //enables refresh tokens, together with the offline_access scope
+				AllowedCorsOrigins =
+				{
+					"http://localhost:5004"
+				}
+			}
 		};
 
 	public static IEnumerable<IdentityResource> IdentityResources => new[]

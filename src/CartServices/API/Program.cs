@@ -19,13 +19,7 @@ builder.Services.AddPresentationLayer( builder.Configuration )
 	.AddBusinessLogicLayer()
 	.AddDataAccessLayer( builder.Configuration );
 
-
-
-
 builder.Services.AddControllers();
-
-
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen( c =>
 {

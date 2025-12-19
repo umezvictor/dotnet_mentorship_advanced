@@ -66,6 +66,7 @@ public static class DependencyInjection
 		   .AddJwtBearer( "Bearer", options =>
 		   {
 			   options.Authority = configuration["JwtSettings:Issuer"];
+			   options.RequireHttpsMetadata = false;
 
 			   options.TokenValidationParameters = new TokenValidationParameters
 			   {

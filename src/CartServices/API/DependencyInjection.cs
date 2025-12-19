@@ -83,12 +83,13 @@ public static class DependencyInjection
 		   .AddJwtBearer( "Bearer", options =>
 		   {
 			   options.Authority = configuration["JwtSettings:Issuer"];
+			   options.RequireHttpsMetadata = false;
 
 			   options.TokenValidationParameters = new TokenValidationParameters
 			   {
 				   ValidateAudience = false,
 				   RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
-				   NameClaimType = "sub"
+				   NameClaimType = "sub",
 
 			   };
 		   } );

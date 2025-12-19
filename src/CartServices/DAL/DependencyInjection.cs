@@ -17,6 +17,7 @@ public static class DependencyInjection
 
 	private static IServiceCollection AddMongoDbClient (this IServiceCollection services, IConfiguration configuration)
 	{
+
 		var dbConnectionString = configuration["MONGODB_CONNECTION_STRING"];
 
 		var mongoUrl = new MongoUrl( dbConnectionString );
@@ -31,6 +32,8 @@ public static class DependencyInjection
 		} );
 
 		return services;
+
+
 	}
 
 	private static IServiceCollection AddCartRepository (this IServiceCollection services)
