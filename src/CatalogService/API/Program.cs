@@ -37,7 +37,7 @@ if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
-	await MigrationManager.ApplyMigrationsAsync( app.Services );
+	await MigrationManager.ApplyMigrationsAsync(app.Services);
 }
 
 app.UseCors(AppConstants.CorsPolicy);
