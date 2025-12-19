@@ -1,20 +1,20 @@
 services:
   catalogapi:
-    image: ${DOCKER_REGISTRY-}catalogapi
+    image: ${DOCKER_REGISTRY-}catalogapi #image name
     build:
       context: .
-      dockerfile: src/CatalogService/API/Dockerfile
+      dockerfile: src/CatalogService/API/Dockerfile #path to Dockerfile
 
     ports:
-      - 5000:8080
+      - 5000:8080 # Exposes port 8080 of the container on port 5000 of the host
       - 5001:8081
     depends_on:
-     - sqlserver
+     - sqlserver #depends on sqlserver service
     environment:
-     - ASPNETCORE_ENVIRONMENT=Development
+     - ASPNETCORE_ENVIRONMENT=Development #sets environment variable
     networks:
-     - app-network
-    restart: on-failure
+     - app-network #connects to app-network
+    restart: on-failure #restarts the container on failure
 
   sqlserver: 
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -25,7 +25,7 @@ services:
     ports:
       - 1433:1433
     volumes:
-     - sqlvolume:/var/opt/mssql 
+     - sqlvolume:/var/opt/mssql #persists database data
     networks:
       - app-network
 
@@ -33,13 +33,13 @@ services:
     image: mongo:latest
     container_name: mongodb
     environment:
-      MONGO_INITDB_DATABASE: CartDB
-      MONGO_INITDB_ROOT_USERNAME: mongoadmin
-      MONGO_INITDB_ROOT_PASSWORD: Passw@rd123
+      MONGO_INITDB_DATABASE: CartDB #database name
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin #root username
+      MONGO_INITDB_ROOT_PASSWORD: Passw@rd123 #root password
     ports:
       - 27017:27017        # Exposes MongoDB default port
     volumes:
-      - mongodata:/data/db   
+      - mongodata:/data/db  #persists MongoDB data
     networks:
       - app-network
   
@@ -64,13 +64,13 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"     # AMQP (used by applications)
-      - "15672:15672"   # Management UI
+      - "5672:5672"    
+      - "15672:15672"  # Management UI
     environment:
-      RABBITMQ_DEFAULT_USER: admin
-      RABBITMQ_DEFAULT_PASS: admin123
+      RABBITMQ_DEFAULT_USER: admin #default username
+      RABBITMQ_DEFAULT_PASS: admin123 #default password
     volumes:
-      - rabbitmqdata:/var/lib/rabbitmq
+      - rabbitmqdata:/var/lib/rabbitmq #persists RabbitMQ data
     networks:
       - app-network
 
