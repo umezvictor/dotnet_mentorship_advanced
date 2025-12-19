@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using CartService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
@@ -18,44 +18,47 @@ public class CartWebApplicationFactory : WebApplicationFactory<Program>
 
 	private MongoDbRunner? _mongoRunner;
 
-	protected override void ConfigureWebHost (IWebHostBuilder builder)
+	protected override void ConfigureWebHost(IWebHostBuilder builder)
 	{
 
 		_mongoRunner = MongoDbRunner.Start();
 
-		builder.ConfigureAppConfiguration( (context, configBuilder) =>
+		builder.ConfigureAppConfiguration((context, configBuilder) =>
 		{
 			var inMemorySettings = new Dictionary<string, string?>
 			{
 				["MONGODB_CONNECTION_STRING"] = _mongoRunner.ConnectionString,
 				["MONGODB_DATABASE"] = "TestCartDb"
 			};
-			configBuilder.AddInMemoryCollection( inMemorySettings );
-		} );
+			configBuilder.AddInMemoryCollection(inMemorySettings);
+		});
 
-		builder.ConfigureServices( services =>
+		builder.ConfigureServices(services =>
 		{
-			var clientDescriptors = services.Where( d => d.ServiceType == typeof( IMongoClient ) ).ToList();
+			var clientDescriptors = services.Where(d => d.ServiceType == typeof(IMongoClient)).ToList();
 			foreach (var descriptor in clientDescriptors)
-				services.Remove( descriptor );
+			{
+				services.Remove(descriptor);
+			}
 
-			var dbDescriptors = services.Where( d => d.ServiceType == typeof( IMongoDatabase ) ).ToList();
+			var dbDescriptors = services.Where(d => d.ServiceType == typeof(IMongoDatabase)).ToList();
 			foreach (var descriptor in dbDescriptors)
-				services.Remove( descriptor );
+			{
+				services.Remove(descriptor);
+			}
+
+			var mongoClient = new MongoClient(_mongoRunner.ConnectionString);
+			services.AddSingleton<IMongoClient>(mongoClient);
+			services.AddScoped<IMongoDatabase>(sp =>
+				sp.GetRequiredService<IMongoClient>().GetDatabase("TestCartDb"));
 
 
-			var mongoClient = new MongoClient( _mongoRunner.ConnectionString );
-			services.AddSingleton<IMongoClient>( mongoClient );
-			services.AddScoped<IMongoDatabase>( sp =>
-				sp.GetRequiredService<IMongoClient>().GetDatabase( "TestCartDb" ) );
-
-
-		} );
+		});
 
 		//Override JWT Authentication for Integration Tests
-		builder.ConfigureTestServices( services =>
+		builder.ConfigureTestServices(services =>
 		{
-			services.PostConfigureAll<JwtBearerOptions>( options =>
+			services.PostConfigureAll<JwtBearerOptions>(options =>
 			{
 				options.TokenValidationParameters = new TokenValidationParameters
 				{
@@ -64,20 +67,20 @@ public class CartWebApplicationFactory : WebApplicationFactory<Program>
 					ValidateAudience = false,
 					ValidateIssuerSigningKey = true,
 					IssuerSigningKey = new SymmetricSecurityKey(
-						Encoding.UTF8.GetBytes( "jWnZr4u7x!A%D*G-JaNdRgUkXp2s5v8y" )
+						Encoding.UTF8.GetBytes("jWnZr4u7x!A%D*G-JaNdRgUkXp2s5v8y")
 					),
 					ValidateLifetime = false,
 					RoleClaimType = "role",
 					NameClaimType = "sub"
 				};
-			} );
-		} );
+			});
+		});
 
 	}
 
-	protected override void Dispose (bool disposing)
+	protected override void Dispose(bool disposing)
 	{
-		base.Dispose( disposing );
+		base.Dispose(disposing);
 		_mongoRunner?.Dispose();
 		Log.CloseAndFlush();
 	}

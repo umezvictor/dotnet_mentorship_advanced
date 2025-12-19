@@ -6,7 +6,7 @@ namespace DAL.Database;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
-	public ApplicationDbContext (DbContextOptions<ApplicationDbContext> options) : base( options )
+	public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
 	{
 	}
 
@@ -14,14 +14,14 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 	public DbSet<Category> Category { get; set; }
 	public DbSet<Outbox> Outbox { get; set; }
 	public new DatabaseFacade Database => base.Database;
-	protected override void OnModelCreating (ModelBuilder modelBuilder)
+	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 
-		base.OnModelCreating( modelBuilder );
-		modelBuilder.ApplyConfigurationsFromAssembly( typeof( ApplicationDbContext ).Assembly );
+		base.OnModelCreating(modelBuilder);
+		modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 	}
 
-	public override Task<int> SaveChangesAsync (CancellationToken cancellationToken = default)
+	public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
 	{
 		var entries = ChangeTracker.Entries<AuditableEntity>();
 		foreach (var entry in entries)
@@ -35,7 +35,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 				entry.Entity.UpdatedAt = DateTime.UtcNow;
 			}
 		}
-		return base.SaveChangesAsync( cancellationToken );
+		return base.SaveChangesAsync(cancellationToken);
 	}
 }
 

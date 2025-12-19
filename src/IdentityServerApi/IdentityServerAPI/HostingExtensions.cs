@@ -4,22 +4,19 @@ namespace IdentityServerAPI;
 
 internal static class HostingExtensions
 {
-	public static WebApplication ConfigureServices (this WebApplicationBuilder builder)
+	public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
 	{
 
-		builder.Services.AddIdentityServer( options =>
-		{
-			options.IssuerUri = "http://identityserverapi:8080"; //necessary to avoid authorization issues for client apps
-		} )
-			.AddInMemoryApiScopes( Config.ApiScopes )
-			.AddInMemoryClients( Config.Clients )
-			.AddTestUsers( Config.Users )
-		.AddInMemoryIdentityResources( Config.IdentityResources );
+		builder.Services.AddIdentityServer()
+			.AddInMemoryApiScopes(Config.ApiScopes)
+			.AddInMemoryClients(Config.Clients)
+			.AddTestUsers(Config.Users)
+		.AddInMemoryIdentityResources(Config.IdentityResources);
 
 		return builder.Build();
 	}
 
-	public static WebApplication ConfigurePipeline (this WebApplication app)
+	public static WebApplication ConfigurePipeline(this WebApplication app)
 	{
 		app.UseSerilogRequestLogging();
 

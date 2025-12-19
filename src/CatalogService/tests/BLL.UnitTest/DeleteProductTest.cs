@@ -18,14 +18,13 @@ public class DeleteProductTest
 	private readonly Mock<IMapper> _mapperMock = new();
 	private readonly ProductService _serviceToTest;
 
-	public DeleteProductTest ()
+	public DeleteProductTest()
 	{
-
-		_serviceToTest = new ProductService( _productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object );
+		_serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object);
 	}
 
 	[Fact]
-	public async Task DeleteProduct_WhenGivenValidId_ShouldDeleteProductAndReturnSuccessMessage ()
+	public async Task DeleteProduct_WhenGivenValidId_ShouldDeleteProductAndReturnSuccessMessage()
 	{
 		var request = new DeleteProductRequest
 		{
@@ -46,21 +45,21 @@ public class DeleteProductTest
 		};
 		var cancellationToken = CancellationToken.None;
 
-		_productRepoMock.Setup( x => x.GetByIdAsync( request.Id, cancellationToken ) ).ReturnsAsync( product );
-		_productRepoMock.Setup( x => x.DeleteAsync( product, cancellationToken ) );
+		_productRepoMock.Setup(x => x.GetByIdAsync(request.Id, cancellationToken)).ReturnsAsync(product);
+		_productRepoMock.Setup(x => x.DeleteAsync(product, cancellationToken));
 
 		// Act
-		var response = await _serviceToTest.DeleteProductAsync( request, cancellationToken );
+		var response = await _serviceToTest.DeleteProductAsync(request, cancellationToken);
 
 		// Assert
-		response.Message.ShouldBe( ResponseMessage.ProductDeleted );
+		response.Message.ShouldBe(ResponseMessage.ProductDeleted);
 		response.Succeeded.ShouldBeTrue();
 
 	}
 
 
 	[Fact]
-	public async Task DeleteProductWhenGivenInValidId_ShouldReturnProductNotFound ()
+	public async Task DeleteProductWhenGivenInValidId_ShouldReturnProductNotFound()
 	{
 		var request = new DeleteProductRequest
 		{
@@ -71,13 +70,13 @@ public class DeleteProductTest
 
 		var cancellationToken = CancellationToken.None;
 
-		_productRepoMock.Setup( x => x.GetByIdAsync( request.Id, cancellationToken ) ).ReturnsAsync( product );
+		_productRepoMock.Setup(x => x.GetByIdAsync(request.Id, cancellationToken)).ReturnsAsync(product);
 
 		// Act
-		var response = await _serviceToTest.DeleteProductAsync( request, cancellationToken );
+		var response = await _serviceToTest.DeleteProductAsync(request, cancellationToken);
 
 		// Assert
-		response.Message.ShouldBe( ResponseMessage.ProductNotFound );
+		response.Message.ShouldBe(ResponseMessage.ProductNotFound);
 		response.Succeeded.ShouldBeFalse();
 
 	}

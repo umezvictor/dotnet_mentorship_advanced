@@ -5,8 +5,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace API.IntegrationTests;
 public static class TestData
 {
-
-	public static Cart CartData ()
+	public static Cart CartData()
 	{
 		return new Cart
 		{
@@ -43,17 +42,15 @@ public static class TestData
 }
 
 
-
-
 public class TestDocument
 {
 	[BsonId]
-	[BsonRepresentation( BsonType.ObjectId )]
+	[BsonRepresentation(BsonType.ObjectId)]
 	public string? CartKey { get; set; }
 
 	public List<CartItem>? CartItems { get; set; }
 
-	public static TestDocument DummyData1 ()
+	public static TestDocument DummyData1()
 	{
 		return new TestDocument
 		{

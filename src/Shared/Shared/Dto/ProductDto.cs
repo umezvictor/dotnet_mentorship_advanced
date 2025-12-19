@@ -14,4 +14,4 @@ public class ProductDto
 
 }
 
-public record Link (string Href, string Rel, string Method);
+public record Link(string Href, string Rel, string Method);

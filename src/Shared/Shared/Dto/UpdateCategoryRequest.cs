@@ -1,7 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
 namespace Shared.Dto;
-
 public class UpdateCategoryRequest
 {
 	[System.Text.Json.Serialization.JsonIgnore]

@@ -18,14 +18,14 @@ public class AddProductTest
 	private readonly Mock<ILinkService> _linkServiceMock = new();
 	private readonly ProductService _serviceToTest;
 
-	public AddProductTest ()
+	public AddProductTest()
 	{
 
-		_serviceToTest = new ProductService( _productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object );
+		_serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object);
 	}
 
 	[Fact]
-	public async Task AddProduct_ValidPayload_ShouldReturnProductAdded ()
+	public async Task AddProduct_ValidPayload_ShouldReturnProductAdded()
 	{
 		// Arrange
 		var request = new AddProductRequest
@@ -52,14 +52,14 @@ public class AddProductTest
 
 		var cancellationToken = CancellationToken.None;
 
-		_productRepoMock.Setup( x => x.CreateAsync( product, cancellationToken ) );
-		_mapperMock.Setup( x => x.Map<Product>( request ) ).Returns( product );
+		_productRepoMock.Setup(x => x.CreateAsync(product, cancellationToken));
+		_mapperMock.Setup(x => x.Map<Product>(request)).Returns(product);
 
 		// Act
-		var response = await _serviceToTest.AddProductAsync( request, cancellationToken );
+		var response = await _serviceToTest.AddProductAsync(request, cancellationToken);
 
 		// Assert
-		response.Message.ShouldBe( ResponseMessage.ProductAdded );
+		response.Message.ShouldBe(ResponseMessage.ProductAdded);
 		response.Succeeded.ShouldBeTrue();
 
 	}

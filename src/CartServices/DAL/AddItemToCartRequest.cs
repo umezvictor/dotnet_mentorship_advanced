@@ -8,12 +8,9 @@ public class AddItemToCartRequest
 	public required string CartKey { get; set; }
 	[Required]
 	public required CartItem CartItem { get; set; }
-
 }
-
 
 public class UpdateItemRequest
 {
 	public required CartItem CartItem { get; set; }
-
 }

@@ -8,19 +8,19 @@ using RabbitMQ;
 using Serilog;
 using Shared.Constants;
 
-var builder = WebApplication.CreateBuilder( args );
+var builder = WebApplication.CreateBuilder(args);
 
 var _config = new ConfigurationBuilder()
-				.AddJsonFile( "appsettings.json" )
+				.AddJsonFile("appsettings.json")
 				.Build();
 
 Log.Logger = new LoggerConfiguration()
-	.ReadFrom.Configuration( builder.Configuration )
+	.ReadFrom.Configuration(builder.Configuration)
 	.CreateLogger();
 
-builder.Services.AddPresentationLayer( _config )
+builder.Services.AddPresentationLayer(_config)
 	.AddBusinessLogicLayer()
-	.AddDataAccessLayer( _config );
+	.AddDataAccessLayer(_config);
 
 
 builder.Services.AddHttpContextAccessor();
@@ -40,7 +40,7 @@ if (app.Environment.IsDevelopment())
 	await MigrationManager.ApplyMigrationsAsync( app.Services );
 }
 
-app.UseCors( AppConstants.CorsPolicy );
+app.UseCors(AppConstants.CorsPolicy);
 app.UseHttpsRedirection();
 app.UseRateLimiter();
 app.UseAuthorization();

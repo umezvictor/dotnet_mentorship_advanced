@@ -11,14 +11,14 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 	private readonly CartWebApplicationFactory _factory;
 	private readonly HttpClient _client;
 
-	public IntegrationTests (CartWebApplicationFactory factory)
+	public IntegrationTests(CartWebApplicationFactory factory)
 	{
 		_factory = factory;
 		_client = _factory.CreateClient();
 	}
 
 	[Fact]
-	public async Task AddItemToCart_GivenValidPayload_ShouldReturnOk ()
+	public async Task AddItemToCart_GivenValidPayload_ShouldReturnOk()
 	{
 
 		var request = new AddItemToCartRequest
@@ -34,9 +34,9 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 			}
 		};
 		var token = TokenGenerator.GenerateAccessToken();
-		_client.DefaultRequestHeaders.Add( "Authorization", $"Bearer {token}" );
-		var response = await _client.PostAsJsonAsync( "/api/v1/cart", request );
-		response.StatusCode.ShouldBe( HttpStatusCode.OK );
+		_client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+		var response = await _client.PostAsJsonAsync("/api/v1/cart", request);
+		response.StatusCode.ShouldBe(HttpStatusCode.OK);
 		var result = await response.Content.ReadFromJsonAsync<Response<string>>();
 		result.ShouldNotBeNull();
 		result.Succeeded.ShouldBeTrue();
@@ -45,16 +45,16 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 
 
 	[Fact]
-	public async Task GetItemFromCart_GivenValidCartKey_Version1ShouldReturnCartModel ()
+	public async Task GetItemFromCart_GivenValidCartKey_Version1ShouldReturnCartModel()
 	{
 
 		string cartKey = "1234";
 		var token = TokenGenerator.GenerateAccessToken();
-		_client.DefaultRequestHeaders.Add( "Authorization", $"Bearer {token}" );
-		await AddTestCartDataAsync( _client, cartKey );
+		_client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+		await AddTestCartDataAsync(_client, cartKey);
 
-		var response = await _client.GetAsync( $"/api/v1/cart/{cartKey}" );
-		response.StatusCode.ShouldBe( HttpStatusCode.OK );
+		var response = await _client.GetAsync($"/api/v1/cart/{cartKey}");
+		response.StatusCode.ShouldBe(HttpStatusCode.OK);
 		var result = await response.Content.ReadFromJsonAsync<Response<Cart>>();
 		result.ShouldNotBeNull();
 		result.Succeeded.ShouldBeTrue();
@@ -64,16 +64,16 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 
 
 	[Fact]
-	public async Task GetItemFromCart_GivenValidCartKey_Version2ShouldReturnCartModel ()
+	public async Task GetItemFromCart_GivenValidCartKey_Version2ShouldReturnCartModel()
 	{
 
 		string cartKey = "1234";
 		var token = TokenGenerator.GenerateAccessToken();
-		_client.DefaultRequestHeaders.Add( "Authorization", $"Bearer {token}" );
-		await AddTestCartDataAsync( _client, cartKey );
+		_client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+		await AddTestCartDataAsync(_client, cartKey);
 
-		var response = await _client.GetAsync( $"/api/v2/cart/{cartKey}" );
-		response.StatusCode.ShouldBe( HttpStatusCode.OK );
+		var response = await _client.GetAsync($"/api/v2/cart/{cartKey}");
+		response.StatusCode.ShouldBe(HttpStatusCode.OK);
 		var result = await response.Content.ReadFromJsonAsync<Response<List<CartItem>>>();
 		result.ShouldNotBeNull();
 		result.Succeeded.ShouldBeTrue();
@@ -81,7 +81,7 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 	}
 
 
-	private static async Task AddTestCartDataAsync (HttpClient client, string cartKey)
+	private static async Task AddTestCartDataAsync(HttpClient client, string cartKey)
 	{
 
 		var request = new AddItemToCartRequest
@@ -97,7 +97,7 @@ public class IntegrationTests : IClassFixture<CartWebApplicationFactory>
 			}
 		};
 
-		await client.PostAsJsonAsync( "/api/v1/cart", request );
+		await client.PostAsJsonAsync("/api/v1/cart", request);
 
 	}
 

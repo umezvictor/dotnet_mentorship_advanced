@@ -7,36 +7,36 @@ namespace CartServices.DAL;
 
 public static class DependencyInjection
 {
-	public static IServiceCollection AddDataAccessLayer (this IServiceCollection services, IConfiguration configuration)
+	public static IServiceCollection AddDataAccessLayer(this IServiceCollection services, IConfiguration configuration)
 	{
 		return services
-			.AddMongoDbClient( configuration )
+			.AddMongoDbClient(configuration)
 			.AddCartRepository();
 
 	}
 
-	private static IServiceCollection AddMongoDbClient (this IServiceCollection services, IConfiguration configuration)
+	private static IServiceCollection AddMongoDbClient(this IServiceCollection services, IConfiguration configuration)
 	{
 
 		var dbConnectionString = configuration["MONGODB_CONNECTION_STRING"];
 
-		var mongoUrl = new MongoUrl( dbConnectionString );
-		var mongoClient = new MongoClient( mongoUrl );
+		var mongoUrl = new MongoUrl(dbConnectionString);
+		var mongoClient = new MongoClient(mongoUrl);
 
-		services.AddSingleton<IMongoClient>( mongoClient );
+		services.AddSingleton<IMongoClient>(mongoClient);
 
-		services.AddScoped<IMongoDatabase>( sp =>
+		services.AddScoped<IMongoDatabase>(sp =>
 		{
 			var client = sp.GetRequiredService<IMongoClient>();
-			return client.GetDatabase( mongoUrl.DatabaseName );
-		} );
+			return client.GetDatabase(mongoUrl.DatabaseName);
+		});
 
 		return services;
 
 
 	}
 
-	private static IServiceCollection AddCartRepository (this IServiceCollection services)
+	private static IServiceCollection AddCartRepository(this IServiceCollection services)
 	{
 		services.AddScoped<ICartRepository, CartRepository>();
 		return services;

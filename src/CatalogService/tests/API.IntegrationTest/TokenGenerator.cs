@@ -6,11 +6,11 @@ using Microsoft.IdentityModel.Tokens;
 namespace API.IntegrationTest;
 public static class TokenGenerator
 {
-	public static string GenerateAccessToken ()
+	public static string GenerateAccessToken()
 	{
 		var securityKey = "jWnZr4u7x!A%D*G-JaNdRgUkXp2s5v8y";
-		var key = new SymmetricSecurityKey( Encoding.UTF8.GetBytes( securityKey ) );
-		var creds = new SigningCredentials( key, SecurityAlgorithms.HmacSha256Signature );
+		var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
+		var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
 
 		long epoch = 1764422981L;
 		long exp = 1764426581L;
@@ -38,8 +38,8 @@ public static class TokenGenerator
 			issuer: "https://localhost:5001",
 			audience: "https://localhost:5001",
 			claims: claims,
-			notBefore: DateTimeOffset.FromUnixTimeSeconds( epoch ).UtcDateTime,
-			expires: DateTimeOffset.FromUnixTimeSeconds( exp ).UtcDateTime,
+			notBefore: DateTimeOffset.FromUnixTimeSeconds(epoch).UtcDateTime,
+			expires: DateTimeOffset.FromUnixTimeSeconds(exp).UtcDateTime,
 			signingCredentials: creds
 		);
 
@@ -47,6 +47,6 @@ public static class TokenGenerator
 		token.Payload["nbf"] = epoch;
 		token.Payload["exp"] = exp;
 
-		return new JwtSecurityTokenHandler().WriteToken( token );
+		return new JwtSecurityTokenHandler().WriteToken(token);
 	}
 }

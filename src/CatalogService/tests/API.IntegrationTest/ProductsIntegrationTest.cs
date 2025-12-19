@@ -7,12 +7,12 @@ using Shouldly;
 namespace API.IntegrationTest;
 public class ProductsIntegrationTest : BaseFunctionalTest
 {
-	public ProductsIntegrationTest (CatalogWebApplicationFactory factory) : base( factory )
+	public ProductsIntegrationTest(CatalogWebApplicationFactory factory) : base(factory)
 	{
 	}
 
 	[Fact]
-	public async Task Addproduct_ValidPayload_ShouldReturnProductAddedSuccessfully ()
+	public async Task Addproduct_ValidPayload_ShouldReturnProductAddedSuccessfully()
 	{
 
 		var request = new AddProductRequest
@@ -28,20 +28,20 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
 
 		// Act
-		HttpResponseMessage response = await HttpClient.PostAsJsonAsync( "/api/products", request );
+		HttpResponseMessage response = await HttpClient.PostAsJsonAsync("/api/products", request);
 		var result = await response.Content.ReadFromJsonAsync<Response<long>>();
 
 		// Assert
-		response.StatusCode.ShouldBe( HttpStatusCode.OK );
+		response.StatusCode.ShouldBe(HttpStatusCode.OK);
 		result.ShouldNotBeNull();
 		result.Succeeded.ShouldBeTrue();
-		result.Message.ShouldBe( ResponseMessage.ProductAdded );
+		result.Message.ShouldBe(ResponseMessage.ProductAdded);
 	}
 
 
 
 	[Fact]
-	public async Task Addproduct_InValidPayload_ShouldReturnForbidden ()
+	public async Task Addproduct_InValidPayload_ShouldReturnForbidden()
 	{
 
 		var request = new AddProductRequest
@@ -56,9 +56,9 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 		};
 
 		// Act
-		HttpResponseMessage response = await HttpClient.PostAsJsonAsync( "/api/products", request );
+		HttpResponseMessage response = await HttpClient.PostAsJsonAsync("/api/products", request);
 
-		response.StatusCode.ShouldBe( HttpStatusCode.BadRequest );
+		response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
 
 
 	}
@@ -66,7 +66,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
 
 	[Fact]
-	public async Task Getproduct_ValidPayload_ShouldReturnProductAddedSuccessfully ()
+	public async Task Getproduct_ValidPayload_ShouldReturnProductAddedSuccessfully()
 	{
 
 		var query = new GetProductsQuery
@@ -79,11 +79,11 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
 		await AddProduct();
 		// Act
-		HttpResponseMessage response = await HttpClient.GetAsync( $"/api/products?categoryId={query.CategoryId}&pageNumber={query.PageNumber}&pageSize={query.PageSize}" );
+		HttpResponseMessage response = await HttpClient.GetAsync($"/api/products?categoryId={query.CategoryId}&pageNumber={query.PageNumber}&pageSize={query.PageSize}");
 		var result = await response.Content.ReadFromJsonAsync<Response<PaginatedResponse<List<ProductDto>>>>();
 
 		// Assert
-		response.StatusCode.ShouldBe( HttpStatusCode.OK );
+		response.StatusCode.ShouldBe(HttpStatusCode.OK);
 		result!.Succeeded.ShouldBeTrue();
 		result.Data!.Data.ShouldNotBeNull();
 		result.Data.Data.ShouldBeOfType<List<ProductDto>>();
@@ -91,7 +91,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 
 
 
-	private async Task AddProduct ()
+	private async Task AddProduct()
 	{
 
 		var request = new AddProductRequest
@@ -106,7 +106,7 @@ public class ProductsIntegrationTest : BaseFunctionalTest
 		};
 
 
-		await HttpClient.PostAsJsonAsync( "/api/products", request );
+		await HttpClient.PostAsJsonAsync("/api/products", request);
 
 
 	}

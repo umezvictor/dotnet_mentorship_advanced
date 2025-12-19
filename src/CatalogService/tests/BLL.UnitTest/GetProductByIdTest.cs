@@ -18,14 +18,14 @@ public class GetProductByIdTest
 
 	private readonly ProductService _serviceToTest;
 
-	public GetProductByIdTest ()
+	public GetProductByIdTest()
 	{
 
-		_serviceToTest = new ProductService( _productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object );
+		_serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object);
 	}
 
 	[Fact]
-	public async Task GetProductById_ProductExists_ReturnsSuccessResponseWithLinks ()
+	public async Task GetProductById_ProductExists_ReturnsSuccessResponseWithLinks()
 	{
 		// Arrange
 		int id = 10;
@@ -55,65 +55,65 @@ public class GetProductByIdTest
 		};
 
 		_productRepoMock
-			.Setup( r => r.GetByIdAsync( id, It.IsAny<CancellationToken>() ) )
-			.ReturnsAsync( product );
+			.Setup(r => r.GetByIdAsync(id, It.IsAny<CancellationToken>()))
+			.ReturnsAsync(product);
 
 		_mapperMock
-			.Setup( m => m.Map<ProductDto>( product ) )
-			.Returns( dto );
+			.Setup(m => m.Map<ProductDto>(product))
+			.Returns(dto);
 
 		_linkServiceMock
-			.Setup( l => l.GenerateLinks( "GetProduct", It.IsAny<object>(), "self", "GET" ) )
-			.Returns( new Link( "getHref", "self", "GET" ) );
+			.Setup(l => l.GenerateLinks("GetProduct", It.IsAny<object>(), "self", "GET"))
+			.Returns(new Link("getHref", "self", "GET"));
 
 		_linkServiceMock
-			.Setup( l => l.GenerateLinks( "DeleteProduct", It.IsAny<object>(), "delete-product", "DELETE" ) )
-			.Returns( new Link( "delHref", "delete-product", "DELETE" ) );
+			.Setup(l => l.GenerateLinks("DeleteProduct", It.IsAny<object>(), "delete-product", "DELETE"))
+			.Returns(new Link("delHref", "delete-product", "DELETE"));
 
 		_linkServiceMock
-			.Setup( l => l.GenerateLinks( "UpdateProduct", It.IsAny<object>(), "update-product", "PUT" ) )
-			.Returns( new Link( "updHref", "update-product", "PUT" ) );
+			.Setup(l => l.GenerateLinks("UpdateProduct", It.IsAny<object>(), "update-product", "PUT"))
+			.Returns(new Link("updHref", "update-product", "PUT"));
 
 
 
 		// Act
-		var response = await _serviceToTest.GetProductByIdAsync( id, CancellationToken.None );
+		var response = await _serviceToTest.GetProductByIdAsync(id, CancellationToken.None);
 
 		// Assert
-		Assert.True( response.Succeeded );
-		Assert.Equal( ResponseMessage.Success, response.Message );
-		Assert.NotNull( response.Data );
-		Assert.Equal( id, response.Data.Id );
-		Assert.Equal( 3, response.Data.Links.Count );
+		Assert.True(response.Succeeded);
+		Assert.Equal(ResponseMessage.Success, response.Message);
+		Assert.NotNull(response.Data);
+		Assert.Equal(id, response.Data.Id);
+		Assert.Equal(3, response.Data.Links.Count);
 
-		_productRepoMock.Verify( r => r.GetByIdAsync( id, It.IsAny<CancellationToken>() ), Times.Once );
-		_mapperMock.Verify( m => m.Map<ProductDto>( product ), Times.Once );
-		_linkServiceMock.Verify( l => l.GenerateLinks( "GetProduct", It.IsAny<object>(), "self", "GET" ), Times.Once );
-		_linkServiceMock.Verify( l => l.GenerateLinks( "DeleteProduct", It.IsAny<object>(), "delete-product", "DELETE" ), Times.Once );
-		_linkServiceMock.Verify( l => l.GenerateLinks( "UpdateProduct", It.IsAny<object>(), "update-product", "PUT" ), Times.Once );
+		_productRepoMock.Verify(r => r.GetByIdAsync(id, It.IsAny<CancellationToken>()), Times.Once);
+		_mapperMock.Verify(m => m.Map<ProductDto>(product), Times.Once);
+		_linkServiceMock.Verify(l => l.GenerateLinks("GetProduct", It.IsAny<object>(), "self", "GET"), Times.Once);
+		_linkServiceMock.Verify(l => l.GenerateLinks("DeleteProduct", It.IsAny<object>(), "delete-product", "DELETE"), Times.Once);
+		_linkServiceMock.Verify(l => l.GenerateLinks("UpdateProduct", It.IsAny<object>(), "update-product", "PUT"), Times.Once);
 	}
 
 
 	[Fact]
-	public async Task GetProductById_ProductDoesNotExist_ReturnsNotFoundResponse ()
+	public async Task GetProductById_ProductDoesNotExist_ReturnsNotFoundResponse()
 	{
 		// Arrange
 		long id = 99;
 		_productRepoMock
-			.Setup( r => r.GetByIdAsync( id, It.IsAny<CancellationToken>() ) )
-			.ReturnsAsync( (Product?)null );
+			.Setup(r => r.GetByIdAsync(id, It.IsAny<CancellationToken>()))
+			.ReturnsAsync((Product?) null);
 
 		// Act
-		var response = await _serviceToTest.GetProductByIdAsync( id, CancellationToken.None );
+		var response = await _serviceToTest.GetProductByIdAsync(id, CancellationToken.None);
 
 		// Assert
-		Assert.False( response.Succeeded );
-		Assert.Equal( ResponseMessage.ProductNotFound, response.Message );
-		Assert.Null( response.Data );
+		Assert.False(response.Succeeded);
+		Assert.Equal(ResponseMessage.ProductNotFound, response.Message);
+		Assert.Null(response.Data);
 
-		_productRepoMock.Verify( r => r.GetByIdAsync( id, It.IsAny<CancellationToken>() ), Times.Once );
-		_mapperMock.Verify( m => m.Map<ProductDto>( It.IsAny<Product>() ), Times.Never );
-		_linkServiceMock.Verify( l => l.GenerateLinks( It.IsAny<string>(), It.IsAny<object>(), It.IsAny<string>(), It.IsAny<string>() ), Times.Never );
+		_productRepoMock.Verify(r => r.GetByIdAsync(id, It.IsAny<CancellationToken>()), Times.Once);
+		_mapperMock.Verify(m => m.Map<ProductDto>(It.IsAny<Product>()), Times.Never);
+		_linkServiceMock.Verify(l => l.GenerateLinks(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<string>(), It.IsAny<string>()), Times.Never);
 	}
 }
 

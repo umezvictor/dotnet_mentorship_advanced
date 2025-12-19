@@ -14,18 +14,16 @@ namespace API.IntegrationTest;
 
 public class CatalogWebApplicationFactory : WebApplicationFactory<Program>
 {
-	protected override void ConfigureWebHost (IWebHostBuilder builder)
+	protected override void ConfigureWebHost(IWebHostBuilder builder)
 	{
-		builder.ConfigureTestServices( services =>
+		builder.ConfigureTestServices(services =>
 		{
-			services.RemoveAll( typeof( DbContextOptions<ApplicationDbContext> ) );
-			services.AddDbContext<ApplicationDbContext>( options =>
-				options.UseInMemoryDatabase( "TestDb" )
+			services.RemoveAll(typeof(DbContextOptions<ApplicationDbContext>));
+			services.AddDbContext<ApplicationDbContext>(options =>
+				options.UseInMemoryDatabase("TestDb")
 			);
 
-
-
-			services.PostConfigureAll<JwtBearerOptions>( options =>
+			services.PostConfigureAll<JwtBearerOptions>(options =>
 			{
 				options.TokenValidationParameters = new TokenValidationParameters
 				{
@@ -34,13 +32,13 @@ public class CatalogWebApplicationFactory : WebApplicationFactory<Program>
 					ValidateAudience = false,
 					ValidateIssuerSigningKey = true,
 					IssuerSigningKey = new SymmetricSecurityKey(
-						Encoding.UTF8.GetBytes( "jWnZr4u7x!A%D*G-JaNdRgUkXp2s5v8y" )
+						Encoding.UTF8.GetBytes("jWnZr4u7x!A%D*G-JaNdRgUkXp2s5v8y")
 					),
 					ValidateLifetime = false,
 					RoleClaimType = "role",
 					NameClaimType = "sub"
 				};
-			} );
-		} );
+			});
+		});
 	}
 }

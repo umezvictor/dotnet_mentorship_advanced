@@ -8,24 +8,24 @@ using Serilog;
 using Shared.Constants;
 
 
-var builder = WebApplication.CreateBuilder( args );
+var builder = WebApplication.CreateBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
-	.ReadFrom.Configuration( builder.Configuration )
+	.ReadFrom.Configuration(builder.Configuration)
 	.CreateLogger();
 
 // register layers
-builder.Services.AddPresentationLayer( builder.Configuration )
+builder.Services.AddPresentationLayer(builder.Configuration)
 	.AddBusinessLogicLayer()
-	.AddDataAccessLayer( builder.Configuration );
+	.AddDataAccessLayer(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen( c =>
+builder.Services.AddSwaggerGen(c =>
 {
-	c.IncludeXmlComments( Path.Combine( AppContext.BaseDirectory,
-		$"{Assembly.GetExecutingAssembly().GetName().Name}.xml" ) );
-} );
+	c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
+		$"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
+});
 
 builder.Services.AddScoped<IRabbitMqClient, RabbitMqClient>();
 builder.Host.UseSerilog();
@@ -38,13 +38,11 @@ if (app.Environment.IsDevelopment())
 }
 app.UseMiddleware<AccessTokenLoggingMiddleware>();
 
-app.UseCors( AppConstants.CorsPolicy );
+app.UseCors(AppConstants.CorsPolicy);
 app.UseHttpsRedirection();
-
 app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 await app.RunAsync();

@@ -14,36 +14,36 @@ public class RabbitMQPublisherJob : IJob
 	private readonly IApplicationDbContext _dbContext;
 	private readonly IRabbitMqClient _rabbitMqClient;
 
-	public RabbitMQPublisherJob (IApplicationDbContext dbContext, IRabbitMqClient rabbitMqClient)
+	public RabbitMQPublisherJob(IApplicationDbContext dbContext, IRabbitMqClient rabbitMqClient)
 	{
 		_dbContext = dbContext;
 		_rabbitMqClient = rabbitMqClient;
 	}
-	public async Task Execute (IJobExecutionContext context)
+	public async Task Execute(IJobExecutionContext context)
 	{
 
-		var outboxMessages = await _dbContext.Outbox.Where( x => x.IsProcessed == false ).ToListAsync();
+		var outboxMessages = await _dbContext.Outbox.Where(x => x.IsProcessed == false).ToListAsync();
 
 		if (outboxMessages.Count > 0)
 		{
 			List<Outbox> processedOutboxMessages = new();
 			foreach (var outboxMessage in outboxMessages)
 			{
-				var productData = JsonSerializer.Deserialize<ProductUpdatedContract>( outboxMessage.Data );
+				var productData = JsonSerializer.Deserialize<ProductUpdatedContract>(outboxMessage.Data);
 				if (productData != null)
 				{
-					await _rabbitMqClient.PublishMessageAsync( new ProductUpdatedContract
+					await _rabbitMqClient.PublishMessageAsync(new ProductUpdatedContract
 					{
 						Id = productData.Id,
 						Name = productData.Name,
 						Price = productData.Price
-					}, RabbitMQConstants.ProductQueue );
+					}, RabbitMQConstants.ProductQueue);
 				}
 				outboxMessage.IsProcessed = true;
-				processedOutboxMessages.Add( outboxMessage );
+				processedOutboxMessages.Add(outboxMessage);
 			}
 
-			_dbContext.Outbox.UpdateRange( processedOutboxMessages );
+			_dbContext.Outbox.UpdateRange(processedOutboxMessages);
 			await _dbContext.SaveChangesAsync();
 		}
 

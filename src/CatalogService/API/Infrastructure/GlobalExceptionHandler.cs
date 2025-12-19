@@ -3,15 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Infrastructure;
 
-internal sealed class GlobalExceptionHandler (ILogger<GlobalExceptionHandler> logger, IProblemDetailsService problemDetailsService)
+internal sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger, IProblemDetailsService problemDetailsService)
    : IExceptionHandler
 {
-	public async ValueTask<bool> TryHandleAsync (
+	public async ValueTask<bool> TryHandleAsync(
 	HttpContext httpContext,
 	Exception exception,
 	CancellationToken cancellationToken)
 	{
-		logger.LogError( exception, "An exception occurred" );
+		logger.LogError(exception, "An exception occurred");
 		var problemDetails = new ProblemDetails
 		{
 			Status = exception switch
@@ -24,11 +24,11 @@ internal sealed class GlobalExceptionHandler (ILogger<GlobalExceptionHandler> lo
 			Detail = exception.Message
 		};
 
-		return await problemDetailsService.TryWriteAsync( new ProblemDetailsContext
+		return await problemDetailsService.TryWriteAsync(new ProblemDetailsContext
 		{
 			Exception = exception,
 			HttpContext = httpContext,
 			ProblemDetails = problemDetails
-		} );
+		});
 	}
 }

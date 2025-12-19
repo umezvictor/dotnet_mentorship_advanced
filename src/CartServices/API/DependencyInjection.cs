@@ -12,75 +12,75 @@ namespace API;
 
 public static class DependencyInjection
 {
-	public static IServiceCollection AddPresentationLayer (this IServiceCollection services, IConfiguration configuration) =>
+	public static IServiceCollection AddPresentationLayer(this IServiceCollection services, IConfiguration configuration) =>
 		  services
-		.AddSecurity( configuration )
-		  .AddServices( configuration )
+		.AddSecurity(configuration)
+		  .AddServices(configuration)
 		  .AddQuartzSetup();
-	public static IServiceCollection AddServices (this IServiceCollection services, IConfiguration configuration)
+	public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
 	{
 		services.AddRazorPages();
 
-		services.AddCors( o => o.AddPolicy( AppConstants.CorsPolicy, builder =>
+		services.AddCors(o => o.AddPolicy(AppConstants.CorsPolicy, builder =>
 		{
-			builder.WithOrigins( "*" ).AllowAnyOrigin()
+			builder.WithOrigins("*").AllowAnyOrigin()
 							  .AllowAnyMethod()
 							  .AllowAnyHeader();
-		} ) );
+		}));
 
 		services.AddExceptionHandler<GlobalExceptionHandler>();
 
-		services.AddProblemDetails( options =>
+		services.AddProblemDetails(options =>
 		{
 			options.CustomizeProblemDetails = context =>
 			{
 				context.ProblemDetails.Instance =
 					$"{context.HttpContext.Request.Method} {context.HttpContext.Request.Path}";
 
-				context.ProblemDetails.Extensions.TryAdd( "requestId", context.HttpContext.TraceIdentifier );
+				context.ProblemDetails.Extensions.TryAdd("requestId", context.HttpContext.TraceIdentifier);
 
 				Activity? activity = context.HttpContext.Features.Get<IHttpActivityFeature>()?.Activity;
-				context.ProblemDetails.Extensions.TryAdd( "traceId", activity?.Id );
+				context.ProblemDetails.Extensions.TryAdd("traceId", activity?.Id);
 			};
-		} );
+		});
 
-		services.AddRateLimiter( options =>
+		services.AddRateLimiter(options =>
 		{
 			options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-			options.AddPolicy( AppConstants.RateLimitingPolicy, httpContext =>
+			options.AddPolicy(AppConstants.RateLimitingPolicy, httpContext =>
 				RateLimitPartition.GetFixedWindowLimiter(
 					partitionKey: httpContext.Connection.RemoteIpAddress?.ToString(),
 					factory: _ => new FixedWindowRateLimiterOptions
 					{
 						PermitLimit = 20,
-						Window = TimeSpan.FromMinutes( 1 ),
-					} ) );
-		} );
+						Window = TimeSpan.FromMinutes(1),
+					}));
+		});
 
 
-		services.AddApiVersioning( options =>
+		services.AddApiVersioning(options =>
 		{
 			options.AssumeDefaultVersionWhenUnspecified = true;
-			options.DefaultApiVersion = new Asp.Versioning.ApiVersion( 1, 0 );
+			options.DefaultApiVersion = new Asp.Versioning.ApiVersion(1, 0);
 			options.ReportApiVersions = true;
-		} )
-		.AddMvc( options =>
+		})
+		.AddMvc(options =>
 		{
-			options.Conventions.Add( new VersionByNamespaceConvention() );
-		} )
-		.AddApiExplorer( options =>
+			options.Conventions.Add(new VersionByNamespaceConvention());
+		})
+		.AddApiExplorer(options =>
 		{
 			options.GroupNameFormat = "'v'V";
 			options.SubstituteApiVersionInUrl = true;
 
-		} );
+		});
 		return services;
 	}
 
-	public static IServiceCollection AddSecurity (this IServiceCollection services, IConfiguration configuration)
+	public static IServiceCollection AddSecurity(this IServiceCollection services, IConfiguration configuration)
 	{
-		services.AddAuthentication( "Bearer" )
-		   .AddJwtBearer( "Bearer", options =>
+		services.AddAuthentication("Bearer")
+		   .AddJwtBearer("Bearer", options =>
 		   {
 			   options.Authority = configuration["JwtSettings:Issuer"];
 			   options.RequireHttpsMetadata = false;
@@ -92,56 +92,56 @@ public static class DependencyInjection
 				   NameClaimType = "sub",
 
 			   };
-		   } );
+		   });
 
-		services.AddAuthorization( options =>
+		services.AddAuthorization(options =>
 		{
-			options.AddPolicy( "ApiScope", policy =>
+			options.AddPolicy("ApiScope", policy =>
 			{
 				policy.RequireAuthenticatedUser();
-				policy.RequireClaim( "scope", "cartApi" );
-			} );
+				policy.RequireClaim("scope", "cartApi");
+			});
 
 
-			options.AddPolicy( "ManagerOrCustomerPolicy", policy =>
+			options.AddPolicy("ManagerOrCustomerPolicy", policy =>
 			{
-				policy.RequireAssertion( context =>
-					(context.User.IsInRole( "Manager" ) &&
-						 context.User.HasClaim( AppConstants.PermissionClaim, "Read" ) ||
-						 context.User.HasClaim( AppConstants.PermissionClaim, "Create" ) ||
-						 context.User.HasClaim( AppConstants.PermissionClaim, "Update" ) ||
-						 context.User.HasClaim( AppConstants.PermissionClaim, "Delete" )
+				policy.RequireAssertion(context =>
+					(context.User.IsInRole("Manager") &&
+						 context.User.HasClaim(AppConstants.PermissionClaim, "Read") ||
+						 context.User.HasClaim(AppConstants.PermissionClaim, "Create") ||
+						 context.User.HasClaim(AppConstants.PermissionClaim, "Update") ||
+						 context.User.HasClaim(AppConstants.PermissionClaim, "Delete")
 					)
 					||
-					(context.User.IsInRole( "StoreCustomer" ) &&
-						 context.User.HasClaim( AppConstants.PermissionClaim, "Read" )
+					(context.User.IsInRole("StoreCustomer") &&
+						 context.User.HasClaim(AppConstants.PermissionClaim, "Read")
 					)
 				);
-			} );
-		} );
+			});
+		});
 
 		return services;
 	}
 
-	public static IServiceCollection AddQuartzSetup (this IServiceCollection services)
+	public static IServiceCollection AddQuartzSetup(this IServiceCollection services)
 	{
-		services.AddQuartz( configure =>
+		services.AddQuartz(configure =>
 		{
 
-			var jobKey = new JobKey( nameof( RabbitMqListenerJob ) );
+			var jobKey = new JobKey(nameof(RabbitMqListenerJob));
 			configure
-				.AddJob<RabbitMqListenerJob>( jobKey )
+				.AddJob<RabbitMqListenerJob>(jobKey)
 				.AddTrigger(
-					trigger => trigger.ForJob( jobKey )
+					trigger => trigger.ForJob(jobKey)
 					.WithSimpleSchedule(
-						schedule => schedule.WithIntervalInSeconds( 10 ).RepeatForever() ) );
+						schedule => schedule.WithIntervalInSeconds(10).RepeatForever()));
 
-		} );
+		});
 
-		services.AddQuartzHostedService( options =>
+		services.AddQuartzHostedService(options =>
 		{
 			options.WaitForJobsToComplete = true;
-		} );
+		});
 
 		return services;
 	}

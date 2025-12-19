@@ -6,20 +6,19 @@ using Shouldly;
 
 namespace BLL.UnitTests;
 
-
 public class DeleteItemFromCartCommandHandlerTest
 {
 	private readonly Mock<ICartRepository> _cartRepoMock = new();
 	private readonly CartService _serviceToTest;
 
-	public DeleteItemFromCartCommandHandlerTest ()
+	public DeleteItemFromCartCommandHandlerTest()
 	{
 
-		_serviceToTest = new CartService( _cartRepoMock.Object );
+		_serviceToTest = new CartService(_cartRepoMock.Object);
 	}
 
 	[Fact]
-	public async Task RemoveItemFromCart_WhenGivenValidId_ShouldDeleteItemAndReturnSuccessMessage ()
+	public async Task RemoveItemFromCart_WhenGivenValidId_ShouldDeleteItemAndReturnSuccessMessage()
 	{
 		var request = new DeleteItemFromCartRequest
 		{
@@ -28,10 +27,10 @@ public class DeleteItemFromCartCommandHandlerTest
 		};
 		var cancellationToken = CancellationToken.None;
 
-		_cartRepoMock.Setup( x => x.RemoveItemAsync( request.CartKey, request.Id, cancellationToken ) ).ReturnsAsync( true );
+		_cartRepoMock.Setup(x => x.RemoveItemAsync(request.CartKey, request.Id, cancellationToken)).ReturnsAsync(true);
 
 		// Act
-		var response = await _serviceToTest.DeleteCartItemAsync( request, cancellationToken );
+		var response = await _serviceToTest.DeleteCartItemAsync(request, cancellationToken);
 
 		// Assert
 		response.ShouldBeTrue();
@@ -40,7 +39,7 @@ public class DeleteItemFromCartCommandHandlerTest
 
 
 	[Fact]
-	public async Task RemoveItemFromCart_WhenGivenInValidId_ShouldReturnItemNotRemoved ()
+	public async Task RemoveItemFromCart_WhenGivenInValidId_ShouldReturnItemNotRemoved()
 	{
 		var request = new DeleteItemFromCartRequest
 		{
@@ -49,10 +48,10 @@ public class DeleteItemFromCartCommandHandlerTest
 		};
 		var cancellationToken = CancellationToken.None;
 
-		_cartRepoMock.Setup( x => x.RemoveItemAsync( request.CartKey, request.Id, cancellationToken ) ).ReturnsAsync( false );
+		_cartRepoMock.Setup(x => x.RemoveItemAsync(request.CartKey, request.Id, cancellationToken)).ReturnsAsync(false);
 
 		// Act
-		var response = await _serviceToTest.DeleteCartItemAsync( request, cancellationToken );
+		var response = await _serviceToTest.DeleteCartItemAsync(request, cancellationToken);
 
 		// Assert
 		response.ShouldBeFalse();
