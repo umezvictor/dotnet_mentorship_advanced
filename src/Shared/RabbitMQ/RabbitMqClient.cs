@@ -9,7 +9,7 @@ public sealed class RabbitMqClient : IRabbitMqClient
 {
 	public async Task PublishMessageAsync<T>(T message, string queueName)
 	{
-		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host };
+		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host, UserName = RabbitMQConstants.Username, Password = RabbitMQConstants.Password };
 		factory.AutomaticRecoveryEnabled = true;
 		factory.NetworkRecoveryInterval = TimeSpan.FromSeconds(10);
 		using var connection = await factory.CreateConnectionAsync();
@@ -26,7 +26,7 @@ public sealed class RabbitMqClient : IRabbitMqClient
 
 	public async Task<string> ConsumeMessageAsync(string queueName)
 	{
-		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host };
+		var factory = new ConnectionFactory { HostName = RabbitMQConstants.Host, UserName = RabbitMQConstants.Username, Password = RabbitMQConstants.Password };
 		factory.AutomaticRecoveryEnabled = true;
 		factory.NetworkRecoveryInterval = TimeSpan.FromSeconds(10);
 		using var connection = await factory.CreateConnectionAsync();

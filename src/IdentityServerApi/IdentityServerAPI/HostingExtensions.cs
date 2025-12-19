@@ -7,7 +7,11 @@ internal static class HostingExtensions
 	public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
 	{
 
-		builder.Services.AddIdentityServer()
+		builder.Services.AddIdentityServer(options =>
+		{
+			//Todo: read from configuration
+			options.IssuerUri = "https://identityserverapi:8080";
+		})
 			.AddInMemoryApiScopes(Config.ApiScopes)
 			.AddInMemoryClients(Config.Clients)
 			.AddTestUsers(Config.Users)
