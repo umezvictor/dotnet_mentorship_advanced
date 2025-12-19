@@ -74,7 +74,7 @@ dotnet_diagnostic.IDE0040.severity = none
 # Constants are PascalCase
 dotnet_naming_rule.constants_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.constants_should_be_pascal_case.symbols = constants
-dotnet_naming_rule.constants_should_be_pascal_case.style = local_function_style
+dotnet_naming_rule.constants_should_be_pascal_case.style = constant_style
 
 dotnet_naming_symbols.constants.applicable_kinds = field, local
 dotnet_naming_symbols.constants.required_modifiers = const
@@ -99,9 +99,6 @@ dotnet_code_quality_unused_parameters                = all
 dotnet_code_quality.CA1725.api_surface               = all
 dotnet_code_quality.CA1826.exclude_ordefault_methods = true
 dotnet_code_quality.CA1852.ignore_internalsvisibleto = true
-tab_width = 4
-indent_size = 4
-end_of_line = crlf
 
 #### C# Coding Conventions ####
 [*.cs]
@@ -216,6 +213,3 @@ csharp_preserve_single_line_statements                                   = false
 
 # Suggest more modern language features when available
 csharp_align_multiline_array_and_object_initializer                      = false
-csharp_style_prefer_top_level_statements = true:silent
-csharp_style_prefer_primary_constructors = true:suggestion
-csharp_prefer_system_threading_lock = true:suggestion
