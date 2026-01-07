@@ -7,8 +7,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "CacheOptions": {
@@ -22,8 +22,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "CacheOptions": {
@@ -35,8 +35,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
@@ -48,8 +48,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}/properties",
@@ -61,8 +61,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/products",
@@ -73,8 +73,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
@@ -85,8 +85,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
@@ -97,8 +97,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/categories/{id}",
@@ -109,8 +109,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/categories",
@@ -121,8 +121,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/categories/{id}",
@@ -133,8 +133,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "catalogapi",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/categories/{id}",
@@ -147,8 +147,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5003
+          "Host": "cart",
+          "Port": 5002
         }
       ]
     },
@@ -159,8 +159,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5003
+          "Host": "cart",
+          "Port": 5002
         }
       ]
     }

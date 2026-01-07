@@ -25,7 +25,7 @@ app.Map("/swagger/v1/swagger.json", builder =>
 	builder.Run(async context =>
 	{
 		using var httpClient = new HttpClient();
-		var json = await httpClient.GetStringAsync("http://localhost:5000/swagger/v1/swagger.json");
+		var json = await httpClient.GetStringAsync("http://catalogapi:8080/swagger/v1/swagger.json");
 		context.Response.ContentType = "application/json";
 		await context.Response.WriteAsync(json);
 	}));
@@ -34,7 +34,7 @@ app.Map("/swagger/v2/swagger.json", builder =>
 	builder.Run(async context =>
 	{
 		using var httpClient = new HttpClient();
-		var json = await httpClient.GetStringAsync("http://localhost:5003/swagger/v1/swagger.json");
+		var json = await httpClient.GetStringAsync("http://cart:8080/swagger/v1/swagger.json");
 		context.Response.ContentType = "application/json";
 		await context.Response.WriteAsync(json);
 	}));
