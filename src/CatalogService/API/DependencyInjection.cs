@@ -79,40 +79,27 @@ public static class DependencyInjection
 
 		services.AddAuthorization(options =>
 		{
-			options.AddPolicy("ApiScope", policy =>
+			options.AddPolicy(AppConstants.AuthenticatedUserPolicy, policy =>
 			{
 				policy.RequireAuthenticatedUser();
-				policy.RequireClaim("scope", "cartApi");
+				policy.RequireClaim("permission", ["Read"]);
+				policy.RequireClaim("scope", ["catalogApi"]);
 			});
 
-
-			options.AddPolicy("ManagerPolicy", policy =>
+			options.AddPolicy(AppConstants.CustomerPolicy, policy =>
 			{
-				policy.RequireAssertion(context =>
-					(context.User.IsInRole("Manager") &&
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Read") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Create") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Update") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Delete")
-					)
-
-				);
+				policy.RequireAuthenticatedUser();
+				policy.RequireRole(RoleConstants.StoreCustomer);
+				policy.RequireClaim("permission", ["Read"]);
+				policy.RequireClaim("scope", ["catalogApi"]);
 			});
 
-			options.AddPolicy("ManagerOrCustomerPolicy", policy =>
+			options.AddPolicy(AppConstants.AdminPolicy, policy =>
 			{
-				policy.RequireAssertion(context =>
-					(context.User.IsInRole("Manager") &&
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Read") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Create") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Update") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Delete")
-					)
-					||
-					(context.User.IsInRole("StoreCustomer") &&
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Read")
-					)
-				);
+				policy.RequireAuthenticatedUser();
+				policy.RequireRole(RoleConstants.Admin);
+				policy.RequireClaim("permission", ["Read", "Create", "Update", "Delete"]);
+				policy.RequireClaim("scope", ["catalogApi"]);
 			});
 		});
 

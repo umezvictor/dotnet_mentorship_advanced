@@ -7,7 +7,6 @@ services:
 
     ports:
       - 5000:8080 # Exposes port 8080 of the container on port 5000 of the host
-      - 5001:8081
     depends_on:
      - sqlserver #depends on sqlserver service
     environment:
@@ -84,6 +83,22 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - 5004:8080
+    networks:
+      - app-network
+    restart: on-failure
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    container_name: apigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/APIGateway/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+     - catalogapi
+    ports:
+      - 6001:8080
     networks:
       - app-network
     restart: on-failure

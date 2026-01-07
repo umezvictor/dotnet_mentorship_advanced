@@ -19,7 +19,7 @@ public static class MigrationManager
 		}
 		catch (Exception ex)
 		{
-			throw new ApplicationException($"An error occurred while applying migrations. {ex.Message} ");
+			//throw new ApplicationException($"An error occurred while applying migrations. {ex.Message} ");
 		}
 	}
 }

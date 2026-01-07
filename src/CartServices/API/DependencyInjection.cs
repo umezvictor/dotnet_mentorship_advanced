@@ -96,27 +96,12 @@ public static class DependencyInjection
 
 		services.AddAuthorization(options =>
 		{
-			options.AddPolicy("ApiScope", policy =>
+			options.AddPolicy(AppConstants.CustomerPolicy, policy =>
 			{
 				policy.RequireAuthenticatedUser();
-				policy.RequireClaim("scope", "cartApi");
-			});
-
-
-			options.AddPolicy("ManagerOrCustomerPolicy", policy =>
-			{
-				policy.RequireAssertion(context =>
-					(context.User.IsInRole("Manager") &&
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Read") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Create") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Update") ||
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Delete")
-					)
-					||
-					(context.User.IsInRole("StoreCustomer") &&
-						 context.User.HasClaim(AppConstants.PermissionClaim, "Read")
-					)
-				);
+				policy.RequireRole(RoleConstants.StoreCustomer);
+				policy.RequireClaim("permission", ["Read", "Create", "Delete"]);
+				policy.RequireClaim("scope", ["cartApi"]);
 			});
 		});
 
@@ -127,7 +112,6 @@ public static class DependencyInjection
 	{
 		services.AddQuartz(configure =>
 		{
-
 			var jobKey = new JobKey(nameof(RabbitMqListenerJob));
 			configure
 				.AddJob<RabbitMqListenerJob>(jobKey)
