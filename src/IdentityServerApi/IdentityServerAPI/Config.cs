@@ -25,15 +25,12 @@ public static class Config
 			new Client
 			{
 				ClientId = "client",
-
 				AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-
 				ClientSecrets =
 				{
 					new Secret("secret".Sha256())
 				},
-
-				AllowedScopes = { "cartApi", "catalogApi", "offline_access","roles", "permissions" },
+				AllowedScopes = {"cartApi", "catalogApi", "offline_access", "roles", "permissions"},
 				AllowOfflineAccess = true, //enables refresh tokens, together with the offline_access scope
 				AllowedCorsOrigins =
 				{

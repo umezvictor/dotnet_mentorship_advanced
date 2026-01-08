@@ -8,7 +8,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "CacheOptions": {
@@ -23,7 +23,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "CacheOptions": {
@@ -36,7 +36,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
@@ -49,7 +49,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}/properties",
@@ -62,7 +62,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products",
@@ -74,7 +74,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
@@ -86,7 +86,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
@@ -98,11 +98,11 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/categories/{id}",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [ "GET" ]
     },
     {
       "DownstreamPathTemplate": "/api/categories",
@@ -110,7 +110,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/categories",
@@ -122,7 +122,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/categories/{id}",
@@ -134,7 +134,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/categories/{id}",
@@ -148,7 +148,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "cart",
-          "Port": 5002
+          "Port": 8080
         }
       ]
     },
@@ -160,7 +160,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "cart",
-          "Port": 5002
+          "Port": 8080
         }
       ]
     }
@@ -173,6 +173,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:6001"
+    "BaseUrl": "http://catalogapi:6001"
   }
 }

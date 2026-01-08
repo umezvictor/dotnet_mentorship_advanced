@@ -5,11 +5,14 @@ using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+//IS4 refers to IdentityServer4
+var authorityUrl = builder.Configuration["Authentication:AuthorityUrl"];
 builder.Services
 	.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 	.AddJwtBearer("IS4", o =>
 	{
-		o.Authority = "http://identityserverapi:8080";
+		o.Authority = authorityUrl;
 	});
 
 builder.Services
@@ -20,12 +23,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
+var catalogApiSwaggerUrl = builder.Configuration["SwaggerUrls:CatalogAPI"];
+var cartApiSwaggerUrl = builder.Configuration["SwaggerUrls:CartAPI"];
 
 app.Map("/swagger/v1/swagger.json", builder =>
 	builder.Run(async context =>
 	{
 		using var httpClient = new HttpClient();
-		var json = await httpClient.GetStringAsync("http://catalogapi:8080/swagger/v1/swagger.json");
+		var json = await httpClient.GetStringAsync(catalogApiSwaggerUrl);
 		context.Response.ContentType = "application/json";
 		await context.Response.WriteAsync(json);
 	}));
@@ -34,7 +39,7 @@ app.Map("/swagger/v2/swagger.json", builder =>
 	builder.Run(async context =>
 	{
 		using var httpClient = new HttpClient();
-		var json = await httpClient.GetStringAsync("http://cart:8080/swagger/v1/swagger.json");
+		var json = await httpClient.GetStringAsync(cartApiSwaggerUrl);
 		context.Response.ContentType = "application/json";
 		await context.Response.WriteAsync(json);
 	}));

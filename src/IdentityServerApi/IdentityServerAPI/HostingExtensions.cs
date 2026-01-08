@@ -10,7 +10,7 @@ internal static class HostingExtensions
 		builder.Services.AddIdentityServer(options =>
 		{
 			//Todo: read from configuration
-			options.IssuerUri = "https://identityserverapi:8080";//this is very key to prevent authorization issues with external clients
+			options.IssuerUri = "http://identityserverapi:8080";//this is very key to prevent authorization issues with external clients
 		})
 			.AddInMemoryApiScopes(Config.ApiScopes)
 			.AddInMemoryClients(Config.Clients)
