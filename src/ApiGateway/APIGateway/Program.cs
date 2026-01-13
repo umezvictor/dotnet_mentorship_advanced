@@ -1,4 +1,6 @@
 using APIGateway;
+using APIGateway.Middleware;
+using APIGateway.Utils;
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Ocelot.Cache.CacheManager;

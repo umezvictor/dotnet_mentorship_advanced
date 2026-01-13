@@ -1,5 +1,4 @@
-﻿
-namespace APIGateway;
+﻿namespace APIGateway.Utils;
 
 public interface IApiClient
 {

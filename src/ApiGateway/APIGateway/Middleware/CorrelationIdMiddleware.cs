@@ -1,6 +1,6 @@
 ﻿using Shared.Constants;
 
-namespace APIGateway;
+namespace APIGateway.Middleware;
 
 public sealed class CorrelationIdMiddleware
 {
@@ -15,7 +15,7 @@ public sealed class CorrelationIdMiddleware
 		if (!string.IsNullOrEmpty(correlationId))
 		{
 			// Set the header on outgoing request to downstream service
-			context.Request.Headers.TryAdd("X-Correlation-ID", correlationId);
+			context.Request.Headers.TryAdd(AppConstants.CorrelationIdHeader, correlationId);
 		}
 
 		await _next(context);
