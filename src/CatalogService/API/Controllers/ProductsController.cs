@@ -88,8 +88,9 @@ public class ProductsController(IProductService productService) : ControllerBase
 	[Authorize(Policy = AppConstants.AdminPolicy)]
 	public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateProductRequest request, CancellationToken cancellationToken)
 	{
+		var correlationId = HttpContext.Request.Headers[AppConstants.CorrelationIdHeader].FirstOrDefault()!;
 		request.Id = id;
-		var response = await productService.UpdateProductAsync(request, cancellationToken);
+		var response = await productService.UpdateProductAsync(request, correlationId, cancellationToken);
 		if (response.Succeeded)
 		{
 			return Ok(response);

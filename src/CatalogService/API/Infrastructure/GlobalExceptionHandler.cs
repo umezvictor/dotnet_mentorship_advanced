@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Constants;
 
 namespace API.Infrastructure;
 
@@ -11,7 +12,8 @@ internal sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> log
 	Exception exception,
 	CancellationToken cancellationToken)
 	{
-		logger.LogError(exception, "An exception occurred");
+		var correlationId = httpContext.Request.Headers[AppConstants.CorrelationIdHeader].FirstOrDefault();
+		logger.LogError(exception, $"An exception occurred. Correlation ID: {correlationId}");
 		var problemDetails = new ProblemDetails
 		{
 			Status = exception switch

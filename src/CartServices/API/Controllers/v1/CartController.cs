@@ -74,7 +74,7 @@ namespace API.Controllers.v1
 		[ProducesResponseType(typeof(Response<Cart>), StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		[ProducesDefaultResponseType]
-		[Authorize(Policy = AppConstants.CustomerPolicy)]
+		//[Authorize(Policy = AppConstants.CustomerPolicy)]
 		public async Task<IActionResult> GetCartInfoV1([FromRoute] string cartKey, CancellationToken cancellationToken)
 		{
 			var cart = await cartService.GetCartItemsAsync(cartKey, cancellationToken);

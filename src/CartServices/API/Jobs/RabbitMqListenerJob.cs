@@ -33,6 +33,7 @@ namespace API.Jobs
 		/// <returns>A task representing the asynchronous operation.</returns>
 		public async Task Execute(IJobExecutionContext context)
 		{
+
 			var message = await _rabbitMqClient.ConsumeMessageAsync(RabbitMQConstants.ProductQueue);
 			if (!string.IsNullOrEmpty(message))
 			{
@@ -43,6 +44,8 @@ namespace API.Jobs
 					await _cartService.UpdateCartItemsFromMessageConsumerAsync(productUpdate, CancellationToken.None);
 				}
 			}
+
+
 		}
 	}
 }

@@ -4,6 +4,7 @@ using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using Quartz;
 using RabbitMQ;
+using Shared.Constants;
 using Shared.RabbitMQ;
 
 namespace API.Jobs;
@@ -22,7 +23,7 @@ public class RabbitMQPublisherJob : IJob
 	public async Task Execute(IJobExecutionContext context)
 	{
 
-		var outboxMessages = await _dbContext.Outbox.Where(x => x.IsProcessed == false).ToListAsync();
+		var outboxMessages = await _dbContext.Outbox.Where(x => x.Status == OutboxMessageStatus.Failed).ToListAsync();
 
 		if (outboxMessages.Count > 0)
 		{
@@ -37,9 +38,9 @@ public class RabbitMQPublisherJob : IJob
 						Id = productData.Id,
 						Name = productData.Name,
 						Price = productData.Price
-					}, RabbitMQConstants.ProductQueue);
+					}, RabbitMQConstants.ProductQueue, outboxMessage.CorrelationId);
 				}
-				outboxMessage.IsProcessed = true;
+				outboxMessage.Status = OutboxMessageStatus.Processed;
 				processedOutboxMessages.Add(outboxMessage);
 			}
 

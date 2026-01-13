@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\RabbitMQ\RabbitMQ.csproj" />
     <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
     <ProjectReference Include="..\DAL\DAL.csproj" />
   </ItemGroup>

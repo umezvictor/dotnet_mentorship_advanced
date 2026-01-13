@@ -5,6 +5,7 @@ using DAL.Database;
 using DAL.Database.Repository;
 using DAL.Entities;
 using Moq;
+using RabbitMQ;
 using Shared.Dto;
 using Shared.ResponseObjects;
 using Shouldly;
@@ -16,11 +17,13 @@ public class DeleteProductTest
 	private readonly Mock<IApplicationDbContext> _dbContextMock = new();
 	private readonly Mock<ILinkService> _linkServiceMock = new();
 	private readonly Mock<IMapper> _mapperMock = new();
+	private readonly Mock<IRabbitMqClient> _rabbitMqClientMock = new();
+
 	private readonly ProductService _serviceToTest;
 
 	public DeleteProductTest()
 	{
-		_serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object);
+		_serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object, _rabbitMqClientMock.Object);
 	}
 
 	[Fact]

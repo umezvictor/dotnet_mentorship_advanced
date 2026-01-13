@@ -4,13 +4,15 @@ using BLL.Abstractions;
 using DAL.Database;
 using DAL.Database.Repository;
 using DAL.Entities;
+using RabbitMQ;
+using Shared.Constants;
 using Shared.Dto;
 using Shared.RabbitMQ;
 using Shared.ResponseObjects;
 
 namespace BLL.Services;
 public sealed class ProductService(IProductRepository productRepository, IMapper mapper, ILinkService linkService,
-	IApplicationDbContext dbContext) : IProductService
+	IApplicationDbContext dbContext, IRabbitMqClient rabbitMqClient) : IProductService
 {
 	public async Task<Response<int>> AddProductAsync(AddProductRequest request, CancellationToken cancellationToken)
 	{
@@ -43,7 +45,7 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
 		return new Response<PaginatedResponse<List<ProductDto>>>(paginatedResponse, ResponseMessage.Success);
 	}
 
-	public async Task<Response<string>> UpdateProductAsync(UpdateProductRequest request, CancellationToken cancellationToken)
+	public async Task<Response<string>> UpdateProductAsync(UpdateProductRequest request, string correlationId, CancellationToken cancellationToken)
 	{
 		var product = await productRepository.GetByIdAsync(request.Id, cancellationToken);
 		if (product is null)
@@ -58,10 +60,9 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
 			var updatedProduct = await productRepository.UpdateAsync(mapper.Map(request, product), cancellationToken);
 			if (updatedProduct != null)
 			{
-				//save update product details to outbox table
-				await dbContext.Outbox.AddAsync(new Outbox
+				//save data to outbox table
+				var outboxMessage = new Outbox
 				{
-
 					CreatedOnUTC = DateTime.UtcNow,
 					Data = JsonSerializer.Serialize(new ProductUpdatedContract
 					{
@@ -69,10 +70,30 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
 						Name = updatedProduct.Name,
 						Price = updatedProduct.Price,
 					}),
-					IsProcessed = false
-				}, cancellationToken);
+					CorrelationId = correlationId,
+					Status = OutboxMessageStatus.Processed
+				};
+
+				await dbContext.Outbox.AddAsync(outboxMessage, cancellationToken);
 				await dbContext.SaveChangesAsync(cancellationToken);
 				await transaction.CommitAsync(cancellationToken);
+
+				//send message to broker
+				try
+				{
+					await rabbitMqClient.PublishMessageAsync(new ProductUpdatedContract
+					{
+						Id = updatedProduct.Id,
+						Name = updatedProduct.Name,
+						Price = updatedProduct.Price
+					}, RabbitMQConstants.ProductQueue, correlationId);
+				}
+				catch
+				{
+					outboxMessage.Status = OutboxMessageStatus.Failed;
+					dbContext.Outbox.Update(outboxMessage);
+					await dbContext.SaveChangesAsync(cancellationToken);
+				}
 				return new Response<string>(ResponseMessage.ProductUpdated);
 			}
 		}
