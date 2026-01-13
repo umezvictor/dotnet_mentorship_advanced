@@ -1,5 +1,6 @@
 Access Token request
-<img width="1403" height="513" alt="image" src="https://github.com/user-attachments/assets/93239144-1e28-4900-b725-128d95a87fc1" />
+<img width="1272" height="942" alt="image" src="https://github.com/user-attachments/assets/a92742fa-575c-4e20-93c9-a0eae32ed962" />
+
 
 Refresh Token request
 
