@@ -18,6 +18,12 @@ public sealed class CorrelationIdMiddleware
 			context.Request.Headers.TryAdd(AppConstants.CorrelationIdHeader, correlationId);
 		}
 
+		context.Response.OnStarting(() =>
+		{
+			context.Response.Headers[AppConstants.CorrelationIdHeader] = correlationId;
+			return Task.CompletedTask;
+		});
+
 		await _next(context);
 	}
 }

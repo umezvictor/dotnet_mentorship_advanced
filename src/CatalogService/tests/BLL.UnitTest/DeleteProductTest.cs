@@ -4,6 +4,7 @@ using BLL.Services;
 using DAL.Database;
 using DAL.Database.Repository;
 using DAL.Entities;
+using Microsoft.Extensions.Logging;
 using Moq;
 using RabbitMQ;
 using Shared.Dto;
@@ -18,12 +19,14 @@ public class DeleteProductTest
 	private readonly Mock<ILinkService> _linkServiceMock = new();
 	private readonly Mock<IMapper> _mapperMock = new();
 	private readonly Mock<IRabbitMqClient> _rabbitMqClientMock = new();
+	private readonly Mock<ILogger<ProductService>> _loggerMock = new();
 
 	private readonly ProductService _serviceToTest;
 
 	public DeleteProductTest()
 	{
-		_serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object, _rabbitMqClientMock.Object);
+		_serviceToTest = new ProductService(_productRepoMock.Object, _mapperMock.Object, _linkServiceMock.Object, _dbContextMock.Object, _rabbitMqClientMock.Object,
+			_loggerMock.Object);
 	}
 
 	[Fact]

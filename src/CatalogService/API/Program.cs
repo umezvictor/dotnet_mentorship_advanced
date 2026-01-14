@@ -47,9 +47,9 @@ builder.Services.AddOpenTelemetry()
 			// This will add the correlation_id tag to all traces, if present in the headers
 			options.EnrichWithHttpRequest = (activity, httpRequest) =>
 			{
-				if (httpRequest.Headers.TryGetValue(AppConstants.CorrelationIdHeader, out var corrId))
+				if (httpRequest.Headers.TryGetValue(AppConstants.CorrelationIdHeader, out var correlationId))
 				{
-					activity.SetTag(AppConstants.CorrelationIdTag, corrId.ToString());
+					activity.SetTag(AppConstants.CorrelationIdTag, correlationId.ToString());
 				}
 			};
 		})

@@ -30,7 +30,7 @@ public sealed class RabbitMqClient : IRabbitMqClient
 		var props = new BasicProperties();
 		props.CorrelationId = correlationId;
 
-		await channel.BasicPublishAsync(exchange: string.Empty, routingKey: queueName, true, props, body: body);
+		await channel.BasicPublishAsync(exchange: string.Empty, routingKey: queueName, false, props, body: body);
 
 		activity?.AddEvent(new ActivityEvent("Message Published"));
 	}

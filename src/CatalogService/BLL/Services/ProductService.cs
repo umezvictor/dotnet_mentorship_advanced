@@ -4,6 +4,7 @@ using BLL.Abstractions;
 using DAL.Database;
 using DAL.Database.Repository;
 using DAL.Entities;
+using Microsoft.Extensions.Logging;
 using RabbitMQ;
 using Shared.Constants;
 using Shared.Dto;
@@ -12,7 +13,7 @@ using Shared.ResponseObjects;
 
 namespace BLL.Services;
 public sealed class ProductService(IProductRepository productRepository, IMapper mapper, ILinkService linkService,
-	IApplicationDbContext dbContext, IRabbitMqClient rabbitMqClient) : IProductService
+	IApplicationDbContext dbContext, IRabbitMqClient rabbitMqClient, ILogger<ProductService> logger) : IProductService
 {
 	public async Task<Response<int>> AddProductAsync(AddProductRequest request, CancellationToken cancellationToken)
 	{
@@ -88,8 +89,9 @@ public sealed class ProductService(IProductRepository productRepository, IMapper
 						Price = updatedProduct.Price
 					}, RabbitMQConstants.ProductQueue, correlationId);
 				}
-				catch
+				catch (Exception ex)
 				{
+					logger.LogError(ex, $"An error occurred while publishing the message to RabbitMQ. CorrelationId: {correlationId}");
 					outboxMessage.Status = OutboxMessageStatus.Failed;
 					dbContext.Outbox.Update(outboxMessage);
 					await dbContext.SaveChangesAsync(cancellationToken);
