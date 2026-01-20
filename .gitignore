@@ -398,3 +398,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 .containers/
+/src/CatalogService/API/.env
+/src/CartServices/API/.env
+/.env

@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: src/CatalogService/API/Dockerfile #path to Dockerfile
-
+    env_file:
+      - src/CatalogService/API/.env
     ports:
       - 5001:8080 # Exposes port 8080 of the container on port 5000 of the host
     depends_on:
@@ -19,7 +20,7 @@ services:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sqlserver
     environment:
-      SA_PASSWORD: "Passw@rd123"
+      SA_PASSWORD: "${SQLServer_Password}"
       ACCEPT_EULA: "Y"        
     ports:
       - 1433:1433
@@ -32,9 +33,9 @@ services:
     image: mongo:latest
     container_name: mongodb
     environment:
-      MONGO_INITDB_DATABASE: CartDB #database name
-      MONGO_INITDB_ROOT_USERNAME: mongoadmin #root username
-      MONGO_INITDB_ROOT_PASSWORD: Passw@rd123 #root password
+      MONGO_INITDB_DATABASE: ${MONGODB_DATABASE} #database name
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USERNAME} #root username
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD} #root password
     ports:
       - 27017:27017        # Exposes MongoDB default port
     volumes:
@@ -48,6 +49,8 @@ services:
     build:
       context: .
       dockerfile: src/CartServices/API/Dockerfile
+    env_file:
+      - src/CartServices/API/.env
     depends_on:
      - mongodb
     ports:

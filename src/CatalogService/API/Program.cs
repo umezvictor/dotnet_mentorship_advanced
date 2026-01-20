@@ -6,12 +6,15 @@ using BLL;
 using BLL.Abstractions;
 using DAL;
 using DAL.Database;
+using DotNetEnv;
 using OpenTelemetry.Trace;
 using RabbitMQ;
 using Serilog;
 using Shared.Constants;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Env.Load();
 var _config = new ConfigurationBuilder()
 				.AddJsonFile("appsettings.json")
 				.Build();

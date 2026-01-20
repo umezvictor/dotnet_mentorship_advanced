@@ -17,23 +17,18 @@ public static class DependencyInjection
 
 	private static IServiceCollection AddMongoDbClient(this IServiceCollection services, IConfiguration configuration)
 	{
-
-		var dbConnectionString = configuration["MONGODB_CONNECTION_STRING"];
+		string dbConnectionString = Environment.GetEnvironmentVariable("MONGODB_CONNECTION_STRING")!;
 
 		var mongoUrl = new MongoUrl(dbConnectionString);
 		var mongoClient = new MongoClient(mongoUrl);
 
 		services.AddSingleton<IMongoClient>(mongoClient);
-
 		services.AddScoped<IMongoDatabase>(sp =>
 		{
 			var client = sp.GetRequiredService<IMongoClient>();
 			return client.GetDatabase(mongoUrl.DatabaseName);
 		});
-
 		return services;
-
-
 	}
 
 	private static IServiceCollection AddCartRepository(this IServiceCollection services)

@@ -12,9 +12,9 @@ public static class DependencyInjection
 
 	private static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
 	{
+		string connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING")!;
 		services.AddDbContext<ApplicationDbContext>(options =>
-		options.UseSqlServer(
-			configuration.GetConnectionString("DefaultConnection"),
+		options.UseSqlServer(connectionString,
 			b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
 		services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<ApplicationDbContext>());

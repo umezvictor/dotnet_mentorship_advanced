@@ -4,6 +4,7 @@ using API.Middleware;
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using CartServices.BLL;
 using CartServices.DAL;
+using DotNetEnv;
 using OpenTelemetry.Trace;
 using RabbitMQ;
 using Serilog;
@@ -11,6 +12,7 @@ using Shared.Constants;
 
 
 var builder = WebApplication.CreateBuilder(args);
+Env.Load();
 var applicationInsightsUrl = builder.Configuration["ApplicationInsightsUrl"];
 
 Log.Logger = new LoggerConfiguration()
